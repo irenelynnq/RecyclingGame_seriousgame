@@ -2,23 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RunController : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
-    //Run Map의 전반적인 게임을 관리합니다.
+    public StageDB db;
     // Start is called before the first frame update
     void Start()
     {
-        
+        db = new StageDB();
+        db.DBInit();
     }
 
     // Update is called once per frame
     void Update()
     {
         
-    }
-
-    void initStage()
-    {
-
     }
 }
