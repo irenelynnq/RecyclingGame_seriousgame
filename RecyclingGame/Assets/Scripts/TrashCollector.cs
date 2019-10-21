@@ -6,6 +6,7 @@ public class TrashCollector : MonoBehaviour
 {
     public List<Trash> collected_right;
     public List<Trash> collected_wrong;
+
     // Start is called before the first frame update
     void Start()
     {
