@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StageItem : MonoBehaviour
+public class StageItem
 {
     public int stage_number;
     public string name;
@@ -16,6 +16,6 @@ public class StageItem : MonoBehaviour
 
     public float trashStartingPoint;
     public float trashGap;
-    public List<Trash> trashList;
-    public List<Trash> answerTrashList;
+    public List<Trash> trashList = new List<Trash>();
+    public List<Trash> answerTrashList = new List<Trash>();
 }

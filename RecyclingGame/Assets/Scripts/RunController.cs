@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RunController : MonoBehaviour
 {
+    
+    public GameObject trashPrefab;
     //Run Map의 전반적인 게임을 관리합니다.
     // Start is called before the first frame update
     void Start()
@@ -17,8 +19,62 @@ public class RunController : MonoBehaviour
         
     }
 
-    void initStage()
+    public void InitRunStage(int level, StageItem stage)
     {
+        List<Dictionary<string, object>> data = CSVReader.Read("FileResources/" + "TrashPosition_" + level.ToString());
+
+        //StageItem으로 stage initialize
+        for (int i = 0; i < stage.trashCount; i++)
+        {
+            GameObject newTrash = Instantiate(trashPrefab);
+            Trash newTrashInfo = newTrash.GetComponent<Trash>();
+
+            newTrashInfo.id = (int)data[i]["id"];
+            newTrashInfo.name = (string)data[i]["name"];
+            newTrashInfo.is_answer = (int)data[i]["is_answer"] == 0 ? false : true;
+            newTrashInfo.need_preprocess = (int)data[i]["need_preprocess"] == 0 ? false : true;
+            newTrashInfo.sprite_name = (string)data[i]["sprite_name"];
+            newTrashInfo.xPosition = stage.trashStartingPoint + (float)((int)data[i]["xPosition"] * stage.trashGap);
+            switch ((string)data[i]["yPosition"])
+            {
+                case "Up":
+                    newTrashInfo.yPosition = TrashPosition.Up;
+                    break;
+                case "Middle":
+                    newTrashInfo.yPosition = TrashPosition.Middle;
+                    break;
+                case "Down":
+                    newTrashInfo.yPosition = TrashPosition.Down;
+                    break;
+                default:
+                    Debug.Log("Error reading yPosition");
+                    break;
+            }
+
+            stage.trashList.Add(newTrashInfo);
+            if (newTrashInfo.is_answer) stage.answerTrashList.Add(newTrashInfo);
+            Debug.Log("DB trash " + newTrashInfo.name);
+
+            Sprite trashSprite = Resources.Load<Sprite>("Art/Trash/"+newTrashInfo.sprite_name);
+            SpriteRenderer sr = newTrash.GetComponent<SpriteRenderer>();
+            sr.sprite = trashSprite;
+            float y = 0f;
+            switch (newTrashInfo.yPosition)
+            {
+                case TrashPosition.Up:
+                    y = 1.76f;
+                    break;
+                case TrashPosition.Middle:
+                    y = 0.16f;
+                    break;
+                case TrashPosition.Down:
+                    y = -1.44f;
+                    break;
+            }
+            newTrash.transform.position = new Vector3(newTrashInfo.xPosition, y);
+
+            Debug.Log("Init Trash " + newTrashInfo.name);
+        }
 
     }
 }

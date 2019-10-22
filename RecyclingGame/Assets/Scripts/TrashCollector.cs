@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class TrashCollector : MonoBehaviour
 {
-    public List<Trash> collected_right;
-    public List<Trash> collected_wrong;
+    public List<Trash> collected_right = new List<Trash>();
+    public List<Trash> collected_wrong = new List<Trash>();
 
     // Start is called before the first frame update
     void Start()

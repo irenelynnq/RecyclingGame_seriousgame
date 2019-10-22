@@ -19,8 +19,19 @@ public class Trash : MonoBehaviour
         if(collision.gameObject.tag == "TrashCollector")
         {
             gameObject.SetActive(false);
-            if (is_answer == true) gameObject.GetComponent<TrashCollector>().collected_right.Add(this);
-            else gameObject.GetComponent<TrashCollector>().collected_wrong.Add(this);
+            if (is_answer == true) collision.gameObject.GetComponent<TrashCollector>().collected_right.Add(this);
+            else collision.gameObject.GetComponent<TrashCollector>().collected_wrong.Add(this);
         }
+    }
+
+    public void CopyInfo(Trash other)
+    {
+        this.id = other.id;
+        this.name = other.name;
+        this.is_answer = other.is_answer;
+        this.need_preprocess = other.need_preprocess;
+        this.sprite_name = other.sprite_name;
+        this.yPosition = other.yPosition;
+        this.xPosition = other.xPosition;
     }
 }
