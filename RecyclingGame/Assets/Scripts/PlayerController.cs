@@ -14,7 +14,8 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public float jump_power;
     public float slide_scale;
-    private bool is_grounded = true;
+    public int jump_count = 2;
+
 
     public enum State
     {
@@ -33,6 +34,7 @@ public class PlayerController : MonoBehaviour
 
         trashCollector = GetComponentInChildren<CircleCollider2D>();
         collectorOffset = trashCollector.offset.y;
+        
     }
 
     // Update is called once per frame
@@ -60,13 +62,15 @@ public class PlayerController : MonoBehaviour
             transform.position += Vector3.right * speed;
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
-                if(is_grounded == true)
+                if(jump_count > 0)
                 {
                     //공중 점프 막으려면 이 안으로 이동
+                    //rigidbody2D.velocity = Vector3.up * jump_power;
+                    rigidbody2D.AddForce(Vector2.up * jump_power, ForceMode2D.Impulse);
+                    jump_count -= 1;
+                    animator.SetBool("jump_bool", true);
                 }
-                rigidbody2D.velocity = Vector3.up * jump_power;
-                is_grounded = false;
-                animator.SetBool("jump_bool", true);
+                
             }
             if (Input.GetKeyUp(KeyCode.DownArrow))
             {
@@ -87,7 +91,7 @@ public class PlayerController : MonoBehaviour
     {
         if(collision.gameObject.tag == "Ground")
         {
-            is_grounded = true;
+            jump_count = 2;
             animator.SetBool("jump_bool", false);
         }
     }
@@ -96,7 +100,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ground")
         {
-            is_grounded = false;
+            
         }
     }
 
