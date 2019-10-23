@@ -2420,8 +2420,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1836525786}
-  speed: 0.3
-  jump_power: 6
+  speed: 0.4
+  jump_power: 8
   slide_scale: 1
 --- !u!1 &1870424958
 GameObject:

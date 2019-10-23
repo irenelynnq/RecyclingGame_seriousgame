@@ -7,8 +7,8 @@ public class StageDB
     //StageItem의 DB 관리
     public List<StageItem> stageList = new List<StageItem>();
     public int stageCount = 1;
-    public float starting = 10; //각각 다르면 DBInit 안으로 들어가야 함
-    public float gap = 10; //각각 다르면 DBInit 안으로 들어가야 함
+    public float starting = 20; //각각 다르면 DBInit 안으로 들어가야 함
+    public float gap = 21; //각각 다르면 DBInit 안으로 들어가야 함
 
 
     public StageItem GetStageItem(int i)

@@ -60,6 +60,10 @@ public class PlayerController : MonoBehaviour
             transform.position += Vector3.right * speed;
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
+                if(is_grounded == true)
+                {
+                    //공중 점프 막으려면 이 안으로 이동
+                }
                 rigidbody2D.velocity = Vector3.up * jump_power;
                 is_grounded = false;
                 animator.SetBool("jump_bool", true);
