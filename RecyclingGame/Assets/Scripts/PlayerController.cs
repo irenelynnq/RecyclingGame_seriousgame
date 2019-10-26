@@ -8,8 +8,9 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rigidbody2D;
     public Animator animator;
 
-    CircleCollider2D trashCollector;
+    CircleCollider2D trashCollectorArea;
     private float collectorOffset;
+    public TrashCollector trashCollector;
 
     public float speed;
     public float jump_power;
@@ -32,8 +33,9 @@ public class PlayerController : MonoBehaviour
         rigidbody2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
 
-        trashCollector = GetComponentInChildren<CircleCollider2D>();
-        collectorOffset = trashCollector.offset.y;
+        trashCollectorArea = GetComponentInChildren<CircleCollider2D>();
+        collectorOffset = trashCollectorArea.offset.y;
+        trashCollector = GetComponentInChildren<TrashCollector>();
         
     }
 
@@ -60,7 +62,7 @@ public class PlayerController : MonoBehaviour
         if(state == State.Running)
         {
             transform.position += Vector3.right * speed;
-            if (Input.GetKeyDown(KeyCode.UpArrow))
+            if (Input.GetKeyUp(KeyCode.UpArrow))
             {
                 if(jump_count > 0)
                 {
@@ -75,13 +77,13 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKeyUp(KeyCode.DownArrow))
             {
                 //stop slide
-                trashCollector.offset = new Vector2(0, collectorOffset);
+                trashCollectorArea.offset = new Vector2(0, collectorOffset);
                 //animator.SetBool("slide_bool", false);
             }
             if (Input.GetKey(KeyCode.DownArrow))
             {
                 //slide
-                trashCollector.offset = new Vector2(0, collectorOffset - slide_scale);
+                trashCollectorArea.offset = new Vector2(0, collectorOffset - slide_scale);
                 //animator.SetBool("slide_bool", true);
             }
         }
@@ -104,5 +106,10 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void PlayerClean()
+    {
+        trashCollector.collected_right.RemoveRange(0, trashCollector.collected_right.Count);
+        trashCollector.collected_wrong.RemoveRange(0, trashCollector.collected_wrong.Count);
+    }
 
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Trash : MonoBehaviour
 {
-    public int id;
+    public string id;
     public string name;
     public bool is_answer;
     public bool need_preprocess;

@@ -29,7 +29,7 @@ public class RunController : MonoBehaviour
             GameObject newTrash = Instantiate(trashPrefab);
             Trash newTrashInfo = newTrash.GetComponent<Trash>();
 
-            newTrashInfo.id = (int)data[i]["id"];
+            newTrashInfo.id = ((int)data[i]["id"]).ToString();
             newTrashInfo.name = (string)data[i]["name"];
             newTrashInfo.is_answer = (int)data[i]["is_answer"] == 0 ? false : true;
             newTrashInfo.need_preprocess = (int)data[i]["need_preprocess"] == 0 ? false : true;
@@ -76,5 +76,8 @@ public class RunController : MonoBehaviour
             Debug.Log("Init Trash " + newTrashInfo.name);
         }
 
+        
+
     }
+   
 }

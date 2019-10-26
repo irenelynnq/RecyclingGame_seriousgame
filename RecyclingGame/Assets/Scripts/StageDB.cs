@@ -51,38 +51,6 @@ public class StageDB
     {
         List<Dictionary<string, object>> data = CSVReader.Read("FileResources/"+stageTrashPosition);
 
-        /*
-        for(var i = 0; i < stage.trashCount; i++)
-        {
-            
-            Trash newTrash;
-            newTrash.id = (int)data[i]["id"];
-            newTrash.name = (string)data[i]["name"];
-            newTrash.is_answer = (int)data[i]["is_answer"] == 0 ? false : true;
-            newTrash.need_preprocess = (int)data[i]["need_preprocess"] == 0 ? false : true;
-            newTrash.sprite_name = (string)data[i]["sprite_name"];
-            newTrash.xPosition = stage.trashStartingPoint + ((float)data[i]["xPosition"] * stage.trashGap);
-            switch ((string)data[i]["yPosition"])
-            {
-                case "Up":
-                    newTrash.yPosition = TrashPosition.Up;
-                    break;
-                case "Middle":
-                    newTrash.yPosition = TrashPosition.Middle;
-                    break;
-                case "Down":
-                    newTrash.yPosition = TrashPosition.Down;
-                    break;
-                default:
-                    Debug.Log("Error reading yPosition");
-                    break;
-            }
 
-            stage.trashList.Add(newTrash);
-            if (newTrash.is_answer) stage.answerTrashList.Add(newTrash);
-            Debug.Log("DB trash " + newTrash.name);
-
-        }
-        */
     }
 }

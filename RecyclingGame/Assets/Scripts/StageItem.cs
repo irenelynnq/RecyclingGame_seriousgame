@@ -18,4 +18,5 @@ public class StageItem
     public float trashGap;
     public List<Trash> trashList = new List<Trash>();
     public List<Trash> answerTrashList = new List<Trash>();
+    public Dictionary<int, Trash> treatTrashDict = new Dictionary<int, Trash>();
 }
