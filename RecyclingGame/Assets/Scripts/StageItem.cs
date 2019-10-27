@@ -14,6 +14,9 @@ public class StageItem
     public int trashCount;
     public int answerCount;
 
+    public int treatTrashCount;
+    public int treatAnswerCount;
+
     public float trashStartingPoint;
     public float trashGap;
     public List<Trash> trashList = new List<Trash>();

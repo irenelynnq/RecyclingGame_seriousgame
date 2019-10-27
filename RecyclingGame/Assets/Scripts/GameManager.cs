@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum GameState
 {
@@ -9,10 +10,21 @@ public enum GameState
     gameOver
 }
 
+public enum GameScene
+{
+    run,
+    runresult,
+    loading,
+    treat,
+    treatresult
+}
+
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
     public GameState currentGameState = GameState.menu;
+    public GameScene currentGameScene = GameScene.run;
+    public int currentLevel;
 
     void Awake()
     {
@@ -47,17 +59,18 @@ public class GameManager : MonoBehaviour
         player = GameObject.Find("Player");
         runController = run.GetComponent<RunController>();
         playerController = player.GetComponent<PlayerController>();
+        currentLevel = 1;
+
+        MakeRunStage();
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            //making stage
-            MakeRunStage(1);
-        }
+        
+        
     }
 
+    /*
     public void StartGame()
     {
 
@@ -70,18 +83,18 @@ public class GameManager : MonoBehaviour
     {
 
     }
+    */
     public void SetGameState(GameState newGameState)
     {
         currentGameState = newGameState;
     }
 
 
-    public void MakeRunStage(int level)
+    public void MakeRunStage()
     {
-        runController.InitRunStage(level, db.GetStageItem(level));
-        //db.StageInit(db.GetStageItem(level), "TrashPosition_" + level.ToString());
+        runController.InitRunStage(currentLevel, db.GetStageItem(currentLevel));
 
-        playerController.PlayerClean();
+        //playerController.PlayerClean();
     }
 
     public void GetRunResult(List<Trash> right, List<Trash> wrong)
@@ -97,5 +110,24 @@ public class GameManager : MonoBehaviour
         {
             trashes_wrong.Add(wrong[i]);
         }
+        
+    }
+
+    public void TurnToTreatStage()
+    {
+        SceneManager.LoadScene("TreatScene");
+        //MakeTreatStage();
+    }
+
+    public void MakeTreatStage()
+    {
+        TreatController.instance.InitTreatStage(currentLevel, db.GetStageItem(currentLevel));
+    }
+
+    public void LevelUp()
+    {
+        currentLevel += 1;
+        SceneManager.LoadScene("RunScene");
+        MakeRunStage();
     }
 }

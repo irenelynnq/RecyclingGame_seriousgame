@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
 
     CircleCollider2D trashCollectorArea;
     private float collectorOffset;
+    public GameObject tc;
     public TrashCollector trashCollector;
 
     public float speed;
@@ -35,7 +36,8 @@ public class PlayerController : MonoBehaviour
 
         trashCollectorArea = GetComponentInChildren<CircleCollider2D>();
         collectorOffset = trashCollectorArea.offset.y;
-        trashCollector = GetComponentInChildren<TrashCollector>();
+        trashCollector = tc.GetComponent<TrashCollector>();
+        //trashCollector = GetComponentInChildren<TrashCollector>();
         
     }
 
@@ -108,8 +110,9 @@ public class PlayerController : MonoBehaviour
 
     public void PlayerClean()
     {
-        trashCollector.collected_right.RemoveRange(0, trashCollector.collected_right.Count);
-        trashCollector.collected_wrong.RemoveRange(0, trashCollector.collected_wrong.Count);
+        if (trashCollector.collected_right.Count != 0) trashCollector.collected_right.RemoveRange(0, trashCollector.collected_right.Count);
+        if (trashCollector.collected_wrong.Count != 0) trashCollector.collected_wrong.RemoveRange(0, trashCollector.collected_wrong.Count);
+
     }
 
 }

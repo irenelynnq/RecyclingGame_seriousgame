@@ -13,6 +13,9 @@ public class Trash : MonoBehaviour
     public TrashPosition yPosition;
     public float xPosition;
 
+    public int hitcount;
+    public bool treatDone;
+
     //플레이어와 충돌시 게임화면에서 사라집니다
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -22,6 +25,22 @@ public class Trash : MonoBehaviour
             if (is_answer == true) collision.gameObject.GetComponent<TrashCollector>().collected_right.Add(this);
             else collision.gameObject.GetComponent<TrashCollector>().collected_wrong.Add(this);
         }
+    }
+
+    public int GotHit()
+    {
+        hitcount = Mathf.Min(hitcount + 1, 10);
+        return hitcount;
+    }
+    public bool IsTreatDone()
+    {
+        hitcount = Mathf.Min(hitcount + 1, 10);
+        if (hitcount == 10 && need_preprocess && !treatDone)
+        {
+            treatDone = true;
+            return true;
+        }
+        else return false;
     }
 
     public void CopyInfo(Trash other)
@@ -34,4 +53,5 @@ public class Trash : MonoBehaviour
         this.yPosition = other.yPosition;
         this.xPosition = other.xPosition;
     }
+
 }

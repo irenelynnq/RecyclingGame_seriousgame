@@ -4,9 +4,21 @@ using UnityEngine;
 
 public class RunController : MonoBehaviour
 {
-    
+    public static RunController instance = null;
     public GameObject trashPrefab;
     //Run Map의 전반적인 게임을 관리합니다.
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
+        DontDestroyOnLoad(gameObject);
+    }
     // Start is called before the first frame update
     void Start()
     {

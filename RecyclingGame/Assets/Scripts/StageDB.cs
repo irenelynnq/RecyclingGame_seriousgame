@@ -39,6 +39,8 @@ public class StageDB
             newStage.is_passed = false;
             newStage.trashCount = trashCount;
             newStage.answerCount = answerCount;
+            newStage.treatTrashCount = 10;
+            newStage.treatAnswerCount = 6;
             newStage.trashStartingPoint = starting;
             newStage.trashGap = gap;
             Debug.Log("stage 1 setting");
