@@ -29,13 +29,13 @@ public class Trash : MonoBehaviour
 
     public int GotHit()
     {
-        hitcount = Mathf.Min(hitcount + 1, 10);
+        hitcount = Mathf.Min(hitcount + 1, 20);
         return hitcount;
     }
     public bool IsTreatDone()
     {
-        hitcount = Mathf.Min(hitcount + 1, 10);
-        if (hitcount == 10 && need_preprocess && !treatDone)
+        hitcount = Mathf.Min(hitcount + 1, 20);
+        if (hitcount == 20 && need_preprocess && !treatDone)
         {
             treatDone = true;
             return true;
@@ -45,13 +45,13 @@ public class Trash : MonoBehaviour
 
     public void CopyInfo(Trash other)
     {
-        this.id = other.id;
-        this.name = other.name;
-        this.is_answer = other.is_answer;
-        this.need_preprocess = other.need_preprocess;
-        this.sprite_name = other.sprite_name;
-        this.yPosition = other.yPosition;
-        this.xPosition = other.xPosition;
+        id = other.id;
+        name = other.name;
+        is_answer = other.is_answer;
+        need_preprocess = other.need_preprocess;
+        sprite_name = other.sprite_name;
+        yPosition = other.yPosition;
+        xPosition = other.xPosition;
     }
 
 }

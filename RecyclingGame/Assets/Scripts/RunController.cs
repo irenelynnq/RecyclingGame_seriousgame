@@ -1,11 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RunController : MonoBehaviour
 {
     public static RunController instance = null;
     public GameObject trashPrefab;
+
+    public GameObject description;
+    public Camera mainCam;
+   
+
     //Run Map의 전반적인 게임을 관리합니다.
     void Awake()
     {
@@ -22,13 +28,24 @@ public class RunController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        mainCam.transform.position = new Vector3(0, 0, 0);
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.S) && SceneManager.GetActiveScene().name == "RunScene")
+        {
+            //임시 start/pause key
+            if (GameManager.instance.playerController.state == State.Idle)
+            {
+                GameManager.instance.playerController.ChangeState(State.Running);
+                GameManager.instance.playerController.animator.SetBool("run_bool", true);
+            }
+            description.SetActive(false);
+
+        }
     }
 
     public void InitRunStage(int level, StageItem stage)

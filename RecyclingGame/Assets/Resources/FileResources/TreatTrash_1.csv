@@ -1,11 +1,11 @@
-id,name,need_preprocess,sprite_name,position_number
-1,±úÁø¼ÒÁÖº´,1,BrokenSoju,1
-2,½ÄÄ®,1,Knife,2
-3,´Ş°¿²®µ¥±â,0,EggShell,3
-4,±úÁø¼ÒÁÖº´,1,BrokenSoju,4
-5,»ı¼±»À,0,FishBone,5
-6,´Ş°¿²®µ¥±â,0,EggShell,6
-7,±úÁø¼ÒÁÖº´,1,BrokenSoju,7
-8,³°Àº¼Ó¿Ê,0,OldUnderwear,8
-9,½ÄÄ®,1,Knife,9
-10,±úÁøÇü±¤µî,1,BrokenLight,10
+ï»¿id,name,need_preprocess,sprite_name,position_number
+1,ê¹¨ì§„ì†Œì£¼ë³‘,1,BrokenSoju,1
+2,ì‹ì¹¼,1,Knife,2
+3,ë‹¬ê±€ê»ë°ê¸°,0,EggShell,3
+4,ê¹¨ì§„ì†Œì£¼ë³‘,1,BrokenSoju,4
+5,ìƒì„ ë¼ˆ,0,FishBone,5
+6,ë‹¬ê±€ê»ë°ê¸°,0,EggShell,6
+7,ê¹¨ì§„ì†Œì£¼ë³‘,1,BrokenSoju,7
+8,ë‚¡ì€ì†ì˜·,0,OldUnderwear,8
+9,ì‹ì¹¼,1,Knife,9
+10,ê¹¨ì§„í˜•ê´‘ë“±,1,BrokenLight,10

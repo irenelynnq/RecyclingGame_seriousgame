@@ -47,8 +47,10 @@ public class GameManager : MonoBehaviour
     public RunController runController;
     public PlayerController playerController;
 
-    public List<Trash> trashes_right = new List<Trash>();
-    public List<Trash> trashes_wrong = new List<Trash>();
+    public List<string> trashes_right = new List<string>();
+    public List<string> trashes_wrong = new List<string>();
+
+    public int treatedCount;
 
     // Start is called before the first frame update
     void Start()
@@ -104,11 +106,11 @@ public class GameManager : MonoBehaviour
         int i;
         for(i = 0; i < right.Count; i++)
         {
-            trashes_right.Add(right[i]);
+            trashes_right.Add(right[i].name);
         }
         for(i = 0; i < wrong.Count; i++)
         {
-            trashes_wrong.Add(wrong[i]);
+            trashes_wrong.Add(wrong[i].name);
         }
         
     }

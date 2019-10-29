@@ -9,10 +9,23 @@ public class RunScoring : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        List<string> tempwrong = GameManager.instance.trashes_wrong;
+        HashSet<string> wrong = new HashSet<string>();
+        for (int i = 0; i < tempwrong.Count; i++)
+        {
+            wrong.Add(tempwrong[i]);
+        }
 
         GetComponent<TextMeshProUGUI>().text =
-            "Right Trash : " + GameManager.instance.playerController.trashCollector.collected_right.Count + "\n" +
-            "Wrong Trash : " + GameManager.instance.playerController.trashCollector.collected_wrong.Count;
+            "모은 일반쓰레기 : " + GameManager.instance.trashes_right.Count + " / "
+            + GameManager.instance.db.GetStageItem(GameManager.instance.currentLevel).answerCount.ToString() + "\n" +
+            "잘못 가져온 쓰레기 : ";
+       foreach(var val in wrong)
+        {
+            GetComponent<TextMeshProUGUI>().text += val + ", ";
+        }
+
+        GetComponent<TextMeshProUGUI>().text.TrimEnd(' ', ',');
     }
 
     // Update is called once per frame

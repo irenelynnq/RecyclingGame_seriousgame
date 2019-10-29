@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+
 
 public class TreatController : MonoBehaviour
 {
@@ -9,9 +12,14 @@ public class TreatController : MonoBehaviour
     public GameObject trashPrefab;
     public GameObject tempCoinPrefab;
 
+    
+    
+
     public Dictionary<int, Vector3> treatPosition;
     public StageItem currentStage;
     public int playerAnswerCount;
+
+    Sprite doneTrashSprite; 
 
     void Awake()
     {
@@ -31,12 +39,14 @@ public class TreatController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        doneTrashSprite = Resources.Load<Sprite>("Art/Trash/Trash_Wrap");
         
     }
 
     // Update is called once per frame
     void Update()
     {
+        
 
     }
 
@@ -93,18 +103,25 @@ public class TreatController : MonoBehaviour
         Debug.Log("finished initdict");
     }
 
+
     public void GotAnswer(int i)
     {
         //i 위치에 있는 쓰레기 정답 표시...
+
+        /*
         GameObject newCoin = Instantiate(tempCoinPrefab);
         newCoin.transform.position = treatPosition[i];
+        */
+        currentStage.treatTrashDict[i].GetComponentInParent<SpriteRenderer>().sprite = doneTrashSprite;
         playerAnswerCount++;
         Debug.Log("Answer!");
         if (playerAnswerCount == currentStage.treatAnswerCount) AllAnswerClear();
+        
     }
 
     public void AllAnswerClear()
     {
         Debug.Log("Finish!");
+
     }
 }
