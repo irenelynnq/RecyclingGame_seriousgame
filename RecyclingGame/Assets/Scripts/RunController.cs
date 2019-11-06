@@ -91,10 +91,10 @@ public class RunController : MonoBehaviour
             switch (newTrashInfo.yPosition)
             {
                 case TrashPosition.Up:
-                    y = 1.76f;
+                    y = 2.08f;
                     break;
                 case TrashPosition.Middle:
-                    y = 0.16f;
+                    y = 0.32f;
                     break;
                 case TrashPosition.Down:
                     y = -1.44f;

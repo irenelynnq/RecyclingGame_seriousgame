@@ -29,13 +29,13 @@ public class Trash : MonoBehaviour
 
     public int GotHit()
     {
-        hitcount = Mathf.Min(hitcount + 1, 20);
+        hitcount = Mathf.Min(hitcount + 1, 15);
         return hitcount;
     }
     public bool IsTreatDone()
     {
-        hitcount = Mathf.Min(hitcount + 1, 20);
-        if (hitcount == 20 && need_preprocess && !treatDone)
+        hitcount = Mathf.Min(hitcount + 1, 15);
+        if (hitcount == 15 && need_preprocess && !treatDone)
         {
             treatDone = true;
             return true;

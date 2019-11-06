@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
         if(state == State.Running)
         {
             transform.position += Vector3.right * speed;
-            if (Input.GetKeyUp(KeyCode.UpArrow))
+            if (Input.GetKeyDown(KeyCode.UpArrow))
             {
                 if(jump_count > 0)
                 {
