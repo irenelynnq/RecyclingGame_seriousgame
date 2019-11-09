@@ -8,7 +8,6 @@ public class RunController : MonoBehaviour
     public static RunController instance = null;
     public GameObject trashPrefab;
 
-    public GameObject description;
     public Camera mainCam;
    
 
@@ -35,17 +34,7 @@ public class RunController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.S) && SceneManager.GetActiveScene().name == "RunScene")
-        {
-            //임시 start/pause key
-            if (GameManager.instance.playerController.state == State.Idle)
-            {
-                GameManager.instance.playerController.ChangeState(State.Running);
-                GameManager.instance.playerController.animator.SetBool("run_bool", true);
-            }
-            description.SetActive(false);
-
-        }
+        
     }
 
     public void InitRunStage(int level, StageItem stage)

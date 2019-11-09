@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum State
 {
@@ -17,6 +18,7 @@ public class PlayerController : MonoBehaviour
     private float collectorOffset;
     public GameObject tc;
     public TrashCollector trashCollector;
+    public GameObject runUIController;
 
     public float speed;
     public float jump_power;
@@ -38,16 +40,24 @@ public class PlayerController : MonoBehaviour
         trashCollectorArea = GetComponentInChildren<CircleCollider2D>();
         collectorOffset = trashCollectorArea.offset.y;
         trashCollector = tc.GetComponent<TrashCollector>();
-        //trashCollector = GetComponentInChildren<TrashCollector>();
+        trashCollector.runUI = runUIController.GetComponent<RunUI>();
         
     }
 
     // Update is called once per frame
     void Update()
     {
-       
+        if (Input.GetKeyDown(KeyCode.S) && SceneManager.GetActiveScene().name == "RunScene")
+        {
+            //임시 start/pause key
+            if (state == State.Idle)
+            {
+                ChangeState(State.Running);
+                animator.SetBool("run_bool", true);
+            }
+        }
 
-        if(state == State.Running)
+        if (state == State.Running)
         {
             transform.position += Vector3.right * speed;
             if (Input.GetKeyDown(KeyCode.UpArrow))

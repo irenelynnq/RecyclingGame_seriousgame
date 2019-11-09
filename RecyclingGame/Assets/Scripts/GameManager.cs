@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour
     public GameState currentGameState = GameState.menu;
     public GameScene currentGameScene = GameScene.run;
     public int currentLevel;
+    public int life;
+    public int score;
 
     void Awake()
     {
@@ -42,7 +44,6 @@ public class GameManager : MonoBehaviour
     public StageDB db;
 
     public GameObject run;
-    public GameObject player;
 
     public RunController runController;
     public PlayerController playerController;
@@ -58,12 +59,11 @@ public class GameManager : MonoBehaviour
         db = new StageDB();
         db.DBInit();
         run = GameObject.Find("RunController");
-        player = GameObject.Find("Player");
         runController = run.GetComponent<RunController>();
-        playerController = player.GetComponent<PlayerController>();
-        currentLevel = 1;
 
-        MakeRunStage();
+        StartGame();
+
+        
     }
 
     void Update()
@@ -72,20 +72,26 @@ public class GameManager : MonoBehaviour
         
     }
 
-    /*
+    
     public void StartGame()
     {
-
+        currentLevel = 1;
+        life = 3;
+        score = 0;
+        MakeRunStage();
     }
-    public void GameOver()
-    {
-
-    }
+    
     public void BackToMenu()
     {
 
     }
-    */
+    
+
+    public void GameOver()
+    {
+        SceneManager.LoadScene("GameOverScene");
+    }
+
     public void SetGameState(GameState newGameState)
     {
         currentGameState = newGameState;
@@ -95,8 +101,6 @@ public class GameManager : MonoBehaviour
     public void MakeRunStage()
     {
         runController.InitRunStage(currentLevel, db.GetStageItem(currentLevel));
-
-        //playerController.PlayerClean();
     }
 
     public void GetRunResult(List<Trash> right, List<Trash> wrong)

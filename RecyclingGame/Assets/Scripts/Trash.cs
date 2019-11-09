@@ -23,7 +23,11 @@ public class Trash : MonoBehaviour
         {
             gameObject.SetActive(false);
             if (is_answer == true) collision.gameObject.GetComponent<TrashCollector>().collected_right.Add(this);
-            else collision.gameObject.GetComponent<TrashCollector>().collected_wrong.Add(this);
+            else
+            {
+                collision.gameObject.GetComponent<TrashCollector>().collected_wrong.Add(this);
+                collision.gameObject.GetComponent<TrashCollector>().GotWrong();
+            }
         }
     }
 
