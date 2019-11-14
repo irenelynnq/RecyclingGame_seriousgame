@@ -104,6 +104,33 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void Flicker()
+    {
+        StartCoroutine("FlickerEffect");
+    }
+
+    IEnumerator FlickerEffect()
+    {
+        int countTime = 0;
+
+        while (countTime < 7)
+        {
+            if (countTime % 2 == 0)
+                spriteRenderer.color = new Color32(255, 255, 255, 90);
+            else
+                spriteRenderer.color = new Color32(255, 255, 255, 180);
+
+            //wait update frame
+            yield return new WaitForSeconds(0.1f);
+
+            countTime++;
+        }
+
+        spriteRenderer.color = new Color32(255, 255, 255, 255);
+
+        yield return null;
+    }
+
     public void PlayerClean()
     {
         if (trashCollector.collected_right.Count != 0) trashCollector.collected_right.RemoveRange(0, trashCollector.collected_right.Count);

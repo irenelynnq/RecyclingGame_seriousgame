@@ -100,7 +100,7 @@ public class GameManager : MonoBehaviour
 
     public void MakeRunStage()
     {
-        runController.InitRunStage(currentLevel, db.GetStageItem(currentLevel));
+        SceneManager.LoadScene("RunScene");
     }
 
     public void GetRunResult(List<Trash> right, List<Trash> wrong)
@@ -119,21 +119,16 @@ public class GameManager : MonoBehaviour
         
     }
 
-    public void TurnToTreatStage()
-    {
-        SceneManager.LoadScene("TreatScene");
-        //MakeTreatStage();
-    }
 
     public void MakeTreatStage()
     {
-        TreatController.instance.InitTreatStage(currentLevel, db.GetStageItem(currentLevel));
+        SceneManager.LoadScene("TreatScene");
+        //TreatController.instance.InitTreatStage(currentLevel, db.GetStageItem(currentLevel));
     }
 
     public void LevelUp()
     {
         currentLevel += 1;
-        SceneManager.LoadScene("RunScene");
         MakeRunStage();
     }
 }

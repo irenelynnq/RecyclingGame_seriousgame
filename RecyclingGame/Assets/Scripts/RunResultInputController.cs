@@ -17,7 +17,7 @@ public class RunResultInputController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.C))
         {
             Debug.Log("loading treat scene");
-            GameManager.instance.TurnToTreatStage();
+            GameManager.instance.MakeTreatStage();
         }
     }
 }

@@ -37,7 +37,6 @@ public class TreatInputController : MonoBehaviour
         {
             description.SetActive(false);
             currentTreatState = TreatState.treating;
-            GameManager.instance.MakeTreatStage();
             selectBox.SetActive(true);
             timer.SetTimerState(TimerState.counting);
         }
