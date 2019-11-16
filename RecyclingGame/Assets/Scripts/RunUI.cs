@@ -2,16 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class RunUI : MonoBehaviour
 {
-    public GameObject stageTitle;
+    public GameObject stageName;
     public GameObject lifeCount;
+    public List<GameObject> lifeHearts;
     // Start is called before the first frame update
     void Start()
     {
-        stageTitle.GetComponent<TextMeshProUGUI>().text = GameManager.instance.db.stageList[GameManager.instance.currentLevel-1].name;
+        stageName.GetComponent<Image>().sprite = Resources.Load<Sprite>("Art/UI/" + "UIStageName_" + GameManager.instance.currentLevel.ToString());
         lifeCount.GetComponent<TextMeshProUGUI>().text = "X " + GameManager.instance.life.ToString();
+        UpdateLife();
+
     }
 
     // Update is called once per frame
@@ -23,5 +27,14 @@ public class RunUI : MonoBehaviour
     public void UpdateLife()
     {
         lifeCount.GetComponent<TextMeshProUGUI>().text = "X " + GameManager.instance.life.ToString();
+        int i;
+        for(i=0; i<5; i++)
+        {
+            lifeHearts[i].SetActive(false);
+        }
+        for(i=0; i<GameManager.instance.life; i++)
+        {
+            lifeHearts[i].SetActive(true);
+        }
     }
 }
