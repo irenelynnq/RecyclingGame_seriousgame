@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     public GameObject tc;
     public TrashCollector trashCollector;
     public GameObject runUIController;
+    RunUI runUI;
 
     public float speed;
     public float jump_power;
@@ -40,8 +41,8 @@ public class PlayerController : MonoBehaviour
         trashCollectorArea = GetComponentInChildren<CircleCollider2D>();
         collectorOffset = trashCollectorArea.offset.y;
         trashCollector = tc.GetComponent<TrashCollector>();
-        trashCollector.runUI = runUIController.GetComponent<RunUI>();
-        
+        runUI = runUIController.GetComponent<RunUI>();
+        trashCollector.runUI = runUI;
     }
 
     // Update is called once per frame
@@ -84,6 +85,7 @@ public class PlayerController : MonoBehaviour
                 trashCollectorArea.offset = new Vector2(0, collectorOffset - slide_scale);
                 animator.SetBool("slide_bool", true);
             }
+            runUI.playerPosition = transform.position.x;
         }
     }
 
