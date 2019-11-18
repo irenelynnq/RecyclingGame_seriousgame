@@ -16,9 +16,8 @@ public class FinishPoint : MonoBehaviour
         GameObject obj = collision.gameObject;
         if(collision.gameObject.tag == "Player")
         {
-            GameManager.instance.GetRunResult(obj.GetComponentInChildren<TrashCollector>().collected_right, obj.GetComponentInChildren<TrashCollector>().collected_wrong);
+            RunController.instance.GetRunResult(obj.GetComponentInChildren<TrashCollector>().collected_right, obj.GetComponentInChildren<TrashCollector>().collected_wrong);
             SceneManager.LoadScene("RunResultScene");
-            //gamemanger가 player한테 긁어와야 하나???
         }
     }
 }

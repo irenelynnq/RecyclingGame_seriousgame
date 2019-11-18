@@ -48,10 +48,9 @@ public class GameManager : MonoBehaviour
     public RunController runController;
     public PlayerController playerController;
 
-    public List<string> trashes_right = new List<string>();
-    public List<string> trashes_wrong = new List<string>();
+    
 
-    public int treatedCount;
+
 
     // Start is called before the first frame update
     void Start()
@@ -103,27 +102,12 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("RunScene");
     }
 
-    public void GetRunResult(List<Trash> right, List<Trash> wrong)
-    {
-        if (trashes_right.Count != 0) trashes_right.RemoveRange(0, trashes_right.Count);
-        if (trashes_wrong.Count != 0) trashes_wrong.RemoveRange(0, trashes_wrong.Count);
-        int i;
-        for(i = 0; i < right.Count; i++)
-        {
-            trashes_right.Add(right[i].name);
-        }
-        for(i = 0; i < wrong.Count; i++)
-        {
-            trashes_wrong.Add(wrong[i].name);
-        }
-        
-    }
+    
 
 
     public void MakeTreatStage()
     {
         SceneManager.LoadScene("TreatScene");
-        //TreatController.instance.InitTreatStage(currentLevel, db.GetStageItem(currentLevel));
     }
 
     public void LevelUp()

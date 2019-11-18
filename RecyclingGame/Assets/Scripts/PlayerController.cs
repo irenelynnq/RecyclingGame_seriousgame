@@ -133,11 +133,6 @@ public class PlayerController : MonoBehaviour
         yield return null;
     }
 
-    public void PlayerClean()
-    {
-        if (trashCollector.collected_right.Count != 0) trashCollector.collected_right.RemoveRange(0, trashCollector.collected_right.Count);
-        if (trashCollector.collected_wrong.Count != 0) trashCollector.collected_wrong.RemoveRange(0, trashCollector.collected_wrong.Count);
-
-    }
+    
 
 }

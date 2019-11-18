@@ -18,10 +18,21 @@ public class RunScoring : MonoBehaviour
         }
         */
 
-        GetComponent<TextMeshProUGUI>().text =
-            "모은 일반쓰레기 : " + GameManager.instance.trashes_right.Count + " / "
-            + GameManager.instance.db.GetStageItem(GameManager.instance.currentLevel).answerCount.ToString() + "\n";
+        int currentLevel = GameManager.instance.currentLevel;
+        int rightCount = RunController.instance.trashes_right.Count;
 
+        GetComponent<TextMeshProUGUI>().text =
+            "모은 일반쓰레기 : " + rightCount + " / "
+            + GameManager.instance.db.GetStageItem(currentLevel).answerCount.ToString() + "\n";
+
+        if(rightCount < GameManager.instance.db.GetStageItem(currentLevel).pass_criteria) 
+        {
+            GetComponent<TextMeshProUGUI>().text += "쓰레기를 덜 주웠습니다. 다시 플레이해야 합니다.";
+        }
+        else
+        {
+            RunController.instance.PassRunStage();
+        }
 
         /*
        foreach(var val in wrong)

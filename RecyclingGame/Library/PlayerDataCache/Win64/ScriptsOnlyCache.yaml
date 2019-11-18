@@ -7,10 +7,12 @@ ScriptsOnlyBuild:
     - Cinemachine.CinemachineVirtualCamera
     - FinishPoint
     - GameManager
+    - GameOverInputController
     - PlayerController
     - RunController
     - RunResultInputController
     - RunScoring
+    - RunStageMaker
     - RunUI
     - Timer
     - Trash
@@ -18,6 +20,7 @@ ScriptsOnlyBuild:
     - TreatController
     - TreatInputController
     - TreatScoring
+    - TreatStageMaker
     Unity.TextMeshPro.dll:
     - TMPro.TMP_FontAsset
     - TMPro.TMP_Settings
@@ -38,6 +41,7 @@ ScriptsOnlyBuild:
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.Image
   sceneClasses:
     Assets/Scenes/GameOverScene.unity:
     - Class: 1
@@ -69,7 +73,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10192}
     - Class: 114
-      Script: {instanceID: 10344}
+      Script: {instanceID: 10348}
+    - Class: 114
+      Script: {instanceID: 10470}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -116,7 +122,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10210}
     - Class: 114
-      Script: {instanceID: 10344}
+      Script: {instanceID: 10348}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -173,6 +179,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9432}
     - Class: 114
+      Script: {instanceID: 9440}
+    - Class: 114
       Script: {instanceID: 9476}
     - Class: 114
       Script: {instanceID: 9662}
@@ -197,17 +205,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10264}
     - Class: 114
-      Script: {instanceID: 10342}
-    - Class: 114
       Script: {instanceID: 10344}
     - Class: 114
-      Script: {instanceID: 10570}
+      Script: {instanceID: 10346}
     - Class: 114
-      Script: {instanceID: 10658}
+      Script: {instanceID: 10348}
     - Class: 114
-      Script: {instanceID: 10670}
+      Script: {instanceID: 10576}
     - Class: 114
-      Script: {instanceID: 10680}
+      Script: {instanceID: 10664}
+    - Class: 114
+      Script: {instanceID: 10676}
+    - Class: 114
+      Script: {instanceID: 10686}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -266,7 +276,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10210}
     - Class: 114
-      Script: {instanceID: 10344}
+      Script: {instanceID: 10348}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -309,11 +319,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10192}
     - Class: 114
-      Script: {instanceID: 10344}
+      Script: {instanceID: 10274}
     - Class: 114
-      Script: {instanceID: 10640}
+      Script: {instanceID: 10348}
     - Class: 114
-      Script: {instanceID: 10720}
+      Script: {instanceID: 10646}
+    - Class: 114
+      Script: {instanceID: 10726}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -333,7 +345,7 @@ ScriptsOnlyBuild:
   scriptHashData:
   - hash:
       serializedVersion: 2
-      Hash: 8857a4e698c71c5f5d69101769c8e525
+      Hash: 972cc8301a4e44128008e1b69e2e1179
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: TrashCollector
@@ -789,7 +801,7 @@ ScriptsOnlyBuild:
     className: SignalAsset
   - hash:
       serializedVersion: 2
-      Hash: d076e8ad9f996dfe83f9f7afe7824087
+      Hash: 61e67a044ecc873b131c8b39002b570f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: RunController
@@ -807,7 +819,7 @@ ScriptsOnlyBuild:
     className: TreatScoring
   - hash:
       serializedVersion: 2
-      Hash: 8f009df0038f2d967836da8aef44da95
+      Hash: f8e592c6d51323f341c186a11bac45a7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -1095,6 +1107,12 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TreatStageMaker
+  - hash:
+      serializedVersion: 2
       Hash: 1cc71a08bece2af5ba7ae4660fb393f1
     assemblyName: Assembly-CSharp.dll
     namespaceName: Cinemachine
@@ -1107,10 +1125,16 @@ ScriptsOnlyBuild:
     className: CinemachineBlenderSettings
   - hash:
       serializedVersion: 2
-      Hash: 827a7efdbec09cda37315962a1a2f9f6
+      Hash: dd7bbc3c2204eb15f0e9de78ac5f19a2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: RunUI
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RunStageMaker
   - hash:
       serializedVersion: 2
       Hash: ee0cef6caaac8ae485bfa82f000f0f7b
@@ -1141,6 +1165,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: Cinemachine
     className: CinemachineHardLookAt
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameOverInputController
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -1238,4 +1268,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/TreatScene.unity
   - Assets/Scenes/TreatResultScene.unity
   - Assets/Scenes/GameOverScene.unity
-  playerPath: "D:/\uD61C\uB9B0\uC790\uB8CC/GitHub/RecyclingGame_seriousgame/RecyclingGame/Build/v1.1_x86_64/RecyclingGame.exe"
+  playerPath: "D:/\uD61C\uB9B0\uC790\uB8CC/GitHub/RecyclingGame_seriousgame/RecyclingGame/Build/v1.2_x86_64/RecyclingGame.exe"

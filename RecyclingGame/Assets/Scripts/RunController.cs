@@ -8,6 +8,10 @@ public class RunController : MonoBehaviour
     public static RunController instance = null;
     public GameObject trashPrefab;
 
+    public List<string> trashes_right = new List<string>();
+    public List<string> trashes_wrong = new List<string>();
+    private bool runPass;
+
     public Camera mainCam;
    
 
@@ -28,7 +32,7 @@ public class RunController : MonoBehaviour
     void Start()
     {
         mainCam.transform.position = new Vector3(0, 0, 0);
-        
+        runPass = false;
     }
 
     // Update is called once per frame
@@ -37,8 +41,35 @@ public class RunController : MonoBehaviour
         
     }
 
+    public void GetRunResult(List<Trash> right, List<Trash> wrong)
+    {
+        int i;
+        for (i = 0; i < right.Count; i++)
+        {
+            trashes_right.Add(right[i].name);
+        }
+        for (i = 0; i < wrong.Count; i++)
+        {
+            trashes_wrong.Add(wrong[i].name);
+        }
+
+    }
+
+    public void PassRunStage()
+    {
+        runPass = true;
+    }
+
+    public bool DidPassRunStage()
+    {
+        return runPass;
+    }
+
     public void InitRunStage(int level, StageItem stage)
     {
+        runPass = false;
+        trashes_right = new List<string>();
+        trashes_wrong = new List<string>();
         List<Dictionary<string, object>> data = CSVReader.Read("FileResources/" + "TrashPosition_" + level.ToString());
 
         //StageItem으로 stage initialize

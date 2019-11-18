@@ -16,8 +16,15 @@ public class RunResultInputController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.C))
         {
-            Debug.Log("loading treat scene");
-            GameManager.instance.MakeTreatStage();
+            if (RunController.instance.DidPassRunStage())
+            {
+                GameManager.instance.MakeTreatStage();
+            }
+            else
+            {
+                //fail runstage
+                GameManager.instance.MakeRunStage();
+            }
         }
     }
 }

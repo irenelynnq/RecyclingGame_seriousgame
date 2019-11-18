@@ -16,8 +16,7 @@ public class GameOverInputController : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.R))
         {
-            GameManager.instance.life = 3;
-            SceneManager.LoadScene("RunScene");
+            GameManager.instance.StartGame();
         }
         
     }
