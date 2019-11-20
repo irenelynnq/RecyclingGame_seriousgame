@@ -14,6 +14,8 @@ public class RunUI : MonoBehaviour
     public GameObject mapDevil;
     public GameObject finishPoint;
 
+    public GameObject countDown;
+
     public GameObject trashDictionary;
     public GameObject keyTutorial;
 

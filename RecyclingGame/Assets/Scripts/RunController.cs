@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class RunController : MonoBehaviour
 {
@@ -51,12 +52,8 @@ public class RunController : MonoBehaviour
             else if (runUI.trashDictionary.activeSelf == true)
             {
                 runUI.ShowDictionary(false);
+                StartCountDownDisplay(4);
                 
-                if (playerController.state == PlayerState.Idle)
-                {
-                    playerController.ChangeState(PlayerState.Running);
-                    playerController.animator.SetBool("run_bool", true);
-                }
             }
         }
     }
@@ -83,6 +80,54 @@ public class RunController : MonoBehaviour
             trashes_wrong.Add(wrong[i].name);
         }
 
+    }
+
+    public void StartCountDownDisplay(int seconds)
+    {
+        StartCoroutine(CountDownDisplay(seconds));
+    }
+
+    IEnumerator CountDownDisplay(int seconds)
+    {
+        int count = seconds;
+        while (count > 0)
+        {
+            if(count == 1) runUI.countDown.GetComponent<TextMeshProUGUI>().text = "START!";
+            else runUI.countDown.GetComponent<TextMeshProUGUI>().text = (count-1).ToString();
+            yield return new WaitForSeconds(1);
+            count--;
+        }
+
+        StartRunning();
+        runUI.countDown.SetActive(false);
+        //StartCountDownDisappear(2);
+
+    }
+
+    public void StartCountDownDisappear(int seconds)
+    {
+        StartCoroutine(CountDownDisappear(seconds));
+    }
+
+    IEnumerator CountDownDisappear(int seconds)
+    {
+        int count = seconds;
+        while (count > 0)
+        {
+            yield return new WaitForSeconds(1);
+            count--;
+        }
+        runUI.countDown.SetActive(false);
+    }
+
+
+    void StartRunning()
+    {
+        if (playerController.state == PlayerState.Idle)
+        {
+            playerController.ChangeState(PlayerState.Running);
+            playerController.animator.SetBool("run_bool", true);
+        }
     }
 
     public void PassRunStage()
