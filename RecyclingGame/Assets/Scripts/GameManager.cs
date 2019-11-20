@@ -43,22 +43,12 @@ public class GameManager : MonoBehaviour
     
     public StageDB db;
 
-    public GameObject run;
-
-    public RunController runController;
-    public PlayerController playerController;
-
-    
-
-
 
     // Start is called before the first frame update
     void Start()
     {
         db = new StageDB();
         db.DBInit();
-        run = GameObject.Find("RunController");
-        runController = run.GetComponent<RunController>();
 
         StartGame();
 

@@ -14,6 +14,9 @@ public class RunUI : MonoBehaviour
     public GameObject mapDevil;
     public GameObject finishPoint;
 
+    public GameObject trashDictionary;
+    public GameObject keyTutorial;
+
     public float playerPosition;
     private float mapStart;
     private float mapY;
@@ -26,6 +29,12 @@ public class RunUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        trashDictionary.GetComponent<Image>().sprite = Resources.Load<Sprite>("Art/Scroll/" + "TrashDictionary" + GameManager.instance.currentLevel.ToString());
+        ShowDictionary(false);
+        ShowKeyTutorial(false);
+
+        ShowScroll();
+
         stageName.GetComponent<Image>().sprite = Resources.Load<Sprite>("Art/UI/" + "UIStageName_" + GameManager.instance.currentLevel.ToString());
         lifeCount.GetComponent<TextMeshProUGUI>().text = "X " + GameManager.instance.life.ToString();
         UpdateLife();
@@ -59,5 +68,24 @@ public class RunUI : MonoBehaviour
         {
             lifeHearts[i].SetActive(true);
         }
+    }
+
+    public void ShowDictionary(bool state)
+    {
+        trashDictionary.SetActive(state);
+    }
+
+    public void ShowKeyTutorial(bool state)
+    {
+        keyTutorial.SetActive(state);
+    }
+
+    public void ShowScroll()
+    {
+        if(GameManager.instance.currentLevel == 1)
+        {
+            ShowKeyTutorial(true);
+        }
+        ShowDictionary(true);
     }
 }

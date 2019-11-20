@@ -12,6 +12,10 @@ public class RunController : MonoBehaviour
     public List<string> trashes_wrong = new List<string>();
     private bool runPass;
 
+    public PlayerController playerController;
+    public GameObject player;
+    public RunUI runUI;
+
     public Camera mainCam;
    
 
@@ -38,7 +42,33 @@ public class RunController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Return) && SceneManager.GetActiveScene().name == "RunScene")
+        {
+            if (runUI.keyTutorial.activeSelf == true)
+            {
+                runUI.ShowKeyTutorial(false);
+            }
+            else if (runUI.trashDictionary.activeSelf == true)
+            {
+                runUI.ShowDictionary(false);
+                
+                if (playerController.state == PlayerState.Idle)
+                {
+                    playerController.ChangeState(PlayerState.Running);
+                    playerController.animator.SetBool("run_bool", true);
+                }
+            }
+        }
+    }
+
+    void FindPlayer()
+    {
+        player = GameObject.Find("Player");
+        playerController = player.GetComponent<PlayerController>();
+    }
+    void FindRunUI()
+    {
+        runUI = GameObject.Find("RunUIController").GetComponent<RunUI>();
     }
 
     public void GetRunResult(List<Trash> right, List<Trash> wrong)
@@ -67,6 +97,8 @@ public class RunController : MonoBehaviour
 
     public void InitRunStage(int level, StageItem stage)
     {
+        FindRunUI();
+        FindPlayer();
         runPass = false;
         trashes_right = new List<string>();
         trashes_wrong = new List<string>();

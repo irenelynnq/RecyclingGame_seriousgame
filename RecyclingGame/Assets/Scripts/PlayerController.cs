@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public enum State
+public enum PlayerState
 {
     Idle,
     Running
@@ -29,8 +29,8 @@ public class PlayerController : MonoBehaviour
 
     
 
-    public State state = State.Idle;
-    public void ChangeState(State state) => this.state = state;
+    public PlayerState state = PlayerState.Idle;
+    public void ChangeState(PlayerState state) => this.state = state;
     // Start is called before the first frame update
     void Start()
     {
@@ -48,17 +48,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.S) && SceneManager.GetActiveScene().name == "RunScene")
-        {
-            //임시 start/pause key
-            if (state == State.Idle)
-            {
-                ChangeState(State.Running);
-                animator.SetBool("run_bool", true);
-            }
-        }
 
-        if (state == State.Running)
+        if (state == PlayerState.Running)
         {
             transform.position += Vector3.right * speed;
             if (Input.GetKeyDown(KeyCode.UpArrow))
