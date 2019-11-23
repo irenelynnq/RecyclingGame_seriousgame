@@ -1,0 +1,38 @@
+id,name,is_answer,sprite_name,yPosition,xPosition,,0,1,2,3,4,5,6,7,8,9
+5101,페트병,0,PetBottle,Middle,0,,,ChickenFoot,,,BrokenSoju,,ChickenFoot,,,BrokenSoju
+5102,닭발,1,ChickenFoot,Up,1,,PetBottle,,Tissue,MilkCarton,EggShell,CoatedFlyer,,FishBone,ColaCan,
+5103,휴지뭉치,1,Tissue,Middle,2,,,,,PaperCup,,PaperCup,,CoatedFlyer,,PetBottle
+5104,우유팩,0,MilkCarton,Middle,3,,,,,,,,,,,
+5105,종이컵,0,PaperCup,Down,3,,10,11,12,13,14,15,16,17,18,19
+5106,깨진 소주병,1,BrokenSoju,Up,4,,FishBone,,PaperCup,,,EggShell,,ColaCan,Receipt,MilkCarton
+5107,달걀껍데기,1,EggShell,Middle,4,,CoatedFlyer,MilkCarton,ColaCan,,Receipt,Tissue,PetBottle,,PaperCup,
+5108,코팅된 전단지,1,CoatedFlyer,Middle,5,,,BrokenSoju,,FishBone,MilkCarton,,,Receipt,,CoatedFlyer
+5109,종이컵,0,PaperCup,Down,5,,,,,,,,,,,
+5110,닭발,1,ChickenFoot,Up,6,,,,,,,,,,,
+5111,생선뼈,1,FishBone,Middle,7,,n,o,n,n,o,n,o,n,n,o
+5112,코팅된 전단지,1,CoatedFlyer,Down,7,,x,n,o,x,o,o,n,o,x,n
+5113,콜라 캔,0,ColaCan,Middle,8,,n,n,n,x,n,x,n,o,n,x
+5114,깨진 소주병,1,BrokenSoju,Up,9,,,,,,,,,,,
+5115,페트병,0,PetBottle,Down,9,,,,,,,,,,,
+5116,생선뼈,1,FishBone,Up,10,,o,n,x,n,n,o,n,x,o,x
+5117,코팅된 전단지,1,CoatedFlyer,Middle,10,,o,x,x,n,o,o,x,n,x,n
+5118,우유팩,0,MilkCarton,Middle,11,,n,o,n,o,x,n,n,o,n,o
+5119,깨진 소주병,1,BrokenSoju,Down,11,,,,,,,,,,,
+5120,종이컵,0,PaperCup,Up,12,,Tissue,휴지뭉치,,,,,,,,
+5121,콜라 캔,0,ColaCan,Middle,12,,Receipt,영수증,,,,,,,,
+5122,생선뼈,1,FishBone,Down,13,,CoatedFlyer,코팅된 전단지,,,,,,,,
+5123,영수증,1,Receipt,Middle,14,,ChickenFoot,닭발,,,,,,,,
+5124,우유팩,0,MilkCarton,Down,14,,FishBone,생선뼈,,,,,,,,
+5125,달걀껍데기,1,EggShell,Up,15,,EggShell,달걀껍데기,,,,,,,,
+5126,휴지뭉치,1,Tissue,Middle,15,,BrokenSoju,깨진 소주병,,,,,,,,
+5127,페트병,0,PetBottle,Middle,16,,,,,,,,,,,
+5128,콜라 캔,0,ColaCan,Up,17,,PetBottle,페트병,,,,,,,,
+5129,영수증,1,Receipt,Down,17,,ColaCan,콜라 캔,,,,,,,,
+5130,영수증,1,Receipt,Up,18,,OldUnderwear,낡은 속옷,,,,,,,,
+5131,종이컵,0,PaperCup,Middle,18,,MilkCarton,우유팩,,,,,,,,
+5132,우유팩,0,MilkCarton,Up,19,,PaperCup,종이컵,,,,,,,,
+5133,코팅된 전단지,1,CoatedFlyer,Down,19,,PeachSeed,복숭아 씨,,,,,,,,
+,,,,,,,Chicken,치킨,,,,,,,,
+,,,,,,,Toothbrush,칫솔,,,,,,,,
+,,,,,,,Knife,식칼,,,,,,,,
+,,,,,,,BrokenLight,깨진 전구,,,,,,,,

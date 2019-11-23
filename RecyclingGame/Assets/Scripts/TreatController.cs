@@ -12,9 +12,6 @@ public class TreatController : MonoBehaviour
     public GameObject trashPrefab;
     public GameObject tempCoinPrefab;
 
-    
-    
-
     public Dictionary<int, Vector3> treatPosition;
     public StageItem currentStage;
     public int playerAnswerCount;
@@ -77,6 +74,11 @@ public class TreatController : MonoBehaviour
             Debug.Log("treat trash " + newTrashInfo.name);
 
             Sprite trashSprite = Resources.Load<Sprite>("Art/Trash/" + newTrashInfo.sprite_name);
+            if (trashSprite == null)
+            {
+                if (newTrashInfo.need_preprocess) trashSprite = Resources.Load<Sprite>("Art/Trash/" + "Zright");
+                else trashSprite = Resources.Load<Sprite>("Art/Trash/" + "Zwrong");
+            }
             SpriteRenderer sr = newTrash.GetComponent<SpriteRenderer>();
             sr.sprite = trashSprite;
             newTrash.transform.position = treatPosition[position_number];
@@ -84,22 +86,24 @@ public class TreatController : MonoBehaviour
             Debug.Log("Init treat Trash " + newTrashInfo.name);
         }
 
-        
-
     }
 
     void InitDict()
     {
-        treatPosition.Add(1, new Vector3(-7f, 1f));
-        treatPosition.Add(2, new Vector3(-3.5f, 1f));
-        treatPosition.Add(3, new Vector3(0f, 1f));
-        treatPosition.Add(4, new Vector3(3.5f, 1f));
-        treatPosition.Add(5, new Vector3(7f, 1f));
-        treatPosition.Add(6, new Vector3(-6f, -2f));
-        treatPosition.Add(7, new Vector3(-3f, -2f));
-        treatPosition.Add(8, new Vector3(0f, -2f));
-        treatPosition.Add(9, new Vector3(3f, -2f));
-        treatPosition.Add(10, new Vector3(6f, -2f));
+        treatPosition.Add(1, new Vector3(-6.32f, 1.28f));
+        treatPosition.Add(2, new Vector3(-2.11f, 1.28f));
+        treatPosition.Add(3, new Vector3(2.11f, 1.28f));
+        treatPosition.Add(4, new Vector3(6.32f, 1.28f));
+
+        treatPosition.Add(5, new Vector3(-6.32f, -0.88f));
+        treatPosition.Add(6, new Vector3(-2.11f, -0.88f));
+        treatPosition.Add(7, new Vector3(2.11f, -0.88f));
+        treatPosition.Add(8, new Vector3(6.32f, -0.88f));
+
+        treatPosition.Add(9, new Vector3(-6.32f, -3.04f));
+        treatPosition.Add(10, new Vector3(-2.11f, -3.04f));
+        treatPosition.Add(11, new Vector3(2.11f, -3.04f));
+        treatPosition.Add(12, new Vector3(6.32f, -3.04f));
         Debug.Log("finished initdict");
     }
 
@@ -108,10 +112,6 @@ public class TreatController : MonoBehaviour
     {
         //i 위치에 있는 쓰레기 정답 표시...
 
-        /*
-        GameObject newCoin = Instantiate(tempCoinPrefab);
-        newCoin.transform.position = treatPosition[i];
-        */
         currentStage.treatTrashDict[i].GetComponentInParent<SpriteRenderer>().sprite = doneTrashSprite;
         playerAnswerCount++;
         Debug.Log("Answer!");
@@ -123,5 +123,10 @@ public class TreatController : MonoBehaviour
     {
         Debug.Log("Finish!");
 
+    }
+
+    public Trash GetTrashAtPosition(int i)
+    {
+        return currentStage.treatTrashDict[i];
     }
 }

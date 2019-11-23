@@ -1,0 +1,13 @@
+id,name,need_preprocess,sprite_name,position_number
+4201,페트병,1,PetBottle,1
+4202,치약 용기,0,ToothPaste,2
+4203,페트병,1,PetBottle,3
+4204,우유팩,1,MilkCarton,4
+4205,마요네즈 용기,1,MayoBottle,5
+4206,우유팩,1,MilkCarton,6
+4207,치약 용기,0,ToothPaste,7
+4208,떡볶이,0,Tteokbokki,8
+4209,햇반 용기,1,RickeBowl,9
+4210,사과,0,Apple,10
+4211,알약,0,Pill,11
+4212,생선뼈,0,FishBone,12

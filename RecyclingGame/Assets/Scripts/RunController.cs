@@ -52,6 +52,7 @@ public class RunController : MonoBehaviour
             else if (runUI.trashDictionary.activeSelf == true)
             {
                 runUI.ShowDictionary(false);
+                runUI.countDown.SetActive(true);
                 StartCountDownDisplay(4);
                 
             }
@@ -97,27 +98,8 @@ public class RunController : MonoBehaviour
             yield return new WaitForSeconds(1);
             count--;
         }
-
+        runUI.countDown.SetActive(false);
         StartRunning();
-        runUI.countDown.SetActive(false);
-        //StartCountDownDisappear(2);
-
-    }
-
-    public void StartCountDownDisappear(int seconds)
-    {
-        StartCoroutine(CountDownDisappear(seconds));
-    }
-
-    IEnumerator CountDownDisappear(int seconds)
-    {
-        int count = seconds;
-        while (count > 0)
-        {
-            yield return new WaitForSeconds(1);
-            count--;
-        }
-        runUI.countDown.SetActive(false);
     }
 
 
@@ -158,7 +140,6 @@ public class RunController : MonoBehaviour
             newTrashInfo.id = ((int)data[i]["id"]).ToString();
             newTrashInfo.name = (string)data[i]["name"];
             newTrashInfo.is_answer = (int)data[i]["is_answer"] == 0 ? false : true;
-            newTrashInfo.need_preprocess = (int)data[i]["need_preprocess"] == 0 ? false : true;
             newTrashInfo.sprite_name = (string)data[i]["sprite_name"];
             newTrashInfo.xPosition = stage.trashStartingPoint + (float)((int)data[i]["xPosition"] * stage.trashGap);
             switch ((string)data[i]["yPosition"])
@@ -182,6 +163,11 @@ public class RunController : MonoBehaviour
             Debug.Log("DB trash " + newTrashInfo.name);
 
             Sprite trashSprite = Resources.Load<Sprite>("Art/Trash/"+newTrashInfo.sprite_name);
+            if (trashSprite == null)
+            {
+                if (newTrashInfo.is_answer) trashSprite = Resources.Load<Sprite>("Art/Trash/" + "Zright");
+                else trashSprite = Resources.Load<Sprite>("Art/Trash/" + "Zwrong");
+            }
             SpriteRenderer sr = newTrash.GetComponent<SpriteRenderer>();
             sr.sprite = trashSprite;
             float y = 0f;

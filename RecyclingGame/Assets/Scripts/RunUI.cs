@@ -31,10 +31,8 @@ public class RunUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        countDown.SetActive(false);
         trashDictionary.GetComponent<Image>().sprite = Resources.Load<Sprite>("Art/Scroll/" + "TrashDictionary" + GameManager.instance.currentLevel.ToString());
-        ShowDictionary(false);
-        ShowKeyTutorial(false);
-
         ShowScroll();
 
         stageName.GetComponent<Image>().sprite = Resources.Load<Sprite>("Art/UI/" + "UIStageName_" + GameManager.instance.currentLevel.ToString());

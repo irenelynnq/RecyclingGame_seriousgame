@@ -1,11 +1,13 @@
-ï»¿id,name,need_preprocess,sprite_name,position_number
-1,ê¹¨ì§„ì†Œì£¼ë³‘,1,BrokenSoju,1
-2,ì‹ì¹¼,1,Knife,2
-3,ë‹¬ê±€ê»ë°ê¸°,0,EggShell,3
-4,ê¹¨ì§„ì†Œì£¼ë³‘,1,BrokenSoju,4
-5,ìƒì„ ë¼ˆ,0,FishBone,5
-6,ë‹¬ê±€ê»ë°ê¸°,0,EggShell,6
-7,ê¹¨ì§„ì†Œì£¼ë³‘,1,BrokenSoju,7
-8,ë‚¡ì€ì†ì˜·,0,OldUnderwear,8
-9,ì‹ì¹¼,1,Knife,9
-10,ê¹¨ì§„í˜•ê´‘ë“±,1,BrokenLight,10
+id,name,need_preprocess,sprite_name,position_number
+1201,Ä¡¾à ¿ë±â,0,Toothpaste,1
+1202,Ã¥,0,Book,2
+1203,¹è´Ş¿ë Èò»ö ÇÃ¶ó½ºÆ½ ¿ë±â,1,DeliveryBowl,3
+1204,°ÇÀüÁö,0,Drycell,4
+1205,¿ä±¸¸£Æ® º´,1,YogurtBottle,5
+1206,Ä¡¾à ¿ë±â,0,Toothpaste,6
+1207,ÇŞ¹İ ¿ë±â,1,RiceBowl,7
+1208,¼¤Çª ¿ë±â,1,Shampoo,8
+1209,½ºÆÔ,0,Spam,9
+1210,ÇŞ¹İ ¿ë±â,1,RiceBowl,10
+1211,¹è´Ş¿ë Èò»ö ÇÃ¶ó½ºÆ½ ¿ë±â,1,DeliveryBowl,11
+1212,Ã¥,0,Book,12

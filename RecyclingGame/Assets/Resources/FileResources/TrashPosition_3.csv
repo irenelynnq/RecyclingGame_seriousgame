@@ -1,0 +1,38 @@
+id,name,is_answer,sprite_name,yPosition,xPosition,,0,1,2,3,4,5,6,7,8,9
+3101,책,1,Book,Up,0,,Book,OldUnderwear,Sketchbook,MilkCarton,,PetBottle,Envelope,PaperCup,TableCalendar,PizzaBox
+3102,복숭아 씨,0,PeachSeed,Down,0,,,,,,,,Box,MilkCarton,,Sketchbook
+3103,낡은 속옷,0,OldUnderwear,Up,1,,PeachSeed,ToiletpaperCore,,Envelope,Box,,,,PeachSeed,
+3104,휴지 심,1,ToiletpaperCore,Down,1,,,,,,,,,,,
+3105,스케치북,1,Sketchbook,Up,2,,10,11,12,13,14,15,16,17,18,19
+3106,우유팩,0,MilkCarton,Up,3,,MilkCarton,,PizzaBox,,MilkCarton,,ToiletpaperCore,,,
+3107,서류봉투,1,Envelope,Down,3,,TableCalendar,PaperCup,ToiletpaperCore,Box,OldUnderwear,PaperCup,,,,TableCalendar
+3108,종이 상자,1,Box,Down,4,,,,,,,,,Book,ColaCan,
+3109,페트병,0,PetBottle,Up,5,,,,,,,,,,,
+3110,서류봉투,1,Envelope,Up,6,,,,,,,,,,,
+3111,종이 상자,1,Box,Middle,6,,o,x,o,x,n,x,o,x,o,o
+3112,종이컵,0,PaperCup,Up,7,,n,n,n,n,n,n,o,x,n,o
+3113,우유팩,0,MilkCarton,Middle,7,,x,o,n,o,o,n,n,n,x,n
+3114,탁상 달력,1,TableCalendar,Up,8,,,,,,,,,,,
+3115,복숭아 씨,0,PeachSeed,Down,8,,,,,,,,,,,
+3116,피자 박스,1,PizzaBox,Up,9,,x,n,o,n,x,n,o,n,n,n
+3117,스케치북,1,Sketchbook,Middle,9,,o,x,o,o,x,x,n,n,n,o
+3118,우유팩,0,MilkCarton,Up,10,,n,n,n,n,n,n,n,o,x,n
+3119,탁상 달력,1,TableCalendar,Middle,10,,,,,,,,,,,
+3120,종이컵,0,PaperCup,Middle,11,,Book,책,,,,,,,,
+3121,피자 박스,1,PizzaBox,Up,12,,Box,종이 상자,,,,,,,,
+3122,휴지 심,1,ToiletpaperCore,Middle,12,,Envelope,서류봉투,,,,,,,,
+3123,종이 상자,1,Box,Middle,13,,Sketchbook,스케치북,,,,,,,,
+3124,우유팩,0,MilkCarton,Up,14,,PizzaBox,피자 박스,,,,,,,,
+3125,낡은 속옷,0,OldUnderwear,Middle,14,,TableCalendar,탁상 달력,,,,,,,,
+3126,종이컵,0,PaperCup,Middle,15,,ToiletpaperCore,휴지 심,,,,,,,,
+3127,휴지 심,1,ToiletpaperCore,Up,16,,,,,,,,,,,
+3128,책,1,Book,Down,17,,PetBottle,페트병,,,,,,,,
+3129,콜라 캔,0,ColaCan,Down,18,,ColaCan,콜라 캔,,,,,,,,
+3130,탁상 달력,1,TableCalendar,Middle,19,,OldUnderwear,낡은 속옷,,,,,,,,
+,,,,,,,MilkCarton,우유팩,,,,,,,,
+,,,,,,,PaperCup,종이컵,,,,,,,,
+,,,,,,,PeachSeed,복숭아 씨,,,,,,,,
+,,,,,,,Chicken,치킨,,,,,,,,
+,,,,,,,Toothbrush,칫솔,,,,,,,,
+,,,,,,,Knife,식칼,,,,,,,,
+,,,,,,,BrokenLight,깨진 전구,,,,,,,,

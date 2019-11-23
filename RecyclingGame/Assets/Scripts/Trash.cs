@@ -46,6 +46,10 @@ public class Trash : MonoBehaviour
         }
         else return false;
     }
+    public int GetHitCount()
+    {
+        return hitcount;
+    }
 
     public void CopyInfo(Trash other)
     {

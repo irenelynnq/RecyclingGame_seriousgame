@@ -26,9 +26,9 @@ public class StageDB
             Debug.Log("start inserting stage " + (i + 1).ToString() + "in DB");
             string name = "일반쓰레기";
             string preprocess = "포장하기";
-            int criteria = 7;
-            int trashCount = 19;
-            int answerCount = 10;
+            int criteria = 12;
+            int trashCount = 27;
+            int answerCount = 16;
             //string trashPositionFileName = "TrashPosition_1";
             
             StageItem newStage = new StageItem();
@@ -39,7 +39,7 @@ public class StageDB
             newStage.is_passed = false;
             newStage.trashCount = trashCount;
             newStage.answerCount = answerCount;
-            newStage.treatTrashCount = 10;
+            newStage.treatTrashCount = 12;
             newStage.treatAnswerCount = 6;
             newStage.trashStartingPoint = starting;
             newStage.trashGap = gap;
