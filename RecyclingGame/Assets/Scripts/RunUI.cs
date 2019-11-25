@@ -35,11 +35,12 @@ public class RunUI : MonoBehaviour
         trashDictionary.GetComponent<Image>().sprite = Resources.Load<Sprite>("Art/Scroll/" + "TrashDictionary" + GameManager.instance.currentLevel.ToString());
         ShowScroll();
 
-        stageName.GetComponent<Image>().sprite = Resources.Load<Sprite>("Art/UI/" + "UIStageName_" + GameManager.instance.currentLevel.ToString());
+        stageName.GetComponent<TextMeshProUGUI>().text = GameManager.instance.db.GetStageItem(GameManager.instance.currentLevel).name;
         lifeCount.GetComponent<TextMeshProUGUI>().text = "X " + GameManager.instance.life.ToString();
         UpdateLife();
 
         mapStart = mapCharacter.GetComponent<RectTransform>().position.x;
+        print("minimap" + mapStart.ToString());
         mapY = mapCharacter.GetComponent<RectTransform>().position.y;
         mapFinish = mapDevil.GetComponent<RectTransform>().position.x;
         start = 0;

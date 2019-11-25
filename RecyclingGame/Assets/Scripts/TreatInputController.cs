@@ -26,7 +26,7 @@ public class TreatInputController : MonoBehaviour
         selectBox.SetActive(false);
         currentTreatState = TreatState.stop;
         selectPosition = 1;
-        treatUI.UpdateGauge(selectPosition, TreatController.instance.GetTrashAtPosition(selectPosition));
+
     }
 
     // Update is called once per frame
@@ -38,6 +38,9 @@ public class TreatInputController : MonoBehaviour
             {
                 treatUI.ShowKeyTutorial(false);
                 selectBox.SetActive(true);
+                treatUI.UpdateGauge(selectPosition, TreatController.instance.GetTrashAtPosition(selectPosition));
+                treatUI.gaugeFill.SetActive(true);
+                treatUI.gaugeRect.SetActive(true);
                 treatUI.countDown.SetActive(true);
                 StartCountDownDisplay(4);
             }

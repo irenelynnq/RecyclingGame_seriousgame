@@ -19,6 +19,8 @@ public class TreatUI : MonoBehaviour
     public GameObject gaugeRect;
     public GameObject gaugeFill;
     Dictionary<int, Vector3> gaugeDict;
+
+    public GameObject gaugeIndicator;
     
     // Start is called before the first frame update
     void Start()
@@ -28,7 +30,7 @@ public class TreatUI : MonoBehaviour
         countDown.SetActive(false);
         ShowScroll();
 
-        stageName.GetComponent<Image>().sprite = Resources.Load<Sprite>("Art/UI/" + "UITreatName_" + GameManager.instance.currentLevel.ToString());
+        stageName.GetComponent<TextMeshProUGUI>().text = GameManager.instance.db.GetStageItem(GameManager.instance.currentLevel).preprocess;
         UpdateLife();
     }
 
@@ -66,8 +68,11 @@ public class TreatUI : MonoBehaviour
 
     public void UpdateGauge(int i, Trash trash)
     {
-        gaugeRect.GetComponent<RectTransform>().position = gaugeDict[i];
-        gaugeFill.GetComponent<RectTransform>().position = gaugeDict[i];
+        /*
+        gaugeRect.GetComponent<Transform>().position = gaugeDict[i];
+        gaugeFill.GetComponent<Transform>().position = gaugeDict[i];
+        */
+        gaugeIndicator.GetComponent<Transform>().position = gaugeDict[i];
         gaugeFill.GetComponent<Image>().fillAmount = (float)trash.GetHitCount() / 15;
     }
 
@@ -96,10 +101,11 @@ public class TreatUI : MonoBehaviour
     }
     float calX(float posX)
     {
-        return (posX + 1.38f) * 10 * 4;
+        return (posX + 1.38f);
+        //return posX;
     }
     float calY(float posY)
     {
-        return (posY * 10 * 4) + 3;
+        return posY;
     }
 }

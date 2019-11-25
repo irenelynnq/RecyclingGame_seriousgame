@@ -26,9 +26,9 @@ public class StageDB
             Debug.Log("start inserting stage " + (i + 1).ToString() + "in DB");
             string name = "일반쓰레기";
             string preprocess = "포장하기";
-            int criteria = 12;
-            int trashCount = 27;
-            int answerCount = 16;
+            int criteria = 2;
+            int trashCount = 20;
+            int answerCount = 6;
             //string trashPositionFileName = "TrashPosition_1";
             
             StageItem newStage = new StageItem();
