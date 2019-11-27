@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class TreatStageMaker : MonoBehaviour
 {
+    private void Awake()
+    {
+        TreatController.instance.InitTreatStage(GameManager.instance.currentLevel, GameManager.instance.db.GetStageItem(GameManager.instance.currentLevel));
+    }
     // Start is called before the first frame update
     void Start()
     {
-        TreatController.instance.InitTreatStage(GameManager.instance.currentLevel, GameManager.instance.db.GetStageItem(GameManager.instance.currentLevel));
+        
     }
 
     // Update is called once per frame

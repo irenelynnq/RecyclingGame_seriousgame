@@ -45,16 +45,26 @@ public class RunController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return) && SceneManager.GetActiveScene().name == "RunScene")
         {
-            if (runUI.keyTutorial.activeSelf == true)
+            if (GameManager.instance.currentLevel == 1)
             {
-                runUI.ShowKeyTutorial(false);
+                if (runUI.keyTutorial.activeSelf == true)
+                {
+                    runUI.ShowKeyTutorial(false);
+                }
+                else if (runUI.trashDictionary.activeSelf == true)
+                {
+                    runUI.ShowDictionary(false);
+                    runUI.countDown.SetActive(true);
+                    StartCountDownDisplay(4);
+
+                }
             }
             else if (runUI.trashDictionary.activeSelf == true)
             {
                 runUI.ShowDictionary(false);
                 runUI.countDown.SetActive(true);
                 StartCountDownDisplay(4);
-                
+
             }
         }
     }
@@ -137,7 +147,7 @@ public class RunController : MonoBehaviour
             GameObject newTrash = Instantiate(trashPrefab);
             Trash newTrashInfo = newTrash.GetComponent<Trash>();
 
-            newTrashInfo.id = ((int)data[i]["id"]).ToString();
+            //newTrashInfo.id = ((int)data[i]["id"]).ToString();
             newTrashInfo.name = (string)data[i]["name"];
             newTrashInfo.is_answer = (int)data[i]["is_answer"] == 0 ? false : true;
             newTrashInfo.sprite_name = (string)data[i]["sprite_name"];

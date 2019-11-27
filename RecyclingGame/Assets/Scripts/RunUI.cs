@@ -31,6 +31,8 @@ public class RunUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        ShowDictionary(false);
+        ShowKeyTutorial(false);
         countDown.SetActive(false);
         trashDictionary.GetComponent<Image>().sprite = Resources.Load<Sprite>("Art/Scroll/" + "TrashDictionary" + GameManager.instance.currentLevel.ToString());
         ShowScroll();
@@ -54,7 +56,10 @@ public class RunUI : MonoBehaviour
     {
         //이 부분에 미니맵 움직이는 거 구현. 계산 하자
         x = mapStart + ((playerPosition - start) * (mapFinish - mapStart) / (finish - start));
-        mapCharTr.position = new Vector3(x, mapY, 0);
+        if (mapCharTr != null)
+        {
+            mapCharTr.position = new Vector3(x, mapY, 0);
+        }
     }
 
     public void UpdateLife()

@@ -51,7 +51,6 @@ public class GameManager : MonoBehaviour
         db.DBInit();
 
         StartGame();
-
         
     }
 
@@ -65,6 +64,7 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         currentLevel = 1;
+        //for test
         life = 3;
         score = 0;
         MakeRunStage();

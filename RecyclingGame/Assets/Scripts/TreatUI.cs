@@ -15,6 +15,7 @@ public class TreatUI : MonoBehaviour
     public GameObject countDown;
 
     public GameObject keyTutorial;
+    public GameObject trashDictionary;
 
     public GameObject gaugeRect;
     public GameObject gaugeFill;
@@ -25,9 +26,12 @@ public class TreatUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        ShowDictionary(false);
+        ShowKeyTutorial(false);
         InitGaugeDict();
         timer = timerDisplay.GetComponent<Timer>();
         countDown.SetActive(false);
+        trashDictionary.GetComponent<Image>().sprite = Resources.Load<Sprite>("Art/Scroll/" + "TrashDictionary" + GameManager.instance.currentLevel.ToString());
         ShowScroll();
 
         stageName.GetComponent<TextMeshProUGUI>().text = GameManager.instance.db.GetStageItem(GameManager.instance.currentLevel).preprocess;
@@ -53,6 +57,11 @@ public class TreatUI : MonoBehaviour
         }
     }
 
+    public void ShowDictionary(bool state)
+    {
+        trashDictionary.SetActive(state);
+    }
+
     public void ShowKeyTutorial(bool state)
     {
         keyTutorial.SetActive(state);
@@ -64,14 +73,12 @@ public class TreatUI : MonoBehaviour
         {
             ShowKeyTutorial(true);
         }
+        ShowDictionary(true);
     }
 
     public void UpdateGauge(int i, Trash trash)
     {
-        /*
-        gaugeRect.GetComponent<Transform>().position = gaugeDict[i];
-        gaugeFill.GetComponent<Transform>().position = gaugeDict[i];
-        */
+        
         gaugeIndicator.GetComponent<Transform>().position = gaugeDict[i];
         gaugeFill.GetComponent<Image>().fillAmount = (float)trash.GetHitCount() / 15;
     }

@@ -34,15 +34,34 @@ public class TreatInputController : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Return) && SceneManager.GetActiveScene().name == "TreatScene")
         {
-            if (treatUI.keyTutorial.activeSelf == true)
+            if (GameManager.instance.currentLevel == 1)
             {
-                treatUI.ShowKeyTutorial(false);
+                if (treatUI.keyTutorial.activeSelf == true)
+                {
+                    treatUI.ShowKeyTutorial(false);
+                }
+                else if (treatUI.trashDictionary.activeSelf == true)
+                {
+                    treatUI.ShowDictionary(false);
+                    selectBox.SetActive(true);
+                    treatUI.UpdateGauge(selectPosition, TreatController.instance.GetTrashAtPosition(selectPosition));
+                    treatUI.gaugeFill.SetActive(true);
+                    treatUI.gaugeRect.SetActive(true);
+                    treatUI.countDown.SetActive(true);
+                    StartCountDownDisplay(4);
+
+                }
+            }
+            else if (treatUI.trashDictionary.activeSelf == true)
+            {
+                treatUI.ShowDictionary(false);
                 selectBox.SetActive(true);
                 treatUI.UpdateGauge(selectPosition, TreatController.instance.GetTrashAtPosition(selectPosition));
                 treatUI.gaugeFill.SetActive(true);
                 treatUI.gaugeRect.SetActive(true);
                 treatUI.countDown.SetActive(true);
                 StartCountDownDisplay(4);
+
             }
             
         }

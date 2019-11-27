@@ -29,5 +29,6 @@ public class TrashCollector : MonoBehaviour
         GameManager.instance.life -= 1;
         runUI.UpdateLife();
         if (GameManager.instance.life == 0) GameManager.instance.GameOver();
+
     }
 }

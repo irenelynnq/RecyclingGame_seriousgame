@@ -1,0 +1,6 @@
+stage number,name,preprocess,trashCount,answerCount_1,pass_criteria,answerCount_2,trashStartingPoint,trashGap
+1,플라스틱류,씻기,28,17,12,6,0,2094
+2,전용수거함,포장하기,29,17,13,6,0,2094
+3,종이류,분리하기,30,17,13,6,0,2094
+4,음식물쓰레기,씻기,31,18,14,6,0,2094
+5,일반쓰레기,분리하기,33,19,15,6,0,2094

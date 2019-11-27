@@ -95,11 +95,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   name: 
-  is_answer: 0
+  is_answer: 1
   need_preprocess: 0
   sprite_name: 
   yPosition: 0
   xPosition: 0
+  hitcount: 0
+  treatDone: 0
 --- !u!61 &5407465675301083300
 BoxCollider2D:
   m_ObjectHideFlags: 0
