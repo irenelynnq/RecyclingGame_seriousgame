@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Trash : MonoBehaviour
 {
-    public string id;
+    public int id;
     public string name;
     public bool is_answer;
     public bool need_preprocess;
@@ -22,10 +22,10 @@ public class Trash : MonoBehaviour
         if(collision.gameObject.tag == "TrashCollector")
         {
             gameObject.SetActive(false);
-            if (is_answer == true) collision.gameObject.GetComponent<TrashCollector>().collected_right.Add(this);
+            if (is_answer == true) collision.gameObject.GetComponent<TrashCollector>().collected_right.Add(this.id);
             else if (is_answer == false)
             {
-                collision.gameObject.GetComponent<TrashCollector>().collected_wrong.Add(this);
+                collision.gameObject.GetComponent<TrashCollector>().collected_wrong.Add(this.id);
                 collision.gameObject.GetComponent<TrashCollector>().GotWrong();
                 Debug.Log("Got Wrong!!" + name + " " + xPosition.ToString());
             }
@@ -52,7 +52,7 @@ public class Trash : MonoBehaviour
         return hitcount;
     }
 
-    public void CopyInfo(Trash other)
+    public void CopyInfoFrom(Trash other)
     {
         id = other.id;
         name = other.name;
@@ -63,4 +63,10 @@ public class Trash : MonoBehaviour
         xPosition = other.xPosition;
     }
 
+    public int CompareTo(Trash other)
+    {
+        return this.id.CompareTo(other.id);
+    }
 }
+
+

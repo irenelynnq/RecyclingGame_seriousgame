@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class TrashCollector : MonoBehaviour
 {
-    public List<Trash> collected_right;
-    public List<Trash> collected_wrong;
+    public List<int> collected_right;
+    public List<int> collected_wrong;
     public RunUI runUI;
     public PlayerController playerController;
 
     // Start is called before the first frame update
     void Start()
     {
-        collected_right = new List<Trash>();
-        collected_wrong = new List<Trash>();
+        collected_right = new List<int>();
+        collected_wrong = new List<int>();
         playerController = GetComponentInParent<PlayerController>();
     }
 

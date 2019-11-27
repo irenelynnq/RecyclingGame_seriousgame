@@ -59,7 +59,7 @@ public class TreatController : MonoBehaviour
             GameObject newTrash = Instantiate(trashPrefab);
             Trash newTrashInfo = newTrash.GetComponent<Trash>();
 
-            newTrashInfo.id = ((int)data[i]["id"]).ToString();
+            newTrashInfo.id = (int)data[i]["id"];
             newTrashInfo.name = (string)data[i]["name"];
             newTrashInfo.is_answer = true;
             newTrashInfo.need_preprocess = (int)data[i]["need_preprocess"] == 0 ? false : true;

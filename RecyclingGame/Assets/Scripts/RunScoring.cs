@@ -6,42 +6,79 @@ using TMPro;
 
 public class RunScoring : MonoBehaviour
 {
+
+    public GameObject title;
+    public GameObject enter;
+
+    public List<GameObject> collectedImage;
+    public List<GameObject> uncollectedImage;
+
     // Start is called before the first frame update
     void Start()
     {
-        /*
-        List<string> tempwrong = GameManager.instance.trashes_wrong;
-        HashSet<string> wrong = new HashSet<string>();
-        for (int i = 0; i < tempwrong.Count; i++)
-        {
-            wrong.Add(tempwrong[i]);
-        }
-        */
-
+        
         int currentLevel = GameManager.instance.currentLevel;
         int rightCount = RunController.instance.trashes_right.Count;
 
-        GetComponent<TextMeshProUGUI>().text =
-            "모은 일반쓰레기 : " + rightCount + " / "
-            + GameManager.instance.db.GetStageItem(currentLevel).answerCount.ToString() + "\n";
+        title.GetComponent<TextMeshProUGUI>().text = "STAGE " + currentLevel + " - 1 CLEAR";
 
         if(rightCount < GameManager.instance.db.GetStageItem(currentLevel).pass_criteria) 
         {
-            GetComponent<TextMeshProUGUI>().text += "쓰레기를 덜 주웠습니다. 다시 플레이해야 합니다.";
+            enter.GetComponent<TextMeshProUGUI>().text = "";
         }
         else
         {
+            enter.GetComponent<TextMeshProUGUI>().text = "엔터를 눌러 넘어가도록 하라!";
             RunController.instance.PassRunStage();
         }
 
-        /*
-       foreach(var val in wrong)
+        HashSet<string> collectedNames = new HashSet<string>();
+        HashSet<string> uncollectedNames = new HashSet<string>();
+        Dictionary<int, string> allRights = new Dictionary<int, string>(GameManager.instance.db.GetStageItem(currentLevel).answerSpriteNameDict);
+
+        List<int> collectedTrash = RunController.instance.trashes_right;
+
+        int i;
+        for (i = 0; i < collectedTrash.Count; i++)
         {
-            GetComponent<TextMeshProUGUI>().text += val + ", ";
+            if(allRights.ContainsKey(collectedTrash[i]))
+            {
+                collectedNames.Add(allRights[collectedTrash[i]]);
+                allRights.Remove(collectedTrash[i]);
+            }
         }
 
-        GetComponent<TextMeshProUGUI>().text.TrimEnd(' ', ',');
-        */
+        foreach (string name in allRights.Values)
+        {
+            uncollectedNames.Add(name);
+        }
+
+        i = 0;
+        foreach (string name in collectedNames)
+        {
+            Sprite trashSprite = Resources.Load<Sprite>(name);
+            if (trashSprite == null) trashSprite = Resources.Load<Sprite>("Art/Trash/" + "Zwrong");
+            collectedImage[i].GetComponent<Image>().sprite = trashSprite;
+            i++;
+        }
+        for (; i < 6; i++)
+        {
+            collectedImage[i].SetActive(false);
+        }
+
+        i = 0;
+        foreach (string name in uncollectedNames)
+        {
+            Sprite trashSprite = Resources.Load<Sprite>(name);
+            if (trashSprite == null) trashSprite = Resources.Load<Sprite>("Art/Trash/" + "Zwrong");
+            uncollectedImage[i].GetComponent<Image>().sprite = trashSprite;
+            i++;
+        }
+        for (; i < 6; i++)
+        {
+            uncollectedImage[i].SetActive(false);
+        }
+
     }
 
     // Update is called once per frame

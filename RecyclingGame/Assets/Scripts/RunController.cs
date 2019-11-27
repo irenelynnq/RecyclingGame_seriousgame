@@ -9,8 +9,8 @@ public class RunController : MonoBehaviour
     public static RunController instance = null;
     public GameObject trashPrefab;
 
-    public List<string> trashes_right = new List<string>();
-    public List<string> trashes_wrong = new List<string>();
+    public List<int> trashes_right = new List<int>();
+    public List<int> trashes_wrong = new List<int>();
     private bool runPass;
 
     public PlayerController playerController;
@@ -79,16 +79,16 @@ public class RunController : MonoBehaviour
         runUI = GameObject.Find("RunUIController").GetComponent<RunUI>();
     }
 
-    public void GetRunResult(List<Trash> right, List<Trash> wrong)
+    public void GetRunResult(List<int> right, List<int> wrong)
     {
         int i;
         for (i = 0; i < right.Count; i++)
         {
-            trashes_right.Add(right[i].name);
+            trashes_right.Add(right[i]);
         }
         for (i = 0; i < wrong.Count; i++)
         {
-            trashes_wrong.Add(wrong[i].name);
+            trashes_wrong.Add(wrong[i]);
         }
 
     }
@@ -137,8 +137,8 @@ public class RunController : MonoBehaviour
         FindRunUI();
         FindPlayer();
         runPass = false;
-        trashes_right = new List<string>();
-        trashes_wrong = new List<string>();
+        trashes_right = new List<int>();
+        trashes_wrong = new List<int>();
         List<Dictionary<string, object>> data = CSVReader.Read("FileResources/" + "TrashPosition_" + level.ToString());
 
         //StageItem으로 stage initialize
@@ -147,10 +147,14 @@ public class RunController : MonoBehaviour
             GameObject newTrash = Instantiate(trashPrefab);
             Trash newTrashInfo = newTrash.GetComponent<Trash>();
 
-            //newTrashInfo.id = ((int)data[i]["id"]).ToString();
+            newTrashInfo.id = (int)data[i]["id"];
             newTrashInfo.name = (string)data[i]["name"];
             newTrashInfo.is_answer = (int)data[i]["is_answer"] == 0 ? false : true;
             newTrashInfo.sprite_name = (string)data[i]["sprite_name"];
+            if (newTrashInfo.is_answer)
+            {
+                stage.answerSpriteNameDict.Add(newTrashInfo.id, newTrashInfo.sprite_name);
+            }
             newTrashInfo.xPosition = stage.trashStartingPoint + (float)((int)data[i]["xPosition"] * stage.trashGap);
             switch ((string)data[i]["yPosition"])
             {
