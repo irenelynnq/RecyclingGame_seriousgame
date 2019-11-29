@@ -15,6 +15,7 @@ public class TreatController : MonoBehaviour
     public Dictionary<int, Vector3> treatPosition;
     public StageItem currentStage;
     public int playerAnswerCount;
+    public List<string> playerAnswerSpriteNames;
 
     Sprite doneTrashSprite; 
 
@@ -114,6 +115,7 @@ public class TreatController : MonoBehaviour
 
         currentStage.treatTrashDict[i].GetComponentInParent<SpriteRenderer>().sprite = doneTrashSprite;
         playerAnswerCount++;
+        playerAnswerSpriteNames.Add(currentStage.treatTrashDict[i].sprite_name);
         Debug.Log("Answer!");
         if (playerAnswerCount == currentStage.treatAnswerCount) AllAnswerClear();
         
