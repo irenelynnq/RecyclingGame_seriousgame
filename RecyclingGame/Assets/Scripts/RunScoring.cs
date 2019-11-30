@@ -10,6 +10,9 @@ public class RunScoring : MonoBehaviour
     public GameObject title;
     public GameObject enter;
 
+    public GameObject notEnough;
+    public GameObject background;
+
     public List<GameObject> collectedImage;
     public List<GameObject> uncollectedImage;
 
@@ -19,17 +22,27 @@ public class RunScoring : MonoBehaviour
         
         int currentLevel = GameManager.instance.currentLevel;
         int rightCount = RunController.instance.trashes_right.Count;
+        int i;
 
-        title.GetComponent<TextMeshProUGUI>().text = "STAGE " + currentLevel + " - 1 CLEAR";
-
-        if(rightCount < GameManager.instance.db.GetStageItem(currentLevel).pass_criteria) 
+        if (rightCount < GameManager.instance.db.GetStageItem(currentLevel).pass_criteria) 
         {
-            enter.GetComponent<TextMeshProUGUI>().text = "";
+            background.GetComponent<Image>().sprite = Resources.Load<Sprite>("Art/Background/" + "map1re");
+            for (i = 0; i < collectedImage.Count; i++)
+            {
+                collectedImage[i].GetComponent<RectTransform>().position -= new Vector3(0, 15f);
+            }
+            title.GetComponent<TextMeshProUGUI>().text = "STAGE " + currentLevel.ToString() + " - 1 FAIL";
+            notEnough.SetActive(true);
+            enter.GetComponent<TextMeshProUGUI>().text = "엔터를 눌러 돌아가 쓰레기를 다시 주워오거라!";
+
         }
         else
         {
-            enter.GetComponent<TextMeshProUGUI>().text = "엔터를 눌러 넘어가도록 하라!";
             RunController.instance.PassRunStage();
+            notEnough.SetActive(false);
+            title.GetComponent<TextMeshProUGUI>().text = "STAGE " + currentLevel.ToString() + " - 1 CLEAR";
+            enter.GetComponent<TextMeshProUGUI>().text = "엔터를 눌러 넘어가도록 하라!";
+            
         }
 
         HashSet<string> collectedNames = new HashSet<string>();
@@ -38,7 +51,7 @@ public class RunScoring : MonoBehaviour
 
         List<int> collectedTrash = RunController.instance.trashes_right;
 
-        int i;
+        
         for (i = 0; i < collectedTrash.Count; i++)
         {
             if(allRights.ContainsKey(collectedTrash[i]))

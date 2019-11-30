@@ -36,7 +36,7 @@ public class RunController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        mainCam.transform.position = new Vector3(0, 0, 0);
+        //mainCam.transform.position = new Vector3(0, 0, 0);
         runPass = false;
     }
 

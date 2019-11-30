@@ -1,38 +1,38 @@
-id,name,is_answer,sprite_name,yPosition,xPosition,,0,1,2,3,4,5,6,7,8,9
-4101,¹Ù³ª³ª ²®Áú,1,BananaPeel,Up,0,,BananaPeel,,,,,,Onion,PeachSeed,RottenTangerine,
-4102,ÆäÆ®º´,0,PetBottle,Down,1,,,,RottenTangerine,Spam,Apple,PeachSeed,,ColaCan,Spam,
-4103,½âÀº ±Ö,1,RottenTangerine,Middle,2,,,PetBottle,Cookie,PaperCup,,RottenTangerine,MilkCarton,,,PeachSeed
-4104,ÄíÅ°,1,Cookie,Down,2,,,,,,,,,,,
-4105,½ºÆÔ,1,Spam,Middle,3,,10,11,12,13,14,15,16,17,18,19
-4106,Á¾ÀÌÄÅ,0,PaperCup,Down,3,,,OldUnderwear,,Onion,OldUnderwear,,,BananaPeel,,RottenTangerine
-4107,»ç°ú,1,Apple,Middle,4,,,,Cookie,MilkCarton,,PeachSeed,,Tteokbokki,PetBottle,
-4108,º¹¼ş¾Æ ¾¾,0,PeachSeed,Middle,5,,Cookie,Apple,Tteokbokki,,,ColaCan,Spam,,,
-4109,½âÀº ±Ö,1,RottenTangerine,Down,5,,,,,,,,,,,
-4110,¾çÆÄ,1,Onion,Up,6,,,,,,,,,,,
-4111,¿ìÀ¯ÆÑ,0,MilkCarton,Down,6,,o,n,n,n,n,n,o,x,o,n
-4112,º¹¼ş¾Æ ¾¾,0,PeachSeed,Up,7,,n,n,o,o,o,x,n,x,o,n
-4113,Äİ¶ó Äµ,0,ColaCan,Middle,7,,n,x,o,x,n,o,x,n,n,x
-4114,½âÀº ±Ö,1,RottenTangerine,Up,8,,,,,,,,,,,
-4115,½ºÆÔ,1,Spam,Middle,8,,,,,,,,,,,
-4116,º¹¼ş¾Æ ¾¾,0,PeachSeed,Down,9,,n,x,n,o,x,n,n,o,n,o
-4117,ÄíÅ°,1,Cookie,Down,10,,n,n,o,x,n,x,n,o,x,n
-4118,³°Àº ¼Ó¿Ê,0,OldUnderwear,Up,11,,o,o,o,n,n,x,o,n,n,n
-4119,»ç°ú,1,Apple,Down,11,,,,,,,,,,,
-4120,ÄíÅ°,1,Cookie,Middle,12,,Apple,»ç°ú,,,,,,,,
-4121,¶±ººÀÌ,1,Tteokbokki,Down,12,,RottenTangerine,½âÀº ±Ö,,,,,,,,
-4122,¾çÆÄ,1,Onion,Up,13,,Tteokbokki,¶±ººÀÌ,,,,,,,,
-4123,¿ìÀ¯ÆÑ,0,MilkCarton,Middle,13,,BananaPeel,¹Ù³ª³ª ²®Áú,,,,,,,,
-4124,³°Àº ¼Ó¿Ê,0,OldUnderwear,Up,14,,Spam,½ºÆÔ,,,,,,,,
-4125,º¹¼ş¾Æ ¾¾,0,PeachSeed,Middle,15,,Cookie,ÄíÅ°,,,,,,,,
-4126,Äİ¶ó Äµ,0,ColaCan,Down,15,,Onion,¾çÆÄ,,,,,,,,
-4127,½ºÆÔ,1,Spam,Down,16,,,,,,,,,,,
-4128,¹Ù³ª³ª ²®Áú,1,BananaPeel,Up,17,,PetBottle,ÆäÆ®º´,,,,,,,,
-4129,¶±ººÀÌ,1,Tteokbokki,Middle,17,,ColaCan,Äİ¶ó Äµ,,,,,,,,
-4130,ÆäÆ®º´,0,PetBottle,Middle,18,,OldUnderwear,³°Àº ¼Ó¿Ê,,,,,,,,
-4131,½âÀº ±Ö,1,RottenTangerine,Up,19,,MilkCarton,¿ìÀ¯ÆÑ,,,,,,,,
-,,,,,,,PaperCup,Á¾ÀÌÄÅ,,,,,,,,
-,,,,,,,PeachSeed,º¹¼ş¾Æ ¾¾,,,,,,,,
-,,,,,,,Chicken,Ä¡Å²,,,,,,,,
-,,,,,,,Toothbrush,Ä©¼Ö,,,,,,,,
-,,,,,,,Knife,½ÄÄ®,,,,,,,,
-,,,,,,,BrokenLight,±úÁø Àü±¸,,,,,,,,
+ï»¿id,name,is_answer,sprite_name,yPosition,xPosition,,0,1,2,3,4,5,6,7,8,9
+4101,ì©ì€ ê·¤,1,RottenTangerine,Up,0,,RottenTangerine,,,,,,Cookie,,Apple,
+4102,ë‚¡ì€ ì†ì˜·,0,OldUnderwear,Down,1,,,,Spam,Cookie,RottenTangerine,Knife,,BrokenLight,BananaPeel,
+4103,ìŠ¤íŒ¸,1,Spam,Middle,2,,,OldUnderwear,BananaPeel,Shell,,Onion,MilkCarton,,,ColaCan
+4104,ë°”ë‚˜ë‚˜ ê»ì§ˆ,1,BananaPeel,Down,2,,,,,,,,,,,
+4105,ì¿ í‚¤,1,Cookie,Middle,3,,10,11,12,13,14,15,16,17,18,19
+4106,ì¡°ê°œ ê»ë°ê¸°,0,Shell,Down,3,,,PetBottle,,Apple,Shell,,,Onion,,BananaPeel
+4107,ì©ì€ ê·¤,1,RottenTangerine,Middle,4,,,,Onion,PaperCup,,,,Apple,BrokenLight,
+4108,ì‹ì¹¼,0,Knife,Middle,5,,RottenTangerine,Spam,Spam,,,Knife,Cookie,,,
+4109,ì–‘íŒŒ,1,Onion,Down,5,,,,,,,,,,,
+4110,ì¿ í‚¤,1,Cookie,Up,6,,,,,,,,,,,
+4111,ìš°ìœ íŒ©,0,MilkCarton,Down,6,,o,n,n,n,n,n,o,n,o,n
+4112,ê¹¨ì§„ ì „êµ¬,0,BrokenLight,Middle,7,,n,n,o,o,o,x,n,x,o,n
+4113,ì‚¬ê³¼,1,Apple,Up,8,,n,x,o,x,n,o,x,n,n,x
+4114,ë°”ë‚˜ë‚˜ ê»ì§ˆ,1,BananaPeel,Middle,8,,,,,,,,,,,
+4115,ì½œë¼ ìº”,0,ColaCan,Down,9,,,,,,,,,,,
+4116,ì©ì€ ê·¤,1,RottenTangerine,Down,10,,n,x,n,o,x,n,n,o,n,o
+4117,í˜íŠ¸ë³‘,0,PetBottle,Up,11,,n,n,o,x,n,n,n,o,x,n
+4118,ìŠ¤íŒ¸,1,Spam,Down,11,,o,o,o,n,n,x,o,n,n,n
+4119,ì–‘íŒŒ,1,Onion,Middle,12,,,,,,,,,,,
+4120,ìŠ¤íŒ¸,1,Spam,Down,12,,Apple,ì‚¬ê³¼,,,,,,,,
+4121,ì‚¬ê³¼,1,Apple,Up,13,,RottenTangerine,ì©ì€ ê·¤,,,,,,,,
+4122,ì¢…ì´ì»µ,0,PaperCup,Middle,13,,BananaPeel,ë°”ë‚˜ë‚˜ ê»ì§ˆ,,,,,,,,
+4123,ì¡°ê°œ ê»ë°ê¸°,0,Shell,Up,14,,Spam,ìŠ¤íŒ¸,,,,,,,,
+4124,ì‹ì¹¼,0,Knife,Down,15,,Cookie,ì¿ í‚¤,,,,,,,,
+4125,ì¿ í‚¤,1,Cookie,Down,16,,Onion,ì–‘íŒŒ,,,,,,,,
+4126,ì–‘íŒŒ,1,Onion,Up,17,,,,,,,,,,,
+4127,ì‚¬ê³¼,1,Apple,Middle,17,,PetBottle,í˜íŠ¸ë³‘,,,,,,,,
+4128,ê¹¨ì§„ ì „êµ¬,0,BrokenLight,Middle,18,,ColaCan,ì½œë¼ ìº”,,,,,,,,
+4129,ë°”ë‚˜ë‚˜ ê»ì§ˆ,1,BananaPeel,Up,19,,OldUnderwear,ë‚¡ì€ ì†ì˜·,,,,,,,,
+,,,,,,,MilkCarton,ìš°ìœ íŒ©,,,,,,,,
+,,,,,,,PaperCup,ì¢…ì´ì»µ,,,,,,,,
+,,,,,,,Shell,ì¡°ê°œ ê»ë°ê¸°,,,,,,,,
+,,,,,,,Knife,ì‹ì¹¼,,,,,,,,
+,,,,,,,BrokenLight,ê¹¨ì§„ ì „êµ¬,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,

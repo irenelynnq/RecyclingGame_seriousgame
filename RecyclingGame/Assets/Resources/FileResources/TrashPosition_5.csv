@@ -1,38 +1,38 @@
-id,name,is_answer,sprite_name,yPosition,xPosition,,0,1,2,3,4,5,6,7,8,9
-5101,ÆäÆ®º´,0,PetBottle,Middle,0,,,ChickenFoot,,,BrokenSoju,,ChickenFoot,,,BrokenSoju
-5102,´ß¹ß,1,ChickenFoot,Up,1,,PetBottle,,Tissue,MilkCarton,EggShell,CoatedFlyer,,FishBone,ColaCan,
-5103,ÈŞÁö¹¶Ä¡,1,Tissue,Middle,2,,,,,PaperCup,,PaperCup,,CoatedFlyer,,PetBottle
-5104,¿ìÀ¯ÆÑ,0,MilkCarton,Middle,3,,,,,,,,,,,
-5105,Á¾ÀÌÄÅ,0,PaperCup,Down,3,,10,11,12,13,14,15,16,17,18,19
-5106,±úÁø ¼ÒÁÖº´,1,BrokenSoju,Up,4,,FishBone,,PaperCup,,,EggShell,,ColaCan,Receipt,MilkCarton
-5107,´Ş°¿²®µ¥±â,1,EggShell,Middle,4,,CoatedFlyer,MilkCarton,ColaCan,,Receipt,Tissue,PetBottle,,PaperCup,
-5108,ÄÚÆÃµÈ Àü´ÜÁö,1,CoatedFlyer,Middle,5,,,BrokenSoju,,FishBone,MilkCarton,,,Receipt,,CoatedFlyer
-5109,Á¾ÀÌÄÅ,0,PaperCup,Down,5,,,,,,,,,,,
-5110,´ß¹ß,1,ChickenFoot,Up,6,,,,,,,,,,,
-5111,»ı¼±»À,1,FishBone,Middle,7,,n,o,n,n,o,n,o,n,n,o
-5112,ÄÚÆÃµÈ Àü´ÜÁö,1,CoatedFlyer,Down,7,,x,n,o,x,o,o,n,o,x,n
-5113,Äİ¶ó Äµ,0,ColaCan,Middle,8,,n,n,n,x,n,x,n,o,n,x
-5114,±úÁø ¼ÒÁÖº´,1,BrokenSoju,Up,9,,,,,,,,,,,
-5115,ÆäÆ®º´,0,PetBottle,Down,9,,,,,,,,,,,
-5116,»ı¼±»À,1,FishBone,Up,10,,o,n,x,n,n,o,n,x,o,x
-5117,ÄÚÆÃµÈ Àü´ÜÁö,1,CoatedFlyer,Middle,10,,o,x,x,n,o,o,x,n,x,n
-5118,¿ìÀ¯ÆÑ,0,MilkCarton,Middle,11,,n,o,n,o,x,n,n,o,n,o
-5119,±úÁø ¼ÒÁÖº´,1,BrokenSoju,Down,11,,,,,,,,,,,
-5120,Á¾ÀÌÄÅ,0,PaperCup,Up,12,,Tissue,ÈŞÁö¹¶Ä¡,,,,,,,,
-5121,Äİ¶ó Äµ,0,ColaCan,Middle,12,,Receipt,¿µ¼öÁõ,,,,,,,,
-5122,»ı¼±»À,1,FishBone,Down,13,,CoatedFlyer,ÄÚÆÃµÈ Àü´ÜÁö,,,,,,,,
-5123,¿µ¼öÁõ,1,Receipt,Middle,14,,ChickenFoot,´ß¹ß,,,,,,,,
-5124,¿ìÀ¯ÆÑ,0,MilkCarton,Down,14,,FishBone,»ı¼±»À,,,,,,,,
-5125,´Ş°¿²®µ¥±â,1,EggShell,Up,15,,EggShell,´Ş°¿²®µ¥±â,,,,,,,,
-5126,ÈŞÁö¹¶Ä¡,1,Tissue,Middle,15,,BrokenSoju,±úÁø ¼ÒÁÖº´,,,,,,,,
-5127,ÆäÆ®º´,0,PetBottle,Middle,16,,,,,,,,,,,
-5128,Äİ¶ó Äµ,0,ColaCan,Up,17,,PetBottle,ÆäÆ®º´,,,,,,,,
-5129,¿µ¼öÁõ,1,Receipt,Down,17,,ColaCan,Äİ¶ó Äµ,,,,,,,,
-5130,¿µ¼öÁõ,1,Receipt,Up,18,,OldUnderwear,³°Àº ¼Ó¿Ê,,,,,,,,
-5131,Á¾ÀÌÄÅ,0,PaperCup,Middle,18,,MilkCarton,¿ìÀ¯ÆÑ,,,,,,,,
-5132,¿ìÀ¯ÆÑ,0,MilkCarton,Up,19,,PaperCup,Á¾ÀÌÄÅ,,,,,,,,
-5133,ÄÚÆÃµÈ Àü´ÜÁö,1,CoatedFlyer,Down,19,,PeachSeed,º¹¼ş¾Æ ¾¾,,,,,,,,
-,,,,,,,Chicken,Ä¡Å²,,,,,,,,
-,,,,,,,Toothbrush,Ä©¼Ö,,,,,,,,
-,,,,,,,Knife,½ÄÄ®,,,,,,,,
-,,,,,,,BrokenLight,±úÁø Àü±¸,,,,,,,,
+ï»¿id,name,is_answer,sprite_name,yPosition,xPosition,,0,1,2,3,4,5,6,7,8,9
+5101,í˜íŠ¸ë³‘,0,PetBottle,Middle,0,,,BrokenSoju,,,BrokenSoju,,CoatedCard,,,EggShell
+5102,ê¹¨ì§„ ì†Œì£¼ë³‘,1,BrokenSoju,Up,1,,PetBottle,,Tissue,,EggShell,Tissue,,Receipt,ColaCan,
+5103,íœ´ì§€ë­‰ì¹˜,1,Tissue,Middle,2,,,,,PaperCup,,PetBottle,,FishBone,,MilkCarton
+5104,ì¢…ì´ì»µ,0,PaperCup,Down,3,,,,,,,,,,,
+5105,ê¹¨ì§„ ì†Œì£¼ë³‘,1,BrokenSoju,Up,4,,10,11,12,13,14,15,16,17,18,19
+5106,ë‹¬ê±€ê»ë°ê¸°,1,EggShell,Middle,4,,Tissue,,,,,BrokenSoju,,ColaCan,Receipt,MilkCarton
+5107,íœ´ì§€ë­‰ì¹˜,1,Tissue,Middle,5,,CoatedCard,PaperCup,ColaCan,,FishBone,EggShell,MilkCarton,,PaperCup,
+5108,í˜íŠ¸ë³‘,0,PetBottle,Down,5,,,Receipt,,CoatedCard,MilkCarton,,,BrokenSoju,,FishBone
+5109,ì½”íŒ…ëœ ì¹´ë“œ,1,CoatedCard,Up,6,,,,,,,,,,,
+5110,ì˜ìˆ˜ì¦,1,Receipt,Middle,7,,,,,,,,,,,
+5111,ìƒì„ ë¼ˆ,1,FishBone,Down,7,,n,o,n,n,o,n,o,n,n,o
+5112,ì½œë¼ ìº”,0,ColaCan,Middle,8,,x,n,o,n,o,o,n,o,x,n
+5113,ë‹¬ê±€ê»ë°ê¸°,1,EggShell,Up,9,,n,n,n,x,n,x,n,o,n,x
+5114,ìš°ìœ íŒ©,0,MilkCarton,Down,9,,,,,,,,,,,
+5115,íœ´ì§€ë­‰ì¹˜,1,Tissue,Up,10,,,,,,,,,,,
+5116,ì½”íŒ…ëœ ì¹´ë“œ,1,CoatedCard,Middle,10,,o,n,n,n,n,o,n,x,o,x
+5117,ì¢…ì´ì»µ,0,PaperCup,Middle,11,,o,x,x,n,o,o,x,n,x,n
+5118,ì˜ìˆ˜ì¦,1,Receipt,Down,11,,n,o,n,o,x,n,n,o,n,o
+5119,ì½œë¼ ìº”,0,ColaCan,Middle,12,,,,,,,,,,,
+5120,ì½”íŒ…ëœ ì¹´ë“œ,1,CoatedCard,Down,13,,Tissue,íœ´ì§€ë­‰ì¹˜,,,,,,,,
+5121,ìƒì„ ë¼ˆ,1,FishBone,Middle,14,,Receipt,ì˜ìˆ˜ì¦,,,,,,,,
+5122,ìš°ìœ íŒ©,0,MilkCarton,Down,14,,CoatedCard,ì½”íŒ…ëœ ì¹´ë“œ,,,,,,,,
+5123,ê¹¨ì§„ ì†Œì£¼ë³‘,1,BrokenSoju,Up,15,,FishBone,ìƒì„ ë¼ˆ,,,,,,,,
+5124,ë‹¬ê±€ê»ë°ê¸°,1,EggShell,Middle,15,,EggShell,ë‹¬ê±€ê»ë°ê¸°,,,,,,,,
+5125,ìš°ìœ íŒ©,0,MilkCarton,Middle,16,,BrokenSoju,ê¹¨ì§„ ì†Œì£¼ë³‘,,,,,,,,
+5126,ì½œë¼ ìº”,0,ColaCan,Up,17,,,,,,,,,,,
+5127,ê¹¨ì§„ ì†Œì£¼ë³‘,1,BrokenSoju,Down,17,,PetBottle,í˜íŠ¸ë³‘,,,,,,,,
+5128,ì˜ìˆ˜ì¦,1,Receipt,Up,18,,ColaCan,ì½œë¼ ìº”,,,,,,,,
+5129,ì¢…ì´ì»µ,0,PaperCup,Middle,18,,OldUnderwear,ë‚¡ì€ ì†ì˜·,,,,,,,,
+5130,ìš°ìœ íŒ©,0,MilkCarton,Up,19,,MilkCarton,ìš°ìœ íŒ©,,,,,,,,
+5131,ìƒì„ ë¼ˆ,1,FishBone,Down,19,,PaperCup,ì¢…ì´ì»µ,,,,,,,,
+,,,,,,,Shell,ì¡°ê°œ ê»ë°ê¸°,,,,,,,,
+,,,,,,,Knife,ì‹ì¹¼,,,,,,,,
+,,,,,,,BrokenLight,ê¹¨ì§„ ì „êµ¬,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,

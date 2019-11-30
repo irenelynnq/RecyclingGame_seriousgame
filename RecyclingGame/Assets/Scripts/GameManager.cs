@@ -49,8 +49,6 @@ public class GameManager : MonoBehaviour
     {
         db = new StageDB();
         db.DBInit();
-
-        StartGame();
         
     }
 
@@ -68,6 +66,11 @@ public class GameManager : MonoBehaviour
         life = 3;
         score = 0;
         MakeRunStage();
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
     
     public void BackToMenu()

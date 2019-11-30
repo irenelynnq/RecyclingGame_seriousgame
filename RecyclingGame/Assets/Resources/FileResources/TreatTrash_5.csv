@@ -1,13 +1,13 @@
-id,name,need_preprocess,sprite_name,position_number
-4201,ÆäÆ®º´,1,PetBottle,1
-4202,Ä¡¾à ¿ë±â,0,ToothPaste,2
-4203,ÆäÆ®º´,1,PetBottle,3
-4204,¿ìÀ¯ÆÑ,1,MilkCarton,4
-4205,¸¶¿ä³×Áî ¿ë±â,1,MayoBottle,5
-4206,¿ìÀ¯ÆÑ,1,MilkCarton,6
-4207,Ä¡¾à ¿ë±â,0,ToothPaste,7
-4208,¶±ººÀÌ,0,Tteokbokki,8
-4209,ÇŞ¹İ ¿ë±â,1,RickeBowl,9
-4210,»ç°ú,0,Apple,10
-4211,¾Ë¾à,0,Pill,11
-4212,»ı¼±»À,0,FishBone,12
+ï»¿id,name,need_preprocess,sprite_name,position_number
+5201,í˜íŠ¸ë³‘,1,PetBottle,1
+5202,ì‹ìš©ìœ ,0,Oil,2
+5203,ì„œë¥˜ë´‰íˆ¬,0,Envelope,3
+5204,ë§ˆìš”ë„¤ì¦ˆ ìš©ê¸°,1,MayoBottle,4
+5205,ë‚¡ì€ ì†ì˜·,0,OldUnderwear,5
+5206,ìƒ´í‘¸ ìš©ê¸°,1,Shampoo,6
+5207,ë§ˆìš”ë„¤ì¦ˆ ìš©ê¸°,1,MayoBottle,7
+5208,ë‹¬ê±€ê»ë°ê¸°,0,EggShell,8
+5209,í˜íŠ¸ë³‘,1,PetBottle,9
+5210,ë‚¡ì€ ì†ì˜·,0,OldUnderwear,10
+5211,ì„œë¥˜ë´‰íˆ¬,0,Envelope,11
+5212,í”¼ì ë°•ìŠ¤,1,PizzaBox,12

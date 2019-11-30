@@ -1,38 +1,38 @@
-id,name,is_answer,sprite_name,yPosition,xPosition,,0,1,2,3,4,5,6,7,8,9
-2101,Æ¼¼ÅÃ÷,1,Tshirt,Down,0,,,,,,OldUnderwear,ColaCan,Pill,Tshirt,Oil,
-2102,ÆäÆ®º´,0,PetBottle,Down,1,,,,PaperCup,Light,,Light,PeachSeed,Cap,,Light
-2103,Á¾ÀÌÄÅ,0,PaperCup,Middle,2,,Tshirt,PetBottle,,ColaCan,,,,,MilkCarton,
-2104,Çü±¤µî,1,Light,Middle,3,,,,,,,,,,,
-2105,Äİ¶ó Äµ,0,ColaCan,Down,3,,10,11,12,13,14,15,16,17,18,19
-2106,³°Àº ¼Ó¿Ê,0,OldUnderwear,Up,4,,Pill,,,,,PeachSeed,,,,
-2107,Äİ¶ó Äµ,0,ColaCan,Up,5,,OldUnderwear,,PaperCup,Drycell,Oil,,Cap,OldUnderwear,Drycell,
-2108,Çü±¤µî,1,Light,Middle,5,,,Slipper,,,Pill,,Drycell,Tshirt,,PetBottle
-2109,¾Ë¾à,1,Pill,Up,6,,,,,,,,,,,
-2110,º¹¼ş¾Æ ¾¾,0,PeachSeed,Middle,6,,,,,,,,,,,
-2111,Æ¼¼ÅÃ÷,1,Tshirt,Up,7,,n,n,n,n,x,x,o,o,o,n
-2112,º¼Ä¸,1,Cap,Middle,7,,n,n,x,o,n,o,x,o,n,o
-2113,½Ä¿ëÀ¯,1,Oil,Up,8,,o,x,n,x,n,n,n,n,x,n
-2114,¿ìÀ¯ÆÑ,0,MilkCarton,Down,8,,,,,,,,,,,
-2115,Çü±¤µî,1,Light,Middle,9,,,,,,,,,,,
-2116,¾Ë¾à,1,Pill,Up,10,,o,n,n,n,n,x,n,n,n,n
-2117,³°Àº ¼Ó¿Ê,0,OldUnderwear,Middle,10,,x,n,x,o,o,n,o,x,o,n
-2118,½½¸®ÆÛ,1,Slipper,Down,11,,n,o,n,n,o,n,o,o,n,x
-2119,Á¾ÀÌÄÅ,0,PaperCup,Middle,12,,,,,,,,,,,
-2120,°ÇÀüÁö,1,Drycell,Middle,13,,Tshirt,Æ¼¼ÅÃ÷,,,,,,,,
-2121,½Ä¿ëÀ¯,1,Oil,Middle,14,,Cap,º¼Ä¸,,,,,,,,
-2122,¾Ë¾à,1,Pill,Down,14,,Slipper,½½¸®ÆÛ,,,,,,,,
-2123,º¹¼ş¾Æ ¾¾,0,PeachSeed,Up,15,,Light,Çü±¤µî,,,,,,,,
-2124,º¼Ä¸,1,Cap,Middle,16,,Drycell,°ÇÀüÁö,,,,,,,,
-2125,°ÇÀüÁö,1,Drycell,Down,16,,Pill,¾Ë¾à,,,,,,,,
-2126,³°Àº ¼Ó¿Ê,0,OldUnderwear,Middle,17,,Oil,½Ä¿ëÀ¯,,,,,,,,
-2127,Æ¼¼ÅÃ÷,1,Tshirt,Down,17,,,,,,,,,,,
-2128,°ÇÀüÁö,1,Drycell,Middle,18,,PetBottle,ÆäÆ®º´,,,,,,,,
-2129,ÆäÆ®º´,0,PetBottle,Down,19,,ColaCan,Äİ¶ó Äµ,,,,,,,,
-,,,,,,,OldUnderwear,³°Àº ¼Ó¿Ê,,,,,,,,
-,,,,,,,MilkCarton,¿ìÀ¯ÆÑ,,,,,,,,
-,,,,,,,PaperCup,Á¾ÀÌÄÅ,,,,,,,,
-,,,,,,,PeachSeed,º¹¼ş¾Æ ¾¾,,,,,,,,
-,,,,,,,Chicken,Ä¡Å²,,,,,,,,
-,,,,,,,Toothbrush,Ä©¼Ö,,,,,,,,
-,,,,,,,Knife,½ÄÄ®,,,,,,,,
-,,,,,,,BrokenLight,±úÁø Àü±¸,,,,,,,,
+ï»¿id,name,is_answer,sprite_name,yPosition,xPosition,,0,1,2,3,4,5,6,7,8,9
+2101,ê±´ì „ì§€,1,DryCell,Down,0,,,,,,Shell,Knife,Oil,Cap,Tshirt,
+2102,ì½œë¼ ìº”,0,ColaCan,Down,1,,,,OldUnderwear,Tshirt,,Pill,,,,Light
+2103,ë‚¡ì€ ì†ì˜·,0,OldUnderwear,Middle,2,,Drycell,ColaCan,,PetBottle,,,,,Knife,
+2104,í‹°ì…”ì¸ ,1,Tshirt,Middle,3,,,,,,,,,,,
+2105,í˜íŠ¸ë³‘,0,PetBottle,Down,3,,10,11,12,13,14,15,16,17,18,19
+2106,ì¡°ê°œ ê»ë°ê¸°,0,Shell,Up,4,,Oil,,,,,OldUnderwear,,,,
+2107,ì‹ì¹¼,0,Knife,Up,5,,,,Shell,Cap,Pill,,Drycell,ColaCan,Oil,
+2108,ì•Œì•½,1,Pill,Middle,5,,,Cap,,,Drycell,,Light,Pill,,PetBottle
+2109,ì‹ìš©ìœ ,1,Oil,Up,6,,,,,,,,,,,
+2110,ë³¼ìº¡,1,Cap,Up,7,,,,,,,,,,,
+2111,í‹°ì…”ì¸ ,1,Tshirt,Up,8,,n,n,n,n,x,x,o,o,o,n
+2112,ì‹ì¹¼,0,Knife,Down,8,,n,n,x,o,n,o,n,n,n,o
+2113,í˜•ê´‘ë“±,1,Light,Middle,9,,o,x,n,x,n,n,n,n,x,n
+2114,ì‹ìš©ìœ ,1,Oil,Up,10,,,,,,,,,,,
+2115,ë³¼ìº¡,1,Cap,Down,11,,,,,,,,,,,
+2116,ì¡°ê°œ ê»ë°ê¸°,0,Shell,Middle,12,,o,n,n,n,n,x,n,n,n,n
+2117,ë³¼ìº¡,1,Cap,Middle,13,,n,n,x,o,o,n,o,x,o,n
+2118,ì•Œì•½,1,Pill,Middle,14,,n,o,n,n,o,n,o,o,n,x
+2119,ê±´ì „ì§€,1,DryCell,Down,14,,,,,,,,,,,
+2120,ë‚¡ì€ ì†ì˜·,0,OldUnderwear,Up,15,,Tshirt,í‹°ì…”ì¸ ,,,,,,,,
+2121,ê±´ì „ì§€,1,DryCell,Middle,16,,Cap,ë³¼ìº¡,,,,,,,,
+2122,í˜•ê´‘ë“±,1,Light,Down,16,,Light,í˜•ê´‘ë“±,,,,,,,,
+2123,ì½œë¼ ìº”,0,ColaCan,Middle,17,,Drycell,ê±´ì „ì§€,,,,,,,,
+2124,ì•Œì•½,1,Pill,Down,17,,Pill,ì•Œì•½,,,,,,,,
+2125,ì‹ìš©ìœ ,1,Oil,Middle,18,,Oil,ì‹ìš©ìœ ,,,,,,,,
+2126,í˜íŠ¸ë³‘,0,PetBottle,Down,19,,,,,,,,,,,
+,,,,,,,PetBottle,í˜íŠ¸ë³‘,,,,,,,,
+,,,,,,,ColaCan,ì½œë¼ ìº”,,,,,,,,
+,,,,,,,OldUnderwear,ë‚¡ì€ ì†ì˜·,,,,,,,,
+,,,,,,,MilkCarton,ìš°ìœ íŒ©,,,,,,,,
+,,,,,,,PaperCup,ì¢…ì´ì»µ,,,,,,,,
+,,,,,,,Shell,ì¡°ê°œ ê»ë°ê¸°,,,,,,,,
+,,,,,,,Knife,ì‹ì¹¼,,,,,,,,
+,,,,,,,BrokenLight,ê¹¨ì§„ ì „êµ¬,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,

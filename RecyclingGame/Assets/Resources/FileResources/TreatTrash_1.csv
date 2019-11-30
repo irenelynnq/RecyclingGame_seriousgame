@@ -1,13 +1,13 @@
-id,name,need_preprocess,sprite_name,position_number
-1201,Ä¡¾à ¿ë±â,0,Toothpaste,1
-1202,Ã¥,0,Book,2
-1203,¹è´Ş¿ë Èò»ö ÇÃ¶ó½ºÆ½ ¿ë±â,1,DeliveryBowl,3
-1204,°ÇÀüÁö,0,Drycell,4
-1205,¿ä±¸¸£Æ® º´,1,YogurtBottle,5
-1206,Ä¡¾à ¿ë±â,0,Toothpaste,6
-1207,ÇŞ¹İ ¿ë±â,1,RiceBowl,7
-1208,¼¤Çª ¿ë±â,1,Shampoo,8
-1209,½ºÆÔ,0,Spam,9
-1210,ÇŞ¹İ ¿ë±â,1,RiceBowl,10
-1211,¹è´Ş¿ë Èò»ö ÇÃ¶ó½ºÆ½ ¿ë±â,1,DeliveryBowl,11
-1212,Ã¥,0,Book,12
+ï»¿id,name,need_preprocess,sprite_name,position_number
+1201,ì¹˜ì•½ ìš©ê¸°,0,Toothpaste,1
+1202,ì±…,0,Book,2
+1203,ë°°ë‹¬ìš© í°ìƒ‰ í”Œë¼ìŠ¤í‹± ìš©ê¸°,1,DeliveryBowl,3
+1204,ê±´ì „ì§€,0,Drycell,4
+1205,ìƒ´í‘¸ ìš©ê¸°,1,Shampoo,5
+1206,ì¹˜ì•½ ìš©ê¸°,0,Toothpaste,6
+1207,ì½œë¼ ìº”,1,ColaCan,7
+1208,ìƒ´í‘¸ ìš©ê¸°,1,Shampoo,8
+1209,ìŠ¤íŒ¸,0,Spam,9
+1210,ì½œë¼ ìº”,1,ColaCan,10
+1211,ë°°ë‹¬ìš© í°ìƒ‰ í”Œë¼ìŠ¤í‹± ìš©ê¸°,1,DeliveryBowl,11
+1212,ì±…,0,Book,12

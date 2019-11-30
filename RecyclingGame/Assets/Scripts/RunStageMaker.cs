@@ -6,7 +6,7 @@ public class RunStageMaker : MonoBehaviour
 {
     private void Awake()
     {
-        RunController.instance.InitRunStage(GameManager.instance.currentLevel, GameManager.instance.db.GetStageItem(GameManager.instance.currentLevel));
+        RunController.instance.InitRunStage(GameManager.instance.currentLevel, GameManager.instance.db.GetStageItem(GameManager.instance.currentLevel-1));
         Debug.Log("init");
     }
     // Start is called before the first frame update

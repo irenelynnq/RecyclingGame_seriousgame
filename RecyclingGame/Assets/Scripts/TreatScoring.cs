@@ -53,13 +53,13 @@ public class TreatScoring : MonoBehaviour
             case 3:
             case 4:
                 lifeAdded = 1;
-                hearts[1].SetActive(true);
+                hearts[0].SetActive(true);
                 break;
             case 5:
             case 6:
                 lifeAdded = 2;
+                hearts[0].SetActive(true);
                 hearts[1].SetActive(true);
-                hearts[2].SetActive(true);
                 break;
             default:
                 lifeAdded = 0;

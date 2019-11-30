@@ -1,13 +1,13 @@
-id,name,need_preprocess,sprite_name,position_number
-3201,ÇÇÀÚ ¹Ú½º,1,PizzaBox,1
-3202,½ºÄÉÄ¡ºÏ,1,Sketchbook,2
-3203,Ä©¼Ö,0,Toothbrush,3
-3204,ÄíÅ°,0,Cookie,4
-3205,ÇÇÀÚ ¹Ú½º,1,PizzaBox,5
-3206,Å¹»ó ´Ş·Â,1,TableCalendar,6
-3207,»ç°ú,0,Apple,7
-3208,ÄíÅ°,0,Cookie,8
-3209,Çü±¤µî,0,Light,9
-3210,Ä©¼Ö,0,Toothbrush,10
-3211,½ºÄÉÄ¡ºÏ,1,Sketchbook,11
-3212,Å¹»ó ´Ş·Â,1,TableCalendar,12
+ï»¿id,name,need_preprocess,sprite_name,position_number
+3201,í”¼ì ë°•ìŠ¤,1,PizzaBox,1
+3202,ìŠ¤ì¼€ì¹˜ë¶,1,Sketchbook,2
+3203,ì©ì€ ê·¤,0,RottenTangerine,3
+3204,ì¿ í‚¤,0,Cookie,4
+3205,í”¼ì ë°•ìŠ¤,1,PizzaBox,5
+3206,íƒìƒ ë‹¬ë ¥,1,TableCalendar,6
+3207,ì‚¬ê³¼,0,Apple,7
+3208,ì¿ í‚¤,0,Cookie,8
+3209,í˜•ê´‘ë“±,0,Light,9
+3210,ì©ì€ ê·¤,0,RottenTangerine,10
+3211,ìŠ¤ì¼€ì¹˜ë¶,1,Sketchbook,11
+3212,íƒìƒ ë‹¬ë ¥,1,TableCalendar,12

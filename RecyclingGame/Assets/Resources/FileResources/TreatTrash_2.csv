@@ -1,13 +1,13 @@
-id,name,need_preprocess,sprite_name,position_number
-2201,±úÁø ¼ÒÁÖº´,1,BrokenSoju,1
-2202,½ÄÄ®,1,Knife,2
-2203,º¼Ä¸,0,Cap,3
-2204,´Ş°¿²®µ¥±â,0,EggShell,4
-2205,½âÀº ±Ö,0,RottenTangerine,5
-2206,±úÁø Àü±¸,1,BrokenLight,6
-2207,´Ş°¿²®µ¥±â,0,EggShell,7
-2208,½ÄÄ®,1,Knife,8
-2209,½âÀº ±Ö,0,RottenTangerine,9
-2210,±úÁø ¼ÒÁÖº´,1,BrokenSoju,10
-2211,Ã¥,0,Book,11
-2212,±úÁø Àü±¸,1,BrokenLight,12
+ï»¿id,name,need_preprocess,sprite_name,position_number
+2201,ê¹¨ì§„ ì†Œì£¼ë³‘,1,BrokenSoju,1
+2202,ì‹ì¹¼,1,Knife,2
+2203,ë³¼ìº¡,0,Cap,3
+2204,ë‹¬ê±€ê»ë°ê¸°,0,EggShell,4
+2205,ì©ì€ ê·¤,0,RottenTangerine,5
+2206,ê¹¨ì§„ ì „êµ¬,1,BrokenLight,6
+2207,ë‹¬ê±€ê»ë°ê¸°,0,EggShell,7
+2208,ì‹ì¹¼,1,Knife,8
+2209,ì©ì€ ê·¤,0,RottenTangerine,9
+2210,ê¹¨ì§„ ì†Œì£¼ë³‘,1,BrokenSoju,10
+2211,ì±…,0,Book,11
+2212,ê¹¨ì§„ ì „êµ¬,1,BrokenLight,12

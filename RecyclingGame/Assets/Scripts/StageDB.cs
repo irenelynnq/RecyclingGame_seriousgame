@@ -26,7 +26,6 @@ public class StageDB
         for (int i = 0; i < stageCount; i++)
         {
             Debug.Log("start inserting stage " + (i + 1).ToString() + "in DB");
-            //string trashPositionFileName = "TrashPosition_1";
             
             StageItem newStage = new StageItem();
             newStage.stage_number = i+1;

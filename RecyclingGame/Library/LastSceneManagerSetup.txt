@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/TreatResultScene.unity
+- path: Assets/Scenes/TreatScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
