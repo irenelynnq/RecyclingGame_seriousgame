@@ -1,6 +1,6 @@
 ﻿id,name,need_preprocess,sprite_name,position_number
 3201,피자 박스,1,PizzaBox,1
-3202,스케치북,1,Sketchbook,2
+3202,스프링노트,1,SpringNote,2
 3203,썩은 귤,0,RottenTangerine,3
 3204,쿠키,0,Cookie,4
 3205,피자 박스,1,PizzaBox,5
@@ -9,5 +9,5 @@
 3208,쿠키,0,Cookie,8
 3209,형광등,0,Light,9
 3210,썩은 귤,0,RottenTangerine,10
-3211,스케치북,1,Sketchbook,11
+3211,스프링노트,1,SpringNote,11
 3212,탁상 달력,1,TableCalendar,12

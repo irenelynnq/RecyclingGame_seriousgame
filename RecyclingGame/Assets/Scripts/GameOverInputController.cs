@@ -16,6 +16,11 @@ public class GameOverInputController : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.R))
         {
+            for (int i = 1; i <= GameManager.instance.currentLevel; i++)
+            {
+                GameManager.instance.db.GetStageItem(i).StageItemClean();
+            }
+            
             GameManager.instance.StartGame();
         }
         

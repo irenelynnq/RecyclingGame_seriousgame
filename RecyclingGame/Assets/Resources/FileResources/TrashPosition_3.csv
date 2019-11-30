@@ -1,12 +1,12 @@
 ﻿id,name,is_answer,sprite_name,yPosition,xPosition,,0,1,2,3,4,5,6,7,8,9
-3101,스프링 노트,1,SpringNote,Up,0,,SpringNote,,Envelope,BrokenLight,,Knife,Book,,Envelope,Box
-3102,페트병,0,PetBottle,Down,0,,,,,,,,PizzaBox,ColaCan,,Book
-3103,책,1,Book,Down,1,,PetBottle,Book,,TableCalendar,PizzaBox,,,,,
+3101,스프링 노트,1,SpringNote,Up,0,,SpringNote,,Envelope,BrokenLight,,Receipt,Book,,Envelope,Box
+3102,우유팩,0,MilkCarton,Down,0,,,,,,,,PizzaBox,ColaCan,,Book
+3103,책,1,Book,Down,1,,MilkCarton,Book,,TableCalendar,PizzaBox,,,,,
 3104,서류봉투,1,Envelope,Up,2,,,,,,,,,,,
 3105,깨진 전구,0,BrokenLight,Up,3,,10,11,12,13,14,15,16,17,18,19
 3106,탁상 달력,1,TableCalendar,Down,3,,MilkCarton,,Envelope,,Shell,,TableCalendar,,,
-3107,피자 박스,1,PizzaBox,Down,4,,TableCalendar,OldUnderwear,Box,Sketchbook,PaperCup,OldUnderwear,,,,Sketchbook
-3108,식칼,0,Knife,Up,5,,,,,,,,,PizzaBox,PaperCup,
+3107,피자 박스,1,PizzaBox,Down,4,,TableCalendar,OldUnderwear,Box,SpringNote,PaperCup,CoatedCard,,,,SpringNote
+3108,영수증,0,Receipt,Up,5,,,,,,,,,PizzaBox,PaperCup,
 3109,책,1,Book,Up,6,,,,,,,,,,,
 3110,피자 박스,1,PizzaBox,Middle,6,,,,,,,,,,,
 3111,콜라 캔,0,ColaCan,Middle,7,,o,n,o,x,n,x,o,n,o,o
@@ -21,7 +21,7 @@
 3120,스프링 노트,1,SpringNote,Middle,13,,Book,책,,,,,,,,
 3121,조개 껍데기,0,Shell,Up,14,,Box,종이 상자,,,,,,,,
 3122,종이컵,0,PaperCup,Middle,14,,Envelope,서류봉투,,,,,,,,
-3123,낡은 속옷,0,OldUnderwear,Middle,15,,SpringNote,스프링 노트,,,,,,,,
+3123,코팅된 카드,0,CoatedCard,Middle,15,,SpringNote,스프링 노트,,,,,,,,
 3124,탁상 달력,1,TableCalendar,Up,16,,PizzaBox,피자 박스,,,,,,,,
 3125,피자 박스,1,PizzaBox,Down,17,,TableCalendar,탁상 달력,,,,,,,,
 3126,종이컵,0,PaperCup,Down,18,,,,,,,,,,,

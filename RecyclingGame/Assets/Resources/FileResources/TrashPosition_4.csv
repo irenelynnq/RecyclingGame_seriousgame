@@ -1,16 +1,16 @@
 ﻿id,name,is_answer,sprite_name,yPosition,xPosition,,0,1,2,3,4,5,6,7,8,9
 4101,썩은 귤,1,RottenTangerine,Up,0,,RottenTangerine,,,,,,Cookie,,Apple,
-4102,낡은 속옷,0,OldUnderwear,Down,1,,,,Spam,Cookie,RottenTangerine,Knife,,BrokenLight,BananaPeel,
-4103,스팸,1,Spam,Middle,2,,,OldUnderwear,BananaPeel,Shell,,Onion,MilkCarton,,,ColaCan
+4102,조개 껍데기,0,Shell,Down,1,,,,Spam,Cookie,RottenTangerine,Knife,,FishBone,BananaPeel,
+4103,스팸,1,Spam,Middle,2,,,Shell,BananaPeel,Shell,,Onion,MilkCarton,,,ColaCan
 4104,바나나 껍질,1,BananaPeel,Down,2,,,,,,,,,,,
 4105,쿠키,1,Cookie,Middle,3,,10,11,12,13,14,15,16,17,18,19
 4106,조개 껍데기,0,Shell,Down,3,,,PetBottle,,Apple,Shell,,,Onion,,BananaPeel
 4107,썩은 귤,1,RottenTangerine,Middle,4,,,,Onion,PaperCup,,,,Apple,BrokenLight,
-4108,식칼,0,Knife,Middle,5,,RottenTangerine,Spam,Spam,,,Knife,Cookie,,,
+4108,식칼,0,Knife,Middle,5,,RottenTangerine,Spam,Spam,,,EggShell,Cookie,,,
 4109,양파,1,Onion,Down,5,,,,,,,,,,,
 4110,쿠키,1,Cookie,Up,6,,,,,,,,,,,
 4111,우유팩,0,MilkCarton,Down,6,,o,n,n,n,n,n,o,n,o,n
-4112,깨진 전구,0,BrokenLight,Middle,7,,n,n,o,o,o,x,n,x,o,n
+4112,생선뼈,0,FishBone,Middle,7,,n,n,o,o,o,x,n,x,o,n
 4113,사과,1,Apple,Up,8,,n,x,o,x,n,o,x,n,n,x
 4114,바나나 껍질,1,BananaPeel,Middle,8,,,,,,,,,,,
 4115,콜라 캔,0,ColaCan,Down,9,,,,,,,,,,,
@@ -22,7 +22,7 @@
 4121,사과,1,Apple,Up,13,,RottenTangerine,썩은 귤,,,,,,,,
 4122,종이컵,0,PaperCup,Middle,13,,BananaPeel,바나나 껍질,,,,,,,,
 4123,조개 껍데기,0,Shell,Up,14,,Spam,스팸,,,,,,,,
-4124,식칼,0,Knife,Down,15,,Cookie,쿠키,,,,,,,,
+4124,달걀껍데기,0,EggShell,Down,15,,Cookie,쿠키,,,,,,,,
 4125,쿠키,1,Cookie,Down,16,,Onion,양파,,,,,,,,
 4126,양파,1,Onion,Up,17,,,,,,,,,,,
 4127,사과,1,Apple,Middle,17,,PetBottle,페트병,,,,,,,,
