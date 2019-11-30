@@ -17,6 +17,7 @@ public class TitleInputController : MonoBehaviour
     void Start()
     {
         titleMenu = TitleMenu.GameStart;
+        SoundManager.instance.AudioStart(SoundManager.instance.bgmSource, SoundManager.instance.opening_bgm);
     }
 
     // Update is called once per frame
@@ -24,6 +25,7 @@ public class TitleInputController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.UpArrow))
         {
+            SoundManager.instance.FxSound(SoundManager.instance.cursor_fx);
             switch (titleMenu)
             {
                 case TitleMenu.GameStart:
@@ -39,6 +41,7 @@ public class TitleInputController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
         {
+            SoundManager.instance.AudioStop(SoundManager.instance.bgmSource);
             switch (titleMenu)
             {
                 case TitleMenu.GameStart:

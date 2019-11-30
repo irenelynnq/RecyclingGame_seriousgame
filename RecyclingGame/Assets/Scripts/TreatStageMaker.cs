@@ -11,7 +11,8 @@ public class TreatStageMaker : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        SoundManager.instance.AudioVolume(SoundManager.instance.bgmSource, 0.3f);
+        SoundManager.instance.AudioStart(SoundManager.instance.bgmSource, SoundManager.instance.treat_bgm);
     }
 
     // Update is called once per frame

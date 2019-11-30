@@ -23,6 +23,7 @@ public class RunResultInputController : MonoBehaviour
             else
             {
                 //fail runstage
+                GameManager.instance.db.GetStageItem(GameManager.instance.currentLevel).StageItemClean();
                 GameManager.instance.MakeRunStage();
             }
         }

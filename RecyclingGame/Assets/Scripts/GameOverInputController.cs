@@ -8,7 +8,7 @@ public class GameOverInputController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        SoundManager.instance.AudioStart(SoundManager.instance.bgmSource, SoundManager.instance.badEnding_bgm);
     }
 
     // Update is called once per frame
@@ -20,7 +20,7 @@ public class GameOverInputController : MonoBehaviour
             {
                 GameManager.instance.db.GetStageItem(i).StageItemClean();
             }
-            
+            SoundManager.instance.AudioStop(SoundManager.instance.bgmSource);
             GameManager.instance.StartGame();
         }
         

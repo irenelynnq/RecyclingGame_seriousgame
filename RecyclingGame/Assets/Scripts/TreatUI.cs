@@ -78,7 +78,6 @@ public class TreatUI : MonoBehaviour
 
     public void UpdateGauge(int i, Trash trash)
     {
-        
         gaugeIndicator.GetComponent<Transform>().position = gaugeDict[i];
         gaugeFill.GetComponent<Image>().fillAmount = (float)trash.GetHitCount() / 15;
     }

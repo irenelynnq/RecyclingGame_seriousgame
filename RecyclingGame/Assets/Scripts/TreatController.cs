@@ -17,6 +17,8 @@ public class TreatController : MonoBehaviour
     public int playerAnswerCount;
     public List<string> playerAnswerSpriteNames;
 
+    AudioClip treat_fx;
+
     Sprite doneTrashSprite; 
 
     void Awake()
@@ -37,7 +39,7 @@ public class TreatController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        doneTrashSprite = Resources.Load<Sprite>("Art/Trash/Trash_Wrap");
+        
         
     }
 
@@ -53,6 +55,26 @@ public class TreatController : MonoBehaviour
         List<Dictionary<string, object>> data = CSVReader.Read("FileResources/" + "TreatTrash_" + level.ToString());
         currentStage = stage;
         playerAnswerCount = 0;
+        switch (stage.preprocess)
+        {
+            case "씻기":
+                treat_fx = SoundManager.instance.wash_fx;
+                doneTrashSprite = Resources.Load<Sprite>("Art/Trash/Trash_Wrap");
+                break;
+            case "포장하기":
+                treat_fx = SoundManager.instance.wrap_fx;
+                doneTrashSprite = Resources.Load<Sprite>("Art/Trash/Trash_Wrap");
+                break;
+            case "분리하기":
+                treat_fx = SoundManager.instance.separate_fx;
+                doneTrashSprite = Resources.Load<Sprite>("Art/Trash/Trash_Wrap");
+                break;
+            default:
+                treat_fx = SoundManager.instance.wrap_fx;
+                doneTrashSprite = Resources.Load<Sprite>("Art/Trash/Trash_Wrap");
+                break;
+        }
+        
 
         //StageItem으로 stage initialize
         for (int i = 0; i < stage.treatTrashCount; i++)
@@ -112,13 +134,12 @@ public class TreatController : MonoBehaviour
     public void GotAnswer(int i)
     {
         //i 위치에 있는 쓰레기 정답 표시...
-
         currentStage.treatTrashDict[i].GetComponentInParent<SpriteRenderer>().sprite = doneTrashSprite;
+        SoundManager.instance.FxSound(treat_fx);
         playerAnswerCount++;
         playerAnswerSpriteNames.Add(currentStage.treatTrashDict[i].sprite_name);
         Debug.Log("Answer!");
-        if (playerAnswerCount == currentStage.treatAnswerCount) AllAnswerClear();
-        
+        if (playerAnswerCount == currentStage.treatAnswerCount) AllAnswerClear();  
     }
 
     public void AllAnswerClear()

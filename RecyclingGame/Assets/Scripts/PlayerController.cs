@@ -58,23 +58,25 @@ public class PlayerController : MonoBehaviour
                 {
                     //공중 점프 막으려면 이 안으로 이동
                     //rigidbody2D.velocity = Vector3.up * jump_power;
+                    SoundManager.instance.FxSound(SoundManager.instance.jump_fx);
                     rigidbody2D.AddForce(Vector2.up * jump_power, ForceMode2D.Impulse);
                     jump_count -= 1;
                     animator.SetBool("jump_bool", true);
                 }
                 
             }
+            if (Input.GetKeyDown(KeyCode.DownArrow))
+            {
+                SoundManager.instance.FxSound(SoundManager.instance.slide_fx);
+                //slide
+                trashCollectorArea.offset = new Vector2(0, collectorOffset - slide_scale);
+                animator.SetBool("slide_bool", true);
+            }
             if (Input.GetKeyUp(KeyCode.DownArrow))
             {
                 //stop slide
                 trashCollectorArea.offset = new Vector2(0, collectorOffset);
                 animator.SetBool("slide_bool", false);
-            }
-            if (Input.GetKeyDown(KeyCode.DownArrow))
-            {
-                //slide
-                trashCollectorArea.offset = new Vector2(0, collectorOffset - slide_scale);
-                animator.SetBool("slide_bool", true);
             }
             runUI.playerPosition = transform.position.x;
         }

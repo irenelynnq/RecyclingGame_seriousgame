@@ -31,6 +31,7 @@ public class RunScoring : MonoBehaviour
             {
                 collectedImage[i].GetComponent<RectTransform>().position -= new Vector3(0, 15f);
             }
+            title.GetComponent<TextMeshProUGUI>().color = Color.red;
             title.GetComponent<TextMeshProUGUI>().text = "STAGE " + currentLevel.ToString() + " - 1 FAIL";
             notEnough.SetActive(true);
             enter.GetComponent<TextMeshProUGUI>().text = "엔터를 눌러 돌아가 쓰레기를 다시 주워오거라!";
@@ -70,7 +71,7 @@ public class RunScoring : MonoBehaviour
         foreach (string name in collectedNames)
         {
             Sprite trashSprite = Resources.Load<Sprite>(name);
-            if (trashSprite == null) trashSprite = Resources.Load<Sprite>("Art/Trash/" + "Zwrong");
+            if (trashSprite == null) trashSprite = Resources.Load<Sprite>("Art/Trash/" + "Zright");
             collectedImage[i].GetComponent<Image>().sprite = trashSprite;
             i++;
         }
@@ -83,7 +84,7 @@ public class RunScoring : MonoBehaviour
         foreach (string name in uncollectedNames)
         {
             Sprite trashSprite = Resources.Load<Sprite>(name);
-            if (trashSprite == null) trashSprite = Resources.Load<Sprite>("Art/Trash/" + "Zwrong");
+            if (trashSprite == null) trashSprite = Resources.Load<Sprite>("Art/Trash/" + "Zright");
             uncollectedImage[i].GetComponent<Image>().sprite = trashSprite;
             i++;
         }

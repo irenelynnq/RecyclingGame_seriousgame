@@ -27,7 +27,7 @@ public class TreatScoring : MonoBehaviour
         for (i=0; i< TreatController.instance.playerAnswerCount; i++)
         {
             Sprite trashSprite = Resources.Load<Sprite>(answerSpriteNames[i]);
-            if (trashSprite == null) trashSprite = Resources.Load<Sprite>("Art/Trash/" + "Zwrong");
+            if (trashSprite == null) trashSprite = Resources.Load<Sprite>("Art/Trash/" + "Zright");
             treatedImage[i].GetComponent<Image>().sprite = trashSprite;
         }
 

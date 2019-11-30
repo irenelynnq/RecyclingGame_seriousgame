@@ -43,8 +43,8 @@ public class Timer : MonoBehaviour
         if(LimitTime <= 0)
         {
             SetTimerState(TimerState.stop);
+            SoundManager.instance.AudioStop(SoundManager.instance.bgmSource);
             SceneManager.LoadScene("TreatResultScene");
-
         }
     }
 }

@@ -21,6 +21,7 @@ public class Trash : MonoBehaviour
     {
         if(collision.gameObject.tag == "TrashCollector")
         {
+            SoundManager.instance.FxSound(SoundManager.instance.get_fx);
             gameObject.SetActive(false);
             if (is_answer == true) collision.gameObject.GetComponent<TrashCollector>().collected_right.Add(this.id);
             else if (is_answer == false)

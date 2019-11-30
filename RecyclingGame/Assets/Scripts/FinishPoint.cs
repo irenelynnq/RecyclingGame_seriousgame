@@ -17,6 +17,7 @@ public class FinishPoint : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             RunController.instance.GetRunResult(obj.GetComponentInChildren<TrashCollector>().collected_right, obj.GetComponentInChildren<TrashCollector>().collected_wrong);
+            SoundManager.instance.AudioStop(SoundManager.instance.bgmSource);
             SceneManager.LoadScene("RunResultScene");
         }
     }

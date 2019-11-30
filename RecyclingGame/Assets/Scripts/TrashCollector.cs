@@ -28,7 +28,10 @@ public class TrashCollector : MonoBehaviour
         playerController.Flicker();
         GameManager.instance.life -= 1;
         runUI.UpdateLife();
-        if (GameManager.instance.life == 0) GameManager.instance.GameOver();
-
+        if (GameManager.instance.life == 0)
+        {
+            SoundManager.instance.AudioStop(SoundManager.instance.bgmSource);
+            GameManager.instance.GameOver();
+        }
     }
 }

@@ -48,8 +48,8 @@ public class TreatInputController : MonoBehaviour
                     treatUI.gaugeFill.SetActive(true);
                     treatUI.gaugeRect.SetActive(true);
                     treatUI.countDown.SetActive(true);
-                    StartCountDownDisplay(4);
-
+                    SoundManager.instance.AudioVolume(SoundManager.instance.bgmSource, 1f);
+                    StartCountDownDisplay(4);                    
                 }
             }
             else if (treatUI.trashDictionary.activeSelf == true)
@@ -60,8 +60,8 @@ public class TreatInputController : MonoBehaviour
                 treatUI.gaugeFill.SetActive(true);
                 treatUI.gaugeRect.SetActive(true);
                 treatUI.countDown.SetActive(true);
-                StartCountDownDisplay(4);
-
+                SoundManager.instance.AudioVolume(SoundManager.instance.bgmSource, 1f);
+                StartCountDownDisplay(4);                
             }
             
         }
@@ -160,7 +160,11 @@ public class TreatInputController : MonoBehaviour
         int count = seconds;
         while (count > 0)
         {
-            if (count == 1) treatUI.countDown.GetComponent<TextMeshProUGUI>().text = "START!";
+            if (count == 1)
+            {
+                treatUI.countDown.GetComponent<TextMeshProUGUI>().text = "START!";
+                SoundManager.instance.FxSound(SoundManager.instance.start_fx);
+            }
             else treatUI.countDown.GetComponent<TextMeshProUGUI>().text = (count - 1).ToString();
             yield return new WaitForSeconds(1);
             count--;
