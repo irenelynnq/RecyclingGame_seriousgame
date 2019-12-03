@@ -13,6 +13,7 @@ public class TreatScoring : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        SoundManager.instance.FxSound(SoundManager.instance.clear_fx);
         int i;
         for(i=0; i<hearts.Count; i++)
         {

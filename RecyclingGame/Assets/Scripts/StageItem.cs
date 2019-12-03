@@ -32,5 +32,6 @@ public class StageItem
         trashList = new List<Trash>();
         answerTrashList = new List<Trash>();
         answerSpriteNameDict = new Dictionary<int, string>();
+        treatTrashDict = new Dictionary<int, Trash>();
     }
 }

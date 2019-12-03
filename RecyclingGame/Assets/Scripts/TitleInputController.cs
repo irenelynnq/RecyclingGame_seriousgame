@@ -41,6 +41,7 @@ public class TitleInputController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
         {
+            SoundManager.instance.FxSound(SoundManager.instance.next_fx);
             SoundManager.instance.AudioStop(SoundManager.instance.bgmSource);
             switch (titleMenu)
             {

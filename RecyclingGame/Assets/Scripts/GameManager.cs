@@ -106,6 +106,12 @@ public class GameManager : MonoBehaviour
     public void LevelUp()
     {
         currentLevel += 1;
-        MakeRunStage();
+        if (currentLevel < 6) MakeRunStage();
+        else GoodEnding();
+    }
+
+    public void GoodEnding()
+    {
+        SceneManager.LoadScene("GoodEndingScene");
     }
 }

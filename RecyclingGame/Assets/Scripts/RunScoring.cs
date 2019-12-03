@@ -26,6 +26,7 @@ public class RunScoring : MonoBehaviour
 
         if (rightCount < GameManager.instance.db.GetStageItem(currentLevel).pass_criteria) 
         {
+            SoundManager.instance.FxSound(SoundManager.instance.fail_fx);
             background.GetComponent<Image>().sprite = Resources.Load<Sprite>("Art/Background/" + "map1re");
             for (i = 0; i < collectedImage.Count; i++)
             {
@@ -39,6 +40,7 @@ public class RunScoring : MonoBehaviour
         }
         else
         {
+            SoundManager.instance.FxSound(SoundManager.instance.clear_fx);
             RunController.instance.PassRunStage();
             notEnough.SetActive(false);
             title.GetComponent<TextMeshProUGUI>().text = "STAGE " + currentLevel.ToString() + " - 1 CLEAR";

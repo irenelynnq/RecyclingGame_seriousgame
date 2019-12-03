@@ -542,14 +542,17 @@ MonoBehaviour:
   treat_bgm: {fileID: 8300000, guid: ec69de2ce7cf87a4986726e2693a5de0, type: 3}
   happyEnding_bgm: {fileID: 8300000, guid: aad65c6fdec36d8489cf4872d953928a, type: 3}
   badEnding_bgm: {fileID: 8300000, guid: d13ffc17a8b8a654d82dc4ddfed8d288, type: 3}
-  cursor_fx: {fileID: 8300000, guid: 29fd3a377d06b334c985915037503e84, type: 3}
+  cursor_fx: {fileID: 8300000, guid: b4f60b4963ae29444917c2bad70264c5, type: 3}
   get_fx: {fileID: 8300000, guid: d2caefdb549bbb042911ce2ff47299c7, type: 3}
   jump_fx: {fileID: 8300000, guid: b390325c11859a744b502d53dd6e0a9e, type: 3}
   separate_fx: {fileID: 8300000, guid: 313aafc548614a2438effb7b8df1575d, type: 3}
-  slide_fx: {fileID: 8300000, guid: 169766f80857aaa468a6a7b2036f8b4a, type: 3}
+  slide_fx: {fileID: 8300000, guid: 20a40755442cbda40aec0c2c2f2d99ea, type: 3}
   start_fx: {fileID: 8300000, guid: a70eff6d42f31c547a4b10ae3e0d9547, type: 3}
-  wash_fx: {fileID: 8300000, guid: 74a1e9d1b78f99d489ea7c0eb24df2cd, type: 3}
+  wash_fx: {fileID: 8300000, guid: 258d499906814554f85e26d50db43a31, type: 3}
   wrap_fx: {fileID: 8300000, guid: 5bb64fd172628794c8d3b38ce9095b37, type: 3}
+  clear_fx: {fileID: 8300000, guid: b2f792231cb916d4ea4a7fc9f01378a0, type: 3}
+  fail_fx: {fileID: 8300000, guid: d251a7e7f4a7a4643abd1ee5c6f39cb5, type: 3}
+  next_fx: {fileID: 8300000, guid: f30e34056bcef544dbd79759eca6d5cf, type: 3}
 --- !u!4 &535268587
 Transform:
   m_ObjectHideFlags: 0
