@@ -52,7 +52,7 @@ public class RunUI : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         //이 부분에 미니맵 움직이는 거 구현. 계산 하자
         x = mapStart + ((playerPosition - start) * (mapFinish - mapStart) / (finish - start));

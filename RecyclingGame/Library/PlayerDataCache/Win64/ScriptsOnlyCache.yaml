@@ -8,6 +8,9 @@ ScriptsOnlyBuild:
     - FinishPoint
     - GameManager
     - GameOverInputController
+    - GoodEndingInputController
+    - MovingBackground
+    - ParallaxBackground
     - PlayerController
     - RunController
     - RunResultInputController
@@ -33,8 +36,6 @@ ScriptsOnlyBuild:
     - TMPro.TMP_StyleSheet
     - TMPro.TMP_SubMeshUI
     - TMPro.TextMeshProUGUI
-    UnityEditor.TestRunner.dll:
-    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -68,13 +69,58 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9480}
     - Class: 114
-      Script: {instanceID: 9714}
+      Script: {instanceID: 9716}
     - Class: 114
-      Script: {instanceID: 10202}
+      Script: {instanceID: 10208}
     - Class: 114
-      Script: {instanceID: 10358}
+      Script: {instanceID: 10364}
     - Class: 114
-      Script: {instanceID: 10480}
+      Script: {instanceID: 10486}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/GoodEndingScene.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 9424}
+    - Class: 114
+      Script: {instanceID: 9430}
+    - Class: 114
+      Script: {instanceID: 9436}
+    - Class: 114
+      Script: {instanceID: 9480}
+    - Class: 114
+      Script: {instanceID: 9716}
+    - Class: 114
+      Script: {instanceID: 9952}
+    - Class: 114
+      Script: {instanceID: 10208}
+    - Class: 114
+      Script: {instanceID: 10364}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -115,15 +161,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9480}
     - Class: 114
-      Script: {instanceID: 9714}
+      Script: {instanceID: 9716}
     - Class: 114
-      Script: {instanceID: 10046}
+      Script: {instanceID: 10052}
     - Class: 114
-      Script: {instanceID: 10202}
+      Script: {instanceID: 10208}
     - Class: 114
-      Script: {instanceID: 10220}
+      Script: {instanceID: 10226}
     - Class: 114
-      Script: {instanceID: 10358}
+      Script: {instanceID: 10364}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -147,7 +193,13 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
     - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
@@ -156,6 +208,8 @@ ScriptsOnlyBuild:
     - Class: 58
       Script: {instanceID: 0}
     - Class: 61
+      Script: {instanceID: 0}
+    - Class: 64
       Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
@@ -182,27 +236,31 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9480}
     - Class: 114
-      Script: {instanceID: 9714}
+      Script: {instanceID: 9636}
     - Class: 114
-      Script: {instanceID: 9760}
+      Script: {instanceID: 9716}
     - Class: 114
-      Script: {instanceID: 9848}
+      Script: {instanceID: 9762}
     - Class: 114
-      Script: {instanceID: 9940}
+      Script: {instanceID: 9850}
     - Class: 114
-      Script: {instanceID: 10020}
+      Script: {instanceID: 9942}
     - Class: 114
-      Script: {instanceID: 10202}
+      Script: {instanceID: 9986}
     - Class: 114
-      Script: {instanceID: 10274}
+      Script: {instanceID: 10026}
     - Class: 114
-      Script: {instanceID: 10354}
+      Script: {instanceID: 10208}
     - Class: 114
-      Script: {instanceID: 10356}
+      Script: {instanceID: 10280}
     - Class: 114
-      Script: {instanceID: 10358}
+      Script: {instanceID: 10360}
     - Class: 114
-      Script: {instanceID: 10696}
+      Script: {instanceID: 10362}
+    - Class: 114
+      Script: {instanceID: 10364}
+    - Class: 114
+      Script: {instanceID: 10702}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -261,21 +319,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9360}
     - Class: 114
-      Script: {instanceID: 9668}
+      Script: {instanceID: 9670}
     - Class: 114
-      Script: {instanceID: 9696}
+      Script: {instanceID: 9698}
     - Class: 114
-      Script: {instanceID: 9834}
+      Script: {instanceID: 9836}
     - Class: 114
-      Script: {instanceID: 10202}
+      Script: {instanceID: 10208}
     - Class: 114
-      Script: {instanceID: 10214}
+      Script: {instanceID: 10220}
     - Class: 114
-      Script: {instanceID: 10586}
+      Script: {instanceID: 10592}
     - Class: 114
-      Script: {instanceID: 10674}
+      Script: {instanceID: 10680}
     - Class: 114
-      Script: {instanceID: 10686}
+      Script: {instanceID: 10692}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -316,13 +374,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9494}
     - Class: 114
-      Script: {instanceID: 9684}
+      Script: {instanceID: 9686}
     - Class: 114
-      Script: {instanceID: 9714}
+      Script: {instanceID: 9716}
     - Class: 114
-      Script: {instanceID: 10202}
+      Script: {instanceID: 10208}
     - Class: 114
-      Script: {instanceID: 10358}
+      Script: {instanceID: 10364}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -365,21 +423,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9480}
     - Class: 114
-      Script: {instanceID: 9714}
+      Script: {instanceID: 9716}
     - Class: 114
-      Script: {instanceID: 9812}
+      Script: {instanceID: 9814}
     - Class: 114
-      Script: {instanceID: 10040}
+      Script: {instanceID: 10046}
     - Class: 114
-      Script: {instanceID: 10202}
+      Script: {instanceID: 10208}
     - Class: 114
-      Script: {instanceID: 10284}
+      Script: {instanceID: 10290}
     - Class: 114
-      Script: {instanceID: 10358}
+      Script: {instanceID: 10364}
     - Class: 114
-      Script: {instanceID: 10656}
+      Script: {instanceID: 10662}
     - Class: 114
-      Script: {instanceID: 10736}
+      Script: {instanceID: 10742}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -429,7 +487,7 @@ ScriptsOnlyBuild:
     className: TMP_Dropdown
   - hash:
       serializedVersion: 2
-      Hash: 3b4fb8bf7e693b09d0fc226a7302c3d6
+      Hash: 2ad14e55b7fe46b1f69b5b55855de4be
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SoundManager
@@ -867,6 +925,12 @@ ScriptsOnlyBuild:
     className: CinemachineExternalCamera
   - hash:
       serializedVersion: 2
+      Hash: 189682e69af873e9f18899f720a6fa5a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MovingBackground
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -1005,10 +1069,22 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GoodEndingInputController
+  - hash:
+      serializedVersion: 2
       Hash: a688553795f78389591f857339d3b6ee
     assemblyName: Assembly-CSharp.dll
     namespaceName: Cinemachine
     className: CinemachineComposer
+  - hash:
+      serializedVersion: 2
+      Hash: 697beb16d87251227b39de32e68f8fb1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ParallaxBackground
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1353,4 +1429,5 @@ ScriptsOnlyBuild:
   - Assets/Scenes/TreatScene.unity
   - Assets/Scenes/TreatResultScene.unity
   - Assets/Scenes/GameOverScene.unity
-  playerPath: "D:/\uD61C\uB9B0\uC790\uB8CC/GitHub/RecyclingGame_seriousgame/RecyclingGame/Build/v1.5_x86_64/RecyclingGame.exe"
+  - Assets/Scenes/GoodEndingScene.unity
+  playerPath: "C:/\uD61C\uB9B0/Cgit/RecyclingGame_seriousgame/RecyclingGame/Build/v1.7_x86_64/RecyclingGame.exe"

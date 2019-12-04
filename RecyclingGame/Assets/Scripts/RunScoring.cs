@@ -72,7 +72,7 @@ public class RunScoring : MonoBehaviour
         i = 0;
         foreach (string name in collectedNames)
         {
-            Sprite trashSprite = Resources.Load<Sprite>(name);
+            Sprite trashSprite = Resources.Load<Sprite>("Art/Trash/" + name);
             if (trashSprite == null) trashSprite = Resources.Load<Sprite>("Art/Trash/" + "Zright");
             collectedImage[i].GetComponent<Image>().sprite = trashSprite;
             i++;
@@ -85,7 +85,7 @@ public class RunScoring : MonoBehaviour
         i = 0;
         foreach (string name in uncollectedNames)
         {
-            Sprite trashSprite = Resources.Load<Sprite>(name);
+            Sprite trashSprite = Resources.Load<Sprite>("Art/Trash/" + name);
             if (trashSprite == null) trashSprite = Resources.Load<Sprite>("Art/Trash/" + "Zright");
             uncollectedImage[i].GetComponent<Image>().sprite = trashSprite;
             i++;

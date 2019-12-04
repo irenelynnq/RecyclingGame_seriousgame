@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
 
         if (state == PlayerState.Running)
         {
-            transform.position += Vector3.right * speed;
+            transform.position += Vector3.right * speed * Time.deltaTime;
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
                 if(jump_count > 0)
