@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TreatResultInputController : MonoBehaviour
 {
@@ -15,7 +16,8 @@ public class TreatResultInputController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            GameManager.instance.LevelUp();
+            SceneManager.LoadScene("LoadingScene");
+            //GameManager.instance.LevelUp();
         }
     }
 }

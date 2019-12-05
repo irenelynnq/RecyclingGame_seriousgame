@@ -13,13 +13,28 @@ public class Loading : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        List<Dictionary<string, object>> data = CSVReader.Read("FileResources/" + "Loading Message");
-        loading.text = (string)data[GameManager.instance.currentLevel - 1]["message"];
+        info.text = (string)(GameManager.instance.loadingMessages[GameManager.instance.currentLevel]["message"]);
+        StartTakeTime(Random.Range(3, 6));
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    IEnumerator TakeTime(int seconds)
+    {
+        int count = seconds;
+        while (count > 0)
+        {
+            yield return new WaitForSeconds(1);
+            count--;
+        }
+        GameManager.instance.LevelUp();
+    }
+    public void StartTakeTime(int seconds)
+    {
+        StartCoroutine(TakeTime(seconds));
     }
 }

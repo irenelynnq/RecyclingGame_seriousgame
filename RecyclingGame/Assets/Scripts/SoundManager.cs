@@ -8,6 +8,7 @@ public class SoundManager : MonoBehaviour
 
     public AudioSource bgmSource;
     public AudioSource fxSource;
+    public AudioSource runFxSource;
 
     public AudioClip opening_bgm;
     public AudioClip run_bgm;
@@ -71,5 +72,24 @@ public class SoundManager : MonoBehaviour
     {
         fxSource.clip = audioClip;
         fxSource.Play();
+    }
+
+    public void RunFxSound(AudioClip audioClip)
+    {
+        runFxSource.clip = audioClip;
+        runFxSource.Play();
+    }
+
+    public void RunFxStop()
+    {
+        runFxSource.Stop();
+    }
+
+    public void SlideFxStop()
+    {
+        if(runFxSource.clip == slide_fx)
+        {
+            RunFxStop();
+        }
     }
 }

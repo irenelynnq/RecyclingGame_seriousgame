@@ -42,14 +42,14 @@ public class GameManager : MonoBehaviour
     }
     
     public StageDB db;
-
+    public List<Dictionary<string, object>> loadingMessages;
 
     // Start is called before the first frame update
     void Start()
     {
         db = new StageDB();
         db.DBInit();
-        
+        loadingMessages = CSVReader.Read("FileResources/" + "LoadingMessage");
     }
 
     void Update()
@@ -61,11 +61,10 @@ public class GameManager : MonoBehaviour
     
     public void StartGame()
     {
-        currentLevel = 1;
-        //for test
+        currentLevel = 0;
         life = 3;
         score = 0;
-        MakeRunStage();
+        SceneManager.LoadScene("LoadingScene");
     }
 
     public void QuitGame()

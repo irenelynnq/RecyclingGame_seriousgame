@@ -55,6 +55,7 @@ public class TreatController : MonoBehaviour
         List<Dictionary<string, object>> data = CSVReader.Read("FileResources/" + "TreatTrash_" + level.ToString());
         currentStage = stage;
         playerAnswerCount = 0;
+        playerAnswerSpriteNames = new List<string>();
         switch (stage.preprocess)
         {
             case "씻기":
