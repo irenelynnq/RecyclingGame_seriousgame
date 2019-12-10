@@ -1,38 +1,35 @@
-id,name,is_answer,sprite_name,yPosition,xPosition,,0,1,2,3,4,5,6,7,8,9
-5101,ÆäÆ®º´,0,PetBottle,Middle,0,,,BrokenSoju,,,BrokenSoju,,CoatedCard,,,EggShell
-5102,±úÁø ¼ÒÁÖº´,1,BrokenSoju,Up,1,,PetBottle,,Tissue,,EggShell,Tissue,,Receipt,ColaCan,
-5103,ÈŞÁö¹¶Ä¡,1,Tissue,Middle,2,,,,,PaperCup,,PetBottle,,FishBone,,MilkCarton
-5104,Á¾ÀÌÄÅ,0,PaperCup,Down,3,,,,,,,,,,,
-5105,±úÁø ¼ÒÁÖº´,1,BrokenSoju,Up,4,,10,11,12,13,14,15,16,17,18,19
-5106,´Ş°¿²®µ¥±â,1,EggShell,Middle,4,,Tissue,,,,,BrokenSoju,,ColaCan,Receipt,MilkCarton
-5107,ÈŞÁö¹¶Ä¡,1,Tissue,Middle,5,,CoatedCard,PaperCup,ColaCan,,FishBone,EggShell,MilkCarton,,PaperCup,
-5108,ÆäÆ®º´,0,PetBottle,Down,5,,,Receipt,,CoatedCard,MilkCarton,,,BrokenSoju,,FishBone
-5109,ÄÚÆÃµÈ Ä«µå,1,CoatedCard,Up,6,,,,,,,,,,,
-5110,¿µ¼öÁõ,1,Receipt,Middle,7,,,,,,,,,,,
-5111,»ı¼±»À,1,FishBone,Down,7,,n,o,n,n,o,n,o,n,n,o
-5112,Äİ¶ó Äµ,0,ColaCan,Middle,8,,x,n,o,n,o,o,n,o,x,n
-5113,´Ş°¿²®µ¥±â,1,EggShell,Up,9,,n,n,n,x,n,x,n,o,n,x
-5114,¿ìÀ¯ÆÑ,0,MilkCarton,Down,9,,,,,,,,,,,
-5115,ÈŞÁö¹¶Ä¡,1,Tissue,Up,10,,,,,,,,,,,
-5116,ÄÚÆÃµÈ Ä«µå,1,CoatedCard,Middle,10,,o,n,n,n,n,o,n,x,o,x
-5117,Á¾ÀÌÄÅ,0,PaperCup,Middle,11,,o,x,x,n,o,o,x,n,x,n
-5118,¿µ¼öÁõ,1,Receipt,Down,11,,n,o,n,o,x,n,n,o,n,o
-5119,Äİ¶ó Äµ,0,ColaCan,Middle,12,,,,,,,,,,,
-5120,ÄÚÆÃµÈ Ä«µå,1,CoatedCard,Down,13,,Tissue,ÈŞÁö¹¶Ä¡,,,,,,,,
-5121,»ı¼±»À,1,FishBone,Middle,14,,Receipt,¿µ¼öÁõ,,,,,,,,
-5122,¿ìÀ¯ÆÑ,0,MilkCarton,Down,14,,CoatedCard,ÄÚÆÃµÈ Ä«µå,,,,,,,,
-5123,±úÁø ¼ÒÁÖº´,1,BrokenSoju,Up,15,,FishBone,»ı¼±»À,,,,,,,,
-5124,´Ş°¿²®µ¥±â,1,EggShell,Middle,15,,EggShell,´Ş°¿²®µ¥±â,,,,,,,,
-5125,¿ìÀ¯ÆÑ,0,MilkCarton,Middle,16,,BrokenSoju,±úÁø ¼ÒÁÖº´,,,,,,,,
-5126,Äİ¶ó Äµ,0,ColaCan,Up,17,,,,,,,,,,,
-5127,±úÁø ¼ÒÁÖº´,1,BrokenSoju,Down,17,,PetBottle,ÆäÆ®º´,,,,,,,,
-5128,¿µ¼öÁõ,1,Receipt,Up,18,,ColaCan,Äİ¶ó Äµ,,,,,,,,
-5129,Á¾ÀÌÄÅ,0,PaperCup,Middle,18,,OldUnderwear,³°Àº ¼Ó¿Ê,,,,,,,,
-5130,¿ìÀ¯ÆÑ,0,MilkCarton,Up,19,,MilkCarton,¿ìÀ¯ÆÑ,,,,,,,,
-5131,»ı¼±»À,1,FishBone,Down,19,,PaperCup,Á¾ÀÌÄÅ,,,,,,,,
-,,,,,,,Shell,Á¶°³ ²®µ¥±â,,,,,,,,
-,,,,,,,Knife,½ÄÄ®,,,,,,,,
-,,,,,,,BrokenLight,±úÁø Àü±¸,,,,,,,,
-,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,
+ï»¿id,name,is_answer,sprite_name,yPosition,xPosition,,0,1,2,3,4,5,6,7,8,9
+5101,í˜íŠ¸ë³‘,0,PetBottle,Middle,0,,n,n,CoatedCard,PaperCup,n,BrokenSoju,n,EggShell,n,n
+5102,ê¹¨ì§„ ì†Œì£¼ë³‘,1,BrokenSoju,Middle,1,,PetBottle,BrokenSoju,Receipt,n,EggShell,n,Tissue,n,n,FishBone
+5103,íœ´ì§€ë­‰ì¹˜,1,Tissue,Down,1,,n,Tissue,n,n,n,n,FishBone,PetBottle,CoatedCard,ColaCan
+5104,ì½”íŒ…ëœ ì¹´ë“œ,1,CoatedCard,Up,2,,,,,,,,,,,
+5105,ì˜ìˆ˜ì¦,1,Receipt,Middle,2,,10,11,12,13,14,15,16,17,18,19
+5106,ì¢…ì´ì»µ,0,PaperCup,Up,3,,n,Tissue,MilkCarton,n,n,Receipt,n,BrokenSoju,PaperCup,FishBone
+5107,ë‹¬ê±€ê»ë°ê¸°,1,EggShell,Middle,4,,CoatedCard,n,PaperCup,MilkCarton,n,n,MilkCarton,n,EggShell,MilkCarton
+5108,ê¹¨ì§„ ì†Œì£¼ë³‘,1,BrokenSoju,Up,5,,Receipt,n,n,BrokenSoju,ColaCan,n,ColaCan,n,n,n
+5109,íœ´ì§€ë­‰ì¹˜,1,Tissue,Middle,6,,,,,,,,,,,
+5110,ìƒì„ ë¼ˆ,1,FishBone,Down,6,,,,,,,,,,,
+5111,ë‹¬ê±€ê»ë°ê¸°,1,EggShell,Up,7,,n,n,o,x,n,o,n,o,n,n
+5112,í˜íŠ¸ë³‘,0,PetBottle,Down,7,,x,o,o,n,o,n,o,n,n,o
+5113,ì½”íŒ…ëœ ì¹´ë“œ,1,CoatedCard,Down,8,,n,o,n,n,n,n,o,x,o,x
+5114,ìƒì„ ë¼ˆ,1,FishBone,Middle,9,,,,,,,,,,,
+5115,ì½œë¼ ìº”,0,ColaCan,Down,9,,,,,,,,,,,
+5116,ì½”íŒ…ëœ ì¹´ë“œ,1,CoatedCard,Middle,10,,n,o,x,n,n,o,n,o,x,o
+5117,ì˜ìˆ˜ì¦,1,Receipt,Down,10,,o,n,x,x,n,n,x,n,o,x
+5118,íœ´ì§€ë­‰ì¹˜,1,Tissue,Up,11,,o,n,n,o,x,n,x,n,n,n
+5119,ìš°ìœ íŒ©,0,MilkCarton,Up,12,,,,,,,,,,,
+5120,ì¢…ì´ì»µ,0,PaperCup,Middle,12,,Tissue,íœ´ì§€ë­‰ì¹˜,,,,,,,,
+5121,ìš°ìœ íŒ©,0,MilkCarton,Middle,13,,Receipt,ì˜ìˆ˜ì¦,,,,,,,,
+5122,ê¹¨ì§„ ì†Œì£¼ë³‘,1,BrokenSoju,Down,13,,CoatedCard,ì½”íŒ…ëœ ì¹´ë“œ,,,,,,,,
+5123,ì½œë¼ ìº”,0,ColaCan,Down,14,,FishBone,ìƒì„ ë¼ˆ,,,,,,,,
+5124,ì˜ìˆ˜ì¦,1,Receipt,Up,15,,EggShell,ë‹¬ê±€ê»ë°ê¸°,,,,,,,,
+5125,ìš°ìœ íŒ©,0,MilkCarton,Middle,16,,BrokenSoju,ê¹¨ì§„ ì†Œì£¼ë³‘,,,,,,,,
+5126,ì½œë¼ ìº”,0,ColaCan,Down,16,,,,,,,,,,,
+5127,ê¹¨ì§„ ì†Œì£¼ë³‘,1,BrokenSoju,Up,17,,PetBottle,í˜íŠ¸ë³‘,,,,,,,,
+5128,ì¢…ì´ì»µ,0,PaperCup,Up,18,,ColaCan,ì½œë¼ ìº”,,,,,,,,
+5129,ë‹¬ê±€ê»ë°ê¸°,1,EggShell,Middle,18,,OldUnderwear,ë‚¡ì€ ì†ì˜·,,,,,,,,
+5130,ìƒì„ ë¼ˆ,1,FishBone,Up,19,,MilkCarton,ìš°ìœ íŒ©,,,,,,,,
+5131,ìš°ìœ íŒ©,0,MilkCarton,Middle,19,,PaperCup,ì¢…ì´ì»µ,,,,,,,,
+,,,,,,,Shell,ì¡°ê°œ ê»ë°ê¸°,,,,,,,,
+,,,,,,,Knife,ì‹ì¹¼,,,,,,,,
+,,,,,,,BrokenLight,ê¹¨ì§„ ì „êµ¬,,,,,,,,

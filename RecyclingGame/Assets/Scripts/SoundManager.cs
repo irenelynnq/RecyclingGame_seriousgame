@@ -9,6 +9,7 @@ public class SoundManager : MonoBehaviour
     public AudioSource bgmSource;
     public AudioSource fxSource;
     public AudioSource runFxSource;
+    public AudioSource wrongFxSource;
 
     public AudioClip opening_bgm;
     public AudioClip run_bgm;
@@ -18,6 +19,7 @@ public class SoundManager : MonoBehaviour
 
     public AudioClip cursor_fx;
     public AudioClip get_fx;
+    public AudioClip wrong_fx;
     public AudioClip jump_fx;
     public AudioClip separate_fx;
     public AudioClip slide_fx;
@@ -91,5 +93,11 @@ public class SoundManager : MonoBehaviour
         {
             RunFxStop();
         }
+    }
+
+    public void WrongFx()
+    {
+        //wrongFxSource.clip = wrong_fx;
+        wrongFxSource.Play();
     }
 }

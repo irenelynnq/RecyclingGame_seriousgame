@@ -21,11 +21,16 @@ public class Trash : MonoBehaviour
     {
         if(collision.gameObject.tag == "TrashCollector")
         {
-            SoundManager.instance.FxSound(SoundManager.instance.get_fx);
+            
             gameObject.SetActive(false);
-            if (is_answer == true) collision.gameObject.GetComponent<TrashCollector>().collected_right.Add(this.id);
+            if (is_answer == true)
+            {
+                SoundManager.instance.FxSound(SoundManager.instance.get_fx);
+                collision.gameObject.GetComponent<TrashCollector>().collected_right.Add(this.id);
+            }
             else if (is_answer == false)
             {
+                SoundManager.instance.WrongFx();
                 collision.gameObject.GetComponent<TrashCollector>().collected_wrong.Add(this.id);
                 collision.gameObject.GetComponent<TrashCollector>().GotWrong();
                 Debug.Log("Got Wrong!!" + name + " " + xPosition.ToString());

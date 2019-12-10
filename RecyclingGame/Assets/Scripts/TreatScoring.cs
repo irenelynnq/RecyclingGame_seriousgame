@@ -10,6 +10,7 @@ public class TreatScoring : MonoBehaviour
 
     public List<GameObject> treatedImage;
     public List<GameObject> hearts;
+    public GameObject full;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,7 @@ public class TreatScoring : MonoBehaviour
         }
         int currentLevel = GameManager.instance.currentLevel;
         GameManager.instance.life = Mathf.Min(GameManager.instance.life + CalculateLifeAdded(TreatController.instance.playerAnswerCount), 5);
+        if (GameManager.instance.life == 5) full.SetActive(true);
 
         title.GetComponent<TextMeshProUGUI>().text = "STAGE " + currentLevel + " - 2 CLEAR";
 
@@ -54,13 +56,16 @@ public class TreatScoring : MonoBehaviour
             case 3:
             case 4:
                 lifeAdded = 1;
-                hearts[0].SetActive(true);
+                if (GameManager.instance.life < 5)
+                {
+                    hearts[0].SetActive(true);
+                }
                 break;
             case 5:
             case 6:
                 lifeAdded = 2;
-                hearts[0].SetActive(true);
-                hearts[1].SetActive(true);
+                if (GameManager.instance.life < 5) hearts[0].SetActive(true);
+                if (GameManager.instance.life < 4) hearts[1].SetActive(true);
                 break;
             default:
                 lifeAdded = 0;

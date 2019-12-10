@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class RunUI : MonoBehaviour
 {
     public GameObject stageName;
+    public GameObject stageNumber;
     public GameObject lifeCount;
     public List<GameObject> lifeHearts;
 
@@ -27,6 +28,13 @@ public class RunUI : MonoBehaviour
     private float finish;
     private float x;
 
+    public GameObject menuBox;
+    public GameObject menuContinue;
+    public GameObject menuMain;
+    public GameObject menuPointer;
+    public GameObject menuPointer2;
+    public MenuState menuState;
+
     RectTransform mapCharTr;
     // Start is called before the first frame update
     void Start()
@@ -34,10 +42,11 @@ public class RunUI : MonoBehaviour
         ShowDictionary(false);
         ShowKeyTutorial(false);
         countDown.SetActive(false);
-        trashDictionary.GetComponent<Image>().sprite = Resources.Load<Sprite>("Art/Scroll/" + "TrashDictionary" + GameManager.instance.currentLevel.ToString());
+        trashDictionary.GetComponent<Image>().sprite = Resources.Load<Sprite>("Art/Scroll/" + "TrashDictionary" + GameManager.instance.currentLevel.ToString() + "-1");
         ShowScroll();
 
         stageName.GetComponent<TextMeshProUGUI>().text = GameManager.instance.db.GetStageItem(GameManager.instance.currentLevel).name;
+        stageNumber.GetComponent<TextMeshProUGUI>().text = GameManager.instance.currentLevel.ToString();
         lifeCount.GetComponent<TextMeshProUGUI>().text = "X " + GameManager.instance.life.ToString();
         UpdateLife();
 
@@ -88,10 +97,50 @@ public class RunUI : MonoBehaviour
 
     public void ShowScroll()
     {
-        if(GameManager.instance.currentLevel == 1)
+        if (GameManager.instance.is_first_run == true)
         {
             ShowKeyTutorial(true);
         }
-        ShowDictionary(true);
+        else
+        {
+            ShowDictionary(true);
+        }
     }
+
+    public void ShowMenu()
+    {
+        menuBox.SetActive(true);
+        menuContinue.SetActive(true);
+        menuMain.SetActive(true);
+        menuPointer.SetActive(true);
+        menuPointer2.SetActive(false);
+        menuState = MenuState.cont;
+    }
+
+    public void OutMenu()
+    {
+        menuBox.SetActive(false);
+        menuContinue.SetActive(false);
+        menuMain.SetActive(false);
+        menuPointer.SetActive(false);
+    }
+
+    public void MoveMenuPointer()
+    {
+        Debug.Log("move!");
+        SoundManager.instance.FxSound(SoundManager.instance.cursor_fx);
+        if (menuState == MenuState.cont)
+        {
+            menuState = MenuState.mainTitle;
+            menuPointer.SetActive(false);
+            menuPointer2.SetActive(true);
+        }
+        else if (menuState == MenuState.mainTitle)
+        {
+            menuState = MenuState.cont;
+            menuPointer.SetActive(true);
+            menuPointer2.SetActive(false);
+        }
+    }
+
 }

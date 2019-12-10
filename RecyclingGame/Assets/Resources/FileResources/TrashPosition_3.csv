@@ -1,31 +1,31 @@
 ﻿id,name,is_answer,sprite_name,yPosition,xPosition,,0,1,2,3,4,5,6,7,8,9
-3101,스프링 노트,1,SpringNote,Up,0,,SpringNote,,Envelope,BrokenLight,,Receipt,Book,,Envelope,Box
-3102,우유팩,0,MilkCarton,Down,0,,,,,,,,PizzaBox,ColaCan,,Book
-3103,책,1,Book,Down,1,,MilkCarton,Book,,TableCalendar,PizzaBox,,,,,
-3104,서류봉투,1,Envelope,Up,2,,,,,,,,,,,
-3105,깨진 전구,0,BrokenLight,Up,3,,10,11,12,13,14,15,16,17,18,19
-3106,탁상 달력,1,TableCalendar,Down,3,,MilkCarton,,Envelope,,Shell,,TableCalendar,,,
-3107,피자 박스,1,PizzaBox,Down,4,,TableCalendar,OldUnderwear,Box,SpringNote,PaperCup,CoatedCard,,,,SpringNote
-3108,영수증,0,Receipt,Up,5,,,,,,,,,PizzaBox,PaperCup,
-3109,책,1,Book,Up,6,,,,,,,,,,,
-3110,피자 박스,1,PizzaBox,Middle,6,,,,,,,,,,,
-3111,콜라 캔,0,ColaCan,Middle,7,,o,n,o,x,n,x,o,n,o,o
-3112,서류봉투,1,Envelope,Up,8,,n,n,n,n,n,n,o,x,n,o
-3113,종이 상자,1,Box,Up,9,,x,o,n,o,o,n,n,n,n,n
-3114,책,1,Book,Middle,9,,,,,,,,,,,
-3115,우유팩,0,MilkCarton,Up,10,,,,,,,,,,,
-3116,탁상 달력,1,TableCalendar,Middle,10,,x,n,o,n,x,n,o,n,n,n
-3117,낡은 속옷,0,OldUnderwear,Middle,11,,o,x,o,o,x,x,n,n,n,o
-3118,서류봉투,1,Envelope,Up,12,,n,n,n,n,n,n,n,o,x,n
-3119,종이 상자,1,Box,Middle,12,,,,,,,,,,,
-3120,스프링 노트,1,SpringNote,Middle,13,,Book,책,,,,,,,,
-3121,조개 껍데기,0,Shell,Up,14,,Box,종이 상자,,,,,,,,
-3122,종이컵,0,PaperCup,Middle,14,,Envelope,서류봉투,,,,,,,,
-3123,코팅된 카드,0,CoatedCard,Middle,15,,SpringNote,스프링 노트,,,,,,,,
-3124,탁상 달력,1,TableCalendar,Up,16,,PizzaBox,피자 박스,,,,,,,,
-3125,피자 박스,1,PizzaBox,Down,17,,TableCalendar,탁상 달력,,,,,,,,
-3126,종이컵,0,PaperCup,Down,18,,,,,,,,,,,
-3127,스프링 노트,1,SpringNote,Middle,19,,PetBottle,페트병,,,,,,,,
+3101,우유팩,0,MilkCarton,Down,0,,n,Book,n,n,Receipt,PizzaBox,n,n,ColaCan,Shell
+3102,책,1,Book,Up,1,,n,n,SpringNote,BrokenLight,n,n,n,PizzaBox,MilkCarton,n
+3103,스프링 노트,1,SpringNote,Middle,2,,MilkCarton,n,n,Envelope,n,n,TableCalendar,Envelope,n,Box
+3104,깨진 전구,0,BrokenLight,Middle,3,,,,,,,,,,,
+3105,서류봉투,1,Envelope,Down,3,,10,11,12,13,14,15,16,17,18,19
+3106,영수증,0,Receipt,Up,4,,Book,PaperCup,TableCalendar,n,TableCalendar,Box,n,SpringNote,PaperCup,n
+3107,피자 박스,1,PizzaBox,Up,5,,n,Envelope,n,Book,SpringNote,n,OldUnderwear,n,n,n
+3108,탁상 달력,1,TableCalendar,Down,6,,n,n,CoatedCard,n,n,n,n,n,n,PizzaBox
+3109,피자 박스,1,PizzaBox,Middle,7,,,,,,,,,,,
+3110,서류봉투,1,Envelope,Down,7,,,,,,,,,,,
+3111,콜라 캔,0,ColaCan,Up,8,,n,o,n,n,x,o,n,n,x,x
+3112,우유팩,0,MilkCarton,Middle,8,,n,n,o,x,n,n,n,o,x,n
+3113,조개 껍데기,0,Shell,Up,9,,x,n,n,o,n,n,o,o,n,o
+3114,종이 상자,1,Box,Down,9,,,,,,,,,,,
+3115,책,1,Book,Up,10,,,,,,,,,,,
+3116,종이컵,0,PaperCup,Up,11,,o,x,o,n,o,o,n,o,x,n
+3117,서류봉투,1,Envelope,Middle,11,,n,o,n,o,o,n,x,n,n,n
+3118,탁상 달력,1,TableCalendar,Up,12,,n,n,x,n,n,n,n,n,n,o
+3119,코팅된 카드,0,CoatedCard,Down,12,,,,,,,,,,,
+3120,책,1,Book,Middle,13,,Book,책,,,,,,,,
+3121,탁상 달력,1,TableCalendar,Up,14,,Box,종이 상자,,,,,,,,
+3122,스프링 노트,1,SpringNote,Middle,14,,Envelope,서류봉투,,,,,,,,
+3123,종이 상자,1,Box,Up,15,,SpringNote,스프링 노트,,,,,,,,
+3124,낡은 속옷,0,OldUnderwear,Middle,16,,PizzaBox,피자 박스,,,,,,,,
+3125,스프링 노트,1,SpringNote,Up,17,,TableCalendar,탁상 달력,,,,,,,,
+3126,종이컵,0,PaperCup,Up,18,,,,,,,,,,,
+3127,피자 박스,1,PizzaBox,Down,19,,PetBottle,페트병,,,,,,,,
 ,,,,,,,ColaCan,콜라 캔,,,,,,,,
 ,,,,,,,OldUnderwear,낡은 속옷,,,,,,,,
 ,,,,,,,MilkCarton,우유팩,,,,,,,,
@@ -33,6 +33,3 @@
 ,,,,,,,Shell,조개 껍데기,,,,,,,,
 ,,,,,,,Knife,식칼,,,,,,,,
 ,,,,,,,BrokenLight,깨진 전구,,,,,,,,
-,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,

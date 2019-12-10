@@ -40,7 +40,7 @@ public class StageDB
             newStage.trashStartingPoint = starting;
             newStage.trashGap = gap;
             stageList.Add(newStage);
-            Debug.Log("finished inserting DB stage " + (i+1).ToString());
+            Debug.Log("finished inserting DB stage " + newStage.name);
         }
     }
 

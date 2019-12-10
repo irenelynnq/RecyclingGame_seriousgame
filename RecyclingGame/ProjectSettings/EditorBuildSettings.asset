@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/TitleScene.unity
     guid: 255b4c1c25fd442478a607c602e83a3b
   - enabled: 1
+    path: Assets/Scenes/OpeningScene.unity
+    guid: 80879eb73f063e34fa83b7a6d6acee20
+  - enabled: 1
     path: Assets/Scenes/LoadingScene.unity
     guid: 29abe328ecd8abb4a813143d8255c6aa
   - enabled: 1
@@ -29,6 +32,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameOverScene.unity
     guid: 527776d8cc0bbed4f8993bcd472cbf58
+  - enabled: 1
+    path: Assets/Scenes/GoingBackScene.unity
+    guid: 8c8cf5f20d6db7c4e8a50d4000193d35
   - enabled: 1
     path: Assets/Scenes/GoodEndingScene.unity
     guid: a620171554260c246a920156c868bbb5

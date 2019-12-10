@@ -134,8 +134,8 @@ public class TreatController : MonoBehaviour
 
     public void GotAnswer(int i)
     {
-        //i 위치에 있는 쓰레기 정답 표시...
-        currentStage.treatTrashDict[i].GetComponentInParent<SpriteRenderer>().sprite = doneTrashSprite;
+        //i 위치에 있는 쓰레기 정답...
+        //currentStage.treatTrashDict[i].GetComponentInParent<SpriteRenderer>().sprite = doneTrashSprite;
         SoundManager.instance.FxSound(treat_fx);
         playerAnswerCount++;
         playerAnswerSpriteNames.Add(currentStage.treatTrashDict[i].sprite_name);

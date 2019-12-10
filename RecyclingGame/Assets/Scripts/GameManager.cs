@@ -19,14 +19,22 @@ public enum GameScene
     treatresult
 }
 
+public enum MenuState
+{
+    cont,
+    mainTitle
+}
+
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
-    public GameState currentGameState = GameState.menu;
+    public GameState currentGameState;
     public GameScene currentGameScene = GameScene.run;
     public int currentLevel;
     public int life;
     public int score;
+    public bool is_first_run;
+    public bool is_first_treat;
 
     void Awake()
     {
@@ -39,17 +47,20 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
         DontDestroyOnLoad(gameObject);
+        is_first_run = true;
+        is_first_treat = true;
+        currentGameState = GameState.inGame;
     }
     
     public StageDB db;
-    public List<Dictionary<string, object>> loadingMessages;
+    //public List<Dictionary<string, object>> loadingMessages;
 
     // Start is called before the first frame update
     void Start()
     {
         db = new StageDB();
         db.DBInit();
-        loadingMessages = CSVReader.Read("FileResources/" + "LoadingMessage");
+        //loadingMessages = CSVReader.Read("FileResources/" + "LoadingMessage");
     }
 
     void Update()
@@ -64,7 +75,14 @@ public class GameManager : MonoBehaviour
         currentLevel = 0;
         life = 3;
         score = 0;
-        SceneManager.LoadScene("LoadingScene");
+        if (is_first_run)
+        {
+            SceneManager.LoadScene("LoadingScene");
+        }
+        else
+        {
+            LevelUp();
+        }
     }
 
     public void QuitGame()

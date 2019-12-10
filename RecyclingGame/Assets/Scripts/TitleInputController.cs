@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TitleInputController : MonoBehaviour
 {
@@ -42,11 +43,11 @@ public class TitleInputController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
         {
             SoundManager.instance.FxSound(SoundManager.instance.next_fx);
-            SoundManager.instance.AudioStop(SoundManager.instance.bgmSource);
+            //SoundManager.instance.AudioStop(SoundManager.instance.bgmSource);
             switch (titleMenu)
             {
                 case TitleMenu.GameStart:
-                    GameManager.instance.StartGame();
+                    SceneManager.LoadScene("OpeningScene");
                     break;
                 case TitleMenu.GameExit:
                     GameManager.instance.QuitGame();

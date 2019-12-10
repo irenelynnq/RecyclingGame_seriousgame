@@ -1,38 +1,35 @@
 ﻿id,name,is_answer,sprite_name,yPosition,xPosition,,0,1,2,3,4,5,6,7,8,9
-4101,썩은 귤,1,RottenTangerine,Up,0,,RottenTangerine,,,,,,Cookie,,Apple,
-4102,조개 껍데기,0,Shell,Down,1,,,,Spam,Cookie,RottenTangerine,Knife,,FishBone,BananaPeel,
-4103,스팸,1,Spam,Middle,2,,,Shell,BananaPeel,Shell,,Onion,MilkCarton,,,ColaCan
-4104,바나나 껍질,1,BananaPeel,Down,2,,,,,,,,,,,
-4105,쿠키,1,Cookie,Middle,3,,10,11,12,13,14,15,16,17,18,19
-4106,조개 껍데기,0,Shell,Down,3,,,PetBottle,,Apple,Shell,,,Onion,,BananaPeel
-4107,썩은 귤,1,RottenTangerine,Middle,4,,,,Onion,PaperCup,,,,Apple,BrokenLight,
-4108,식칼,0,Knife,Middle,5,,RottenTangerine,Spam,Spam,,,EggShell,Cookie,,,
-4109,양파,1,Onion,Down,5,,,,,,,,,,,
-4110,쿠키,1,Cookie,Up,6,,,,,,,,,,,
-4111,우유팩,0,MilkCarton,Down,6,,o,n,n,n,n,n,o,n,o,n
-4112,생선뼈,0,FishBone,Middle,7,,n,n,o,o,o,x,n,x,o,n
-4113,사과,1,Apple,Up,8,,n,x,o,x,n,o,x,n,n,x
-4114,바나나 껍질,1,BananaPeel,Middle,8,,,,,,,,,,,
-4115,콜라 캔,0,ColaCan,Down,9,,,,,,,,,,,
-4116,썩은 귤,1,RottenTangerine,Down,10,,n,x,n,o,x,n,n,o,n,o
-4117,페트병,0,PetBottle,Up,11,,n,n,o,x,n,n,n,o,x,n
-4118,스팸,1,Spam,Down,11,,o,o,o,n,n,x,o,n,n,n
-4119,양파,1,Onion,Middle,12,,,,,,,,,,,
-4120,스팸,1,Spam,Down,12,,Apple,사과,,,,,,,,
-4121,사과,1,Apple,Up,13,,RottenTangerine,썩은 귤,,,,,,,,
-4122,종이컵,0,PaperCup,Middle,13,,BananaPeel,바나나 껍질,,,,,,,,
-4123,조개 껍데기,0,Shell,Up,14,,Spam,스팸,,,,,,,,
-4124,달걀껍데기,0,EggShell,Down,15,,Cookie,쿠키,,,,,,,,
-4125,쿠키,1,Cookie,Down,16,,Onion,양파,,,,,,,,
-4126,양파,1,Onion,Up,17,,,,,,,,,,,
-4127,사과,1,Apple,Middle,17,,PetBottle,페트병,,,,,,,,
-4128,깨진 전구,0,BrokenLight,Middle,18,,ColaCan,콜라 캔,,,,,,,,
+4101,썩은 귤,1,RottenTangerine,Up,0,,RottenTangerine,n,FishBone,n,n,Cookie,n,n,n,n
+4102,조개 껍데기,0,Shell,Down,1,,n,n,n,Spam,Knife,n,n,Shell,Cookie,EggShell
+4103,생선뼈,0,FishBone,Up,2,,n,Shell,n,BananaPeel,MilkCarton,n,RottenTangerine,Onion,Apple,n
+4104,스팸,1,Spam,Middle,3,,,,,,,,,,,
+4105,바나나 껍질,1,BananaPeel,Down,3,,10,11,12,13,14,15,16,17,18,19
+4106,식칼,0,Knife,Middle,4,,BananaPeel,ColaCan,n,Apple,n,PaperCup,n,Cookie,BrokenLight,BananaPeel
+4107,우유팩,0,MilkCarton,Down,4,,n,n,RottenTangerine,n,Onion,n,n,n,Apple,n
+4108,쿠키,1,Cookie,Up,5,,n,Spam,n,n,PetBottle,Spam,Onion,Shell,n,n
+4109,썩은 귤,1,RottenTangerine,Down,6,,,,,,,,,,,
+4110,조개 껍데기,0,Shell,Middle,7,,,,,,,,,,,
+4111,양파,1,Onion,Down,7,,o,n,x,n,n,o,n,n,n,n
+4112,쿠키,1,Cookie,Middle,8,,n,n,n,o,x,n,n,x,o,x
+4113,사과,1,Apple,Down,8,,n,x,n,o,x,n,o,o,o,n
+4114,달걀껍데기,0,EggShell,Middle,9,,,,,,,,,,,
+4115,바나나 껍질,1,BananaPeel,Up,10,,,,,,,,,,,
+4116,콜라 캔,0,ColaCan,Up,11,,o,x,n,o,n,x,n,o,x,o
+4117,스팸,1,Spam,Down,11,,n,n,o,n,o,n,n,n,o,n
+4118,썩은 귤,1,RottenTangerine,Middle,12,,n,o,n,n,x,o,o,x,n,n
+4119,사과,1,Apple,Up,13,,,,,,,,,,,
+4120,양파,1,Onion,Middle,14,,Apple,사과,,,,,,,,
+4121,페트병,0,PetBottle,Down,14,,RottenTangerine,썩은 귤,,,,,,,,
+4122,종이컵,0,PaperCup,Up,15,,BananaPeel,바나나 껍질,,,,,,,,
+4123,스팸,1,Spam,Down,15,,Spam,스팸,,,,,,,,
+4124,양파,1,Onion,Down,16,,Cookie,쿠키,,,,,,,,
+4125,쿠키,1,Cookie,Up,17,,Onion,양파,,,,,,,,
+4126,조개 껍데기,0,Shell,Down,17,,,,,,,,,,,
+4127,깨진 전구,0,BrokenLight,Up,18,,PetBottle,페트병,,,,,,,,
+4128,사과,1,Apple,Middle,18,,ColaCan,콜라 캔,,,,,,,,
 4129,바나나 껍질,1,BananaPeel,Up,19,,OldUnderwear,낡은 속옷,,,,,,,,
 ,,,,,,,MilkCarton,우유팩,,,,,,,,
 ,,,,,,,PaperCup,종이컵,,,,,,,,
 ,,,,,,,Shell,조개 껍데기,,,,,,,,
 ,,,,,,,Knife,식칼,,,,,,,,
 ,,,,,,,BrokenLight,깨진 전구,,,,,,,,
-,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,

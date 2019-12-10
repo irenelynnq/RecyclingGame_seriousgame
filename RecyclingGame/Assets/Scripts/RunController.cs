@@ -18,6 +18,8 @@ public class RunController : MonoBehaviour
     public RunUI runUI;
 
     public Camera mainCam;
+
+    private bool canMenu;
    
 
     //Run Map의 전반적인 게임을 관리합니다.
@@ -38,35 +40,87 @@ public class RunController : MonoBehaviour
     {
         //mainCam.transform.position = new Vector3(0, 0, 0);
         runPass = false;
+        canMenu = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return) && SceneManager.GetActiveScene().name == "RunScene")
+        if (SceneManager.GetActiveScene().name == "RunScene")
         {
-            if (GameManager.instance.currentLevel == 1)
+            if (GameManager.instance.currentGameState == GameState.menu)
             {
-                if (runUI.keyTutorial.activeSelf == true)
+                if(Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow))
                 {
-                    runUI.ShowKeyTutorial(false);
+                    runUI.MoveMenuPointer();
                 }
-                else if (runUI.trashDictionary.activeSelf == true)
+                if(Input.GetKeyDown(KeyCode.Return))
                 {
-                    runUI.ShowDictionary(false);
-                    runUI.countDown.SetActive(true);
-                    SoundManager.instance.AudioVolume(SoundManager.instance.bgmSource, 1f);
-                    StartCountDownDisplay(4);
+                    GameManager.instance.SetGameState(GameState.inGame);
+                    runUI.OutMenu();
+                    SoundManager.instance.FxSound(SoundManager.instance.next_fx);
+                    if (runUI.menuState == MenuState.cont)
+                    {
+                        if(!(runUI.keyTutorial.activeSelf) && !(runUI.trashDictionary.activeSelf))
+                        {
+                            runUI.countDown.SetActive(true);
+                            StartCountDownDisplay(4);
+                        }
+                    }
+                    else if(runUI.menuState == MenuState.mainTitle)
+                    {
+                        SoundManager.instance.AudioStop(SoundManager.instance.bgmSource);
+                        GameManager.instance.is_first_run = true;
+                        GameManager.instance.is_first_treat = true;
+                        for (int i = 1; i <= GameManager.instance.currentLevel; i++)
+                        {
+                            GameManager.instance.db.GetStageItem(i).StageItemClean();
+                        }
+                        SceneManager.LoadScene("TitleScene");
+                    }
                 }
             }
-            else if (runUI.trashDictionary.activeSelf == true)
+
+            else if(GameManager.instance.currentGameState == GameState.inGame)
             {
-                runUI.ShowDictionary(false);
-                runUI.countDown.SetActive(true);
-                SoundManager.instance.AudioVolume(SoundManager.instance.bgmSource, 1f);
-                StartCountDownDisplay(4);               
+                if (Input.GetKeyDown(KeyCode.Return))
+                {
+                    if (GameManager.instance.is_first_run == true)
+                    {
+                        if (runUI.keyTutorial.activeSelf == true)
+                        {
+                            runUI.ShowDictionary(true);
+                            runUI.ShowKeyTutorial(false);
+                            GameManager.instance.is_first_run = false;
+                        }
+                        else if (runUI.trashDictionary.activeSelf == true)
+                        {
+                            runUI.ShowDictionary(false);
+                            runUI.countDown.SetActive(true);
+                            SoundManager.instance.AudioVolume(SoundManager.instance.bgmSource, 1f);
+                            StartCountDownDisplay(4);
+                        }
+                    }
+                    else if (runUI.trashDictionary.activeSelf == true)
+                    {
+                        runUI.ShowDictionary(false);
+                        runUI.countDown.SetActive(true);
+                        SoundManager.instance.AudioVolume(SoundManager.instance.bgmSource, 1f);
+                        StartCountDownDisplay(4);
+                    }
+                }
+
+                else if (Input.GetKeyDown(KeyCode.Escape) && canMenu)
+                {
+                    playerController.ChangeState(PlayerState.Idle);
+                    playerController.animator.SetBool("run_bool", false);
+                    runUI.ShowMenu();
+                    GameManager.instance.SetGameState(GameState.menu);
+                }
             }
+
         }
+        
     }
 
     void FindPlayer()
@@ -100,6 +154,7 @@ public class RunController : MonoBehaviour
 
     IEnumerator CountDownDisplay(int seconds)
     {
+        canMenu = false;
         int count = seconds;
         while (count > 0)
         {
@@ -114,6 +169,7 @@ public class RunController : MonoBehaviour
         }
         runUI.countDown.SetActive(false);
         StartRunning();
+        canMenu = true;
     }
 
 
@@ -144,6 +200,7 @@ public class RunController : MonoBehaviour
         trashes_right = new List<int>();
         trashes_wrong = new List<int>();
         List<Dictionary<string, object>> data = CSVReader.Read("FileResources/" + "TrashPosition_" + level.ToString());
+        canMenu = true;
 
         //StageItem으로 stage initialize
         for (int i = 0; i < stage.trashCount; i++)

@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
     public float jump_power;
     public float slide_scale;
     public int jump_count = 1;
+    private bool is_grounded;
 
 
     
@@ -43,6 +44,7 @@ public class PlayerController : MonoBehaviour
         trashCollector = tc.GetComponent<TrashCollector>();
         runUI = runUIController.GetComponent<RunUI>();
         trashCollector.runUI = runUI;
+        is_grounded = true;
     }
 
     // Update is called once per frame
@@ -52,7 +54,7 @@ public class PlayerController : MonoBehaviour
         if (state == PlayerState.Running)
         {
             transform.position += Vector3.right * speed * Time.deltaTime;
-            if (Input.GetKeyDown(KeyCode.UpArrow))
+            if (!Input.GetKey(KeyCode.DownArrow) && Input.GetKeyDown(KeyCode.UpArrow))
             {
                 if(jump_count > 0)
                 {
@@ -62,10 +64,11 @@ public class PlayerController : MonoBehaviour
                     rigidbody2D.AddForce(Vector2.up * jump_power, ForceMode2D.Impulse);
                     jump_count -= 1;
                     animator.SetBool("jump_bool", true);
+                    is_grounded = false;
                 }
                 
             }
-            if (Input.GetKeyDown(KeyCode.DownArrow))
+            if (Input.GetKeyDown(KeyCode.DownArrow) && is_grounded)
             {
                 SoundManager.instance.RunFxSound(SoundManager.instance.slide_fx);
                 //slide
@@ -89,6 +92,7 @@ public class PlayerController : MonoBehaviour
         {
             jump_count = 1;
             animator.SetBool("jump_bool", false);
+            is_grounded = true;
         }
     }
 
