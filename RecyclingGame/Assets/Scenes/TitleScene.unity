@@ -558,6 +558,7 @@ MonoBehaviour:
   clear_fx: {fileID: 8300000, guid: b2f792231cb916d4ea4a7fc9f01378a0, type: 3}
   fail_fx: {fileID: 8300000, guid: d251a7e7f4a7a4643abd1ee5c6f39cb5, type: 3}
   next_fx: {fileID: 8300000, guid: f30e34056bcef544dbd79759eca6d5cf, type: 3}
+  youKnowIt_fx: {fileID: 8300000, guid: c84666ccf0f7ad24e85dad85542463ac, type: 3}
 --- !u!4 &535268587
 Transform:
   m_ObjectHideFlags: 0

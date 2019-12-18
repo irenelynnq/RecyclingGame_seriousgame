@@ -29,6 +29,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip clear_fx;
     public AudioClip fail_fx;
     public AudioClip next_fx;
+    public AudioClip youKnowIt_fx;
 
     private void Awake()
     {

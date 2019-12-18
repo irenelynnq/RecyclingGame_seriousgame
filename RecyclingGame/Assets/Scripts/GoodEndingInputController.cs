@@ -79,6 +79,8 @@ public class GoodEndingInputController : MonoBehaviour
                     if(sceneIndex == 3)
                     {
                         SoundManager.instance.AudioStop(SoundManager.instance.bgmSource);
+                        SoundManager.instance.AudioVolume(SoundManager.instance.bgmSource, 1f);
+                        SoundManager.instance.FxSound(SoundManager.instance.youKnowIt_fx);
                     }
                     background.GetComponent<Image>().sprite = Resources.Load<Sprite>("Art/CutScene/Ending/" + "EndingIllust" + (sceneIndex + 1).ToString());
                     textIndex = 0;
@@ -87,6 +89,10 @@ public class GoodEndingInputController : MonoBehaviour
             }
             else if(textIndex < endings[sceneIndex].Count)
             {
+                if (sceneIndex == 2 && textIndex == 3)
+                {
+                    StartCoroutine(FadeAudioSource.StartFade(SoundManager.instance.bgmSource, 1f, 0f));
+                }
                 StartDialogue(textBox, endings[sceneIndex][textIndex], enter);
             }
 

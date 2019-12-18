@@ -1,35 +1,27 @@
-﻿id,name,is_answer,sprite_name,yPosition,xPosition,,0,1,2,3,4,5,6,7,8,9
-2101,건전지,1,DryCell,Down,0,,n,ColaCan,Cap,n,n,Pill,Tshirt,n,n,n
-2102,콜라 캔,0,ColaCan,Up,1,,n,n,n,n,Oil,n,n,Shell,Tshirt,PetBottle
-2103,볼캡,1,Cap,Up,2,,DryCell,n,n,OldUnderwear,n,n,Knife,Light,n,n
-2104,낡은 속옷,0,OldUnderwear,Down,3,,,,,,,,,,,
-2105,식용유,1,Oil,Middle,4,,10,11,12,13,14,15,16,17,18,19
-2106,알약,1,Pill,Up,5,,Cap,ColaCan,DryCell,Shell,PetBottle,n,n,Oil,Pill,n
-2107,티셔츠,1,Tshirt,Up,6,,n,Oil,n,n,OldUnderwear,Pill,DryCell,n,n,n
-2108,식칼,0,Knife,Down,6,,n,n,n,n,n,n,Cap,n,Knife,Light
-2109,조개 껍데기,0,Shell,Middle,7,,,,,,,,,,,
-2110,형광등,1,Light,Down,7,,,,,,,,,,,
-2111,티셔츠,1,Tshirt,Middle,8,,n,x,o,n,n,o,o,n,n,n
-2112,페트병,0,PetBottle,Middle,9,,n,n,n,n,o,n,n,x,o,x
-2113,볼캡,1,Cap,Up,10,,o,n,n,x,n,n,x,o,n,n
-2114,콜라 캔,0,ColaCan,Up,11,,,,,,,,,,,
-2115,식용유,1,Oil,Middle,11,,,,,,,,,,,
-2116,건전지,1,DryCell,Up,12,,o,x,o,x,x,n,n,o,o,n
-2117,조개 껍데기,0,Shell,Up,13,,n,o,n,n,x,o,o,n,n,n
-2118,페트병,0,PetBottle,Up,14,,n,n,n,n,n,n,o,n,x,o
-2119,낡은 속옷,0,OldUnderwear,Middle,14,,,,,,,,,,,
-2120,알약,1,Pill,Middle,15,,Tshirt,티셔츠,,,,,,,,
-2121,건전지,1,DryCell,Middle,16,,Cap,볼캡,,,,,,,,
-2122,볼캡,1,Cap,Down,16,,Light,형광등,,,,,,,,
-2123,식용유,1,Oil,Up,17,,Drycell,건전지,,,,,,,,
-2124,알약,1,Pill,Up,18,,Pill,알약,,,,,,,,
-2125,식칼,0,Knife,Down,18,,Oil,식용유,,,,,,,,
-2126,형광등,1,Light,Down,19,,,,,,,,,,,
-,,,,,,,PetBottle,페트병,,,,,,,,
-,,,,,,,ColaCan,콜라 캔,,,,,,,,
-,,,,,,,OldUnderwear,낡은 속옷,,,,,,,,
-,,,,,,,MilkCarton,우유팩,,,,,,,,
-,,,,,,,PaperCup,종이컵,,,,,,,,
-,,,,,,,Shell,조개 껍데기,,,,,,,,
-,,,,,,,Knife,식칼,,,,,,,,
-,,,,,,,BrokenLight,깨진 전구,,,,,,,,
+﻿id,name,is_answer,sprite_name,yPosition,xPosition
+2101,건전지,1,DryCell,Down,0
+2102,콜라 캔,0,ColaCan,Up,1
+2103,볼캡,1,Cap,Up,2
+2104,낡은 속옷,0,OldUnderwear,Down,3
+2105,식용유,1,Oil,Middle,4
+2106,알약,1,Pill,Up,5
+2107,티셔츠,1,Tshirt,Up,6
+2108,식칼,0,Knife,Down,6
+2109,조개 껍데기,0,Shell,Middle,7
+2110,형광등,1,Light,Down,7
+2111,티셔츠,1,Tshirt,Middle,8
+2112,페트병,0,PetBottle,Middle,9
+2113,볼캡,1,Cap,Up,10
+2114,콜라 캔,0,ColaCan,Up,11
+2115,식용유,1,Oil,Middle,11
+2116,건전지,1,DryCell,Up,12
+2117,조개 껍데기,0,Shell,Up,13
+2118,페트병,0,PetBottle,Up,14
+2119,낡은 속옷,0,OldUnderwear,Middle,14
+2120,알약,1,Pill,Middle,15
+2121,건전지,1,DryCell,Middle,16
+2122,볼캡,1,Cap,Down,16
+2123,식용유,1,Oil,Up,17
+2124,알약,1,Pill,Up,18
+2125,식칼,0,Knife,Down,18
+2126,형광등,1,Light,Down,19
